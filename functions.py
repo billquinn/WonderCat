@@ -2,7 +2,6 @@
 import requests, base64
 import pandas as pd
 import networkx as nx
-import plotly.graph_objects as go
 import plotly.express as px
 
 import constants
