@@ -9,15 +9,10 @@ import numpy as np
 import seaborn as sns
 import plotly.express as px
 import networkx as nx
-from pathlib import Path
 from shiny import App, reactive, render, ui, req
 from shinywidgets import output_widget, render_widget
 
 from functions import *
-
-# # Declare directory.
-# abs_dir = Path(__file__).parent
-# data = pd.read_csv(abs_dir / 'Data/reading-experiences.csv', sep = ',')
 
 # Call Data from WordPress API
 wp_call = read_wordpress_post_with_pagination()
@@ -126,7 +121,7 @@ def server(input, output, session):
     def network():
         net_data = filter_data()
 
-        graph = create_network_graph(net_data, 'title', 'experience', 'benefit') # add reader eventually.
+        graph = create_network_graph(net_data, 'author', 'title', 'experience', 'benefit') # add reader eventually.
         net_fig = create_network_visualization(graph)
 
         return net_fig
