@@ -1,0 +1,13 @@
+seaborn
+plotly
+shiny
+shinywidgets
+numpy
+pandas
+networkx
+requests
+# base64
+
+
+
+# rsconnect add --account billquinn --name billquinn --token 5E639B0F33C59871EA1D1CEB2315EDE3 --secret JQEI9ZWCXEhpDz7Sj2YvtmAxOW2OcbHP1MADgfj/
