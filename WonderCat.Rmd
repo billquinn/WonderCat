@@ -1,0 +1,62 @@
+---
+output:
+  reprex::reprex_document:
+    venue: "gh"
+    advertise: FALSE
+    session_info: TRUE
+    style: TRUE
+    comment: "#;-)"
+    tidyverse_quiet: FALSE
+    std_out_err: TRUE
+knit: reprex::reprex_render
+---
+
+# WonderCat
+
+```{r}
+library(shiny)
+library(httr)
+library(jsonlite)
+library(dplyr)
+library(bslib)
+library(DT)
+library(ggplot2)
+library(ggraph)
+library(igraph)
+library(plotly)
+
+print (getwd())
+# Import functions.
+source(paste0(getwd(), '/Documents/DH/GitHub/WonderCat/R/', 'functions.R'))
+```
+
+## API Call
+```{r}
+
+WP_USER <- 'bill.quinn@marist.edu'
+WP_KEY <- 'f45D rE4U BoIR w6xq Yle7 ktEE'
+URL <- "https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience"
+
+call_api <- function(WP_USER, WP_KEY, URL) {
+    call <- GET(
+        url = URL,
+        content_type_json(),
+        add_headers(WP_USER, WP_KEY)
+    )
+    raw <- rawToChar(call$content)
+    response <- fromJSON(raw)
+    return (as.data.frame(response))
+}
+
+data <- call_api(WP_USER, WP_KEY, URL)
+```
+
+## Create DataFrame
+```{r}
+# Clean Up Dataframe
+clean_up_dataframe <- function(data){
+  data <- data %>% select(id, author, date, benefit, experience, technology, acf)
+  # api_data = api_data[['id', 'author', 'date', 'benefit', 'experience', 'technology', 'acf']] # Select columns to work with. Add 'wikidata' when ready.
+  return (data)
+}
+```
