@@ -44,7 +44,7 @@ ui <- page_navbar(
     ),
     # Benefit Filter ----
     selectInput(
-      "benefit", "Experience Filter:",
+      "benefit", "Benefit Filter:",
       choices = data$benefit, multiple = TRUE
     ),
   ), 
@@ -91,6 +91,11 @@ server <- function(input, output) {
   })
 
 #   Bar Plot Output ----
+output$barplot <- renderPlotly(
+    p <- reactive_df() %>% count(input$barSelect) |>
+    ggplot(aes(x = n, y = input$barSelect, fill = input$barSelect)) +
+    geom_bar(stat = "identity")
+)
 
 #   # Output Timeline ----
 #   output$timeline <- renderPlotly( 
