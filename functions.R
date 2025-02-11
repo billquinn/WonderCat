@@ -1,17 +1,12 @@
 # App Functions
 
+source('constants.R')
 
 # Call Wonder Cat API
 call_api <- function(WP_USER, WP_KEY, URL) {
-  call <- GET(
-    url = URL,
-    content_type_json(),
-    add_headers(WP_USER, WP_KEY)
-  )
-  raw <- rawToChar(call$content)
-  response <- fromJSON(raw)
-  data <- as.data.frame(response)
-  return (data)
+  req <- request(API_prefix)
+  resp <- req |> req_perform() |> resp_body_json(check_type = TRUE, simplifyVector = TRUE)
+  return (resp)
 }
 
 

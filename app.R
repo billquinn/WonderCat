@@ -1,7 +1,6 @@
-# WonderCat Dashboard App.
+library(tidyverse)
 library(shiny)
-library(dplyr)
-library(httr)
+library(httr2)
 library(jsonlite)
 library(bslib)
 library(DT)
@@ -10,50 +9,115 @@ library(ggraph)
 library(igraph)
 library(plotly)
 
-# Set Working Directory -- Delete for Live Version
-# setwd('/Users/williamquinn/Documents/DH/GitHub/WonderCat/R/')
-
-# Import functions.
-source('functions.R')
 source('constants.R')
+source('functions.R')
 
-# Call API data.
-data <- call_api(WP_USER, WP_KEY, URL)
-data <- clean_up_dataframe(data)
 
-# Define UI for app that draws a histogram ----
-ui <- page_sidebar(
+
+response <- call_api(WP_USER, WP_KEY, URL)
+data <- clean_up_dataframe(response)
+
+# Define UI for application: using bslib library for layout.
+ui <- page_navbar(
+  
   # App title ----
-  title = "Hello Shiny!",
-  # Sidebar panel for inputs ----
-  sidebar = sidebar(
-    # Input: Slider for the number of bins ----
-    sliderInput(
-      inputId = "bins",
-      label = "Number of bins:",
-      min = 1,
-      max = 50,
-      value = 30
-    )
+  title = "Reading Experience Database",
+  id = 'nav',
+  
+  # Provide optional hyperlinks in dropdown menu here.
+  nav_menu(
+    title = "Links",
+    align = "right",
+    # nav_item(...)
   ),
-  # Output: Histogram ----
-  plotOutput(outputId = "distPlot")
-)
+  
+  # Build persistent sidebar ----
+  sidebar = sidebar(
+    
+    # Inputs: ----
+    # Source-Narrative Filter ----
+    selectInput(
+      "title", "Title Filter:",
+      choices = data$title, multiple = TRUE
+    ),
+    # Technology Filter ----
+    selectInput(
+      "technology", "Technology Filter:",
+      choices = data$technology, multiple = TRUE
+    ),
+    # Experience Filter ----
+    selectInput(
+      "experience", "Experience Filter:",
+      choices = data$experience, multiple = TRUE
+    ),
+    # Benefit Filter ----
+    selectInput(
+      "benefit", "Experience Filter:",
+      choices = data$benefit, multiple = TRUE
+    ),
+  ), 
+    
+  # Build "main panel" ----
+  navset_card_underline(
+    
+    nav_panel("Table", DT::dataTableOutput('table')),
+    
+  ), # navset_card_underline() closure ----
+    
+fluid = TRUE) # navbarPage() closure
 
-# Define server logic required to draw a histogram ----
+# Define server logic.
 server <- function(input, output) {
-
-  output$distPlot <- renderPlot({
+  # Render User Inputs: ----
+  reactive_df <- reactive({
+    react_data <- default_data
     
-    x    <- faithful$waiting
-    bins <- seq(min(x), max(x), length.out = input$bins + 1)
+    if (length(input$title) > 0) {
+      react_data <- react_data %>% filter(title %in% input$title)
+    }
+    if (length(input$technology) > 0) {
+      react_data <- react_data %>% filter(technology %in% input$technology)
+    }
+    if (length(input$experience) > 0) {
+      react_data <- react_data %>% filter(experience %in% input$experience)
+    }
+    if (length(input$benefit) > 0) {
+      react_data <- react_data %>% filter(benefit %in% input$benefit)
+    }
     
-    hist(x, breaks = bins, col = "#007bc2", border = "white",
-         xlab = "Waiting time to next eruption (in mins)",
-         main = "Histogram of waiting times")
-    
+    react_data
   })
   
+  # Table Output ----
+  output$table <- DT::renderDataTable({ 
+    reactive_df() 
+  })
+
+#   # Output Timeline ----
+#   output$timeline <- renderPlotly( 
+#     plot_ly(reactive_df(), type = "scatter") %>% # , mode = ""
+#       add_trace(x = ~pubDate, y = ~benefit) %>%
+#       layout(showLegend = F, title = "Timeline with Rangeslider",
+#              xaxis = list(rangeslider = list(visible = T)))
+#     )
 }
 
+# Run the application 
 shinyApp(ui = ui, server = server)
+
+# # Create histogram of most common experience in title.
+# histogram <- reactive({
+#   subset() %>%
+#     count(title, experience) %>%
+#     ggplot(aes(x = reorder(title, -n), y = n, fill = experience)) +
+#     geom_bar(stat = "identity") +
+#     coord_flip() +
+#     labs(x = "Source Narrative", y = "Count", fill = "Experience") +
+#     theme_minimal() +
+#     theme(legend.position = "bottom") +
+#     ggtitle("Experiences by Source Narrative")
+# })
+# 
+# # Output Histogram ----
+# output$hist <- renderPlot( histogram() )
+
