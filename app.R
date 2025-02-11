@@ -9,27 +9,19 @@ library(ggraph)
 library(igraph)
 library(plotly)
 
-source('constants.R')
-source('functions.R')
+# source("constants.R")
+source("functions.R")
 
-
-
-response <- call_api(WP_USER, WP_KEY, URL)
-data <- clean_up_dataframe(response)
+URL <- "https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience"
+resp <- call_api(URL)
+data <- clean_up_dataframe(resp)
 
 # Define UI for application: using bslib library for layout.
 ui <- page_navbar(
   
   # App title ----
-  title = "Reading Experience Database",
+  title = "WonderCat",
   id = 'nav',
-  
-  # Provide optional hyperlinks in dropdown menu here.
-  nav_menu(
-    title = "Links",
-    align = "right",
-    # nav_item(...)
-  ),
   
   # Build persistent sidebar ----
   sidebar = sidebar(
@@ -60,7 +52,14 @@ ui <- page_navbar(
   # Build "main panel" ----
   navset_card_underline(
     
-    nav_panel("Table", DT::dataTableOutput('table')),
+    nav_panel("Table", DT::dataTableOutput("table")),
+
+    nav_panel(
+        "Bar Plot", 
+        selectInput("barSelect", "Select Input:", 
+        list('experience'='Experiences', 'benefit'='Benefits', 'technology'='Technologies')), 
+        plotlyOutput("barplot")
+    )
     
   ), # navset_card_underline() closure ----
     
@@ -70,8 +69,7 @@ fluid = TRUE) # navbarPage() closure
 server <- function(input, output) {
   # Render User Inputs: ----
   reactive_df <- reactive({
-    react_data <- default_data
-    
+    react_data <- data
     if (length(input$title) > 0) {
       react_data <- react_data %>% filter(title %in% input$title)
     }
@@ -84,7 +82,6 @@ server <- function(input, output) {
     if (length(input$benefit) > 0) {
       react_data <- react_data %>% filter(benefit %in% input$benefit)
     }
-    
     react_data
   })
   
@@ -92,6 +89,8 @@ server <- function(input, output) {
   output$table <- DT::renderDataTable({ 
     reactive_df() 
   })
+
+#   Bar Plot Output ----
 
 #   # Output Timeline ----
 #   output$timeline <- renderPlotly( 
