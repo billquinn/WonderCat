@@ -10,6 +10,7 @@ library(ggraph)
 library(igraph)
 library(plotly)
 library(treemap)
+library(treemapify)
 
 source("functions.R")
 
@@ -66,7 +67,7 @@ ui <- page_navbar(
 
     nav_panel(
         "Tree Map",
-        plotlyOutput("treemap")
+        plotOutput("treemap")
     )
 
 ), fluid = TRUE
@@ -110,23 +111,15 @@ output$barplot <- renderPlotly(
 treeData <- reactive({
     reactive_df() %>% group_by(title, experience) %>% summarize(count = n())
 })
+
 output$testTable <- renderDataTable({treeData()})
 
 output$treemap <- renderPlot(
-    treemap::treemap(treeData(),
-        index=c("experience", "title"),
-        vSize="count",
-        vColor = "experience",
-        type = "categorical",
-        # formatting options:
-        #palette = brewer.pal(n = 5, name = "Accent"),
-        align.labels=list(
-          c("left", "top"), 
-          c("right", "bottom")
-        ),     
-        border.col = "white",
-        bg.labels = 255,
-        position.legend = "none")
+    ggplot(treeData(), aes(area = count, label = title, fill = experience, subgroup = experience)) + 
+        geom_treemap() +
+        geom_treemap_text(fontface = "italic", colour = "black", place = "topleft", grow = FALSE) + 
+        geom_treemap_subgroup_border() +
+        geom_treemap_subgroup_text(place = "centre", grow = T, alpha = 0.3, colour = "black", fontface = "italic", min.size = 0)
 )
 
 }

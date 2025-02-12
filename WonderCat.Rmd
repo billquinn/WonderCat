@@ -36,9 +36,6 @@ source(paste0(getwd(), 'Documents/DH/GitHub/WonderCat/WonderCat', '/functions.R'
 
 NEED TO PULL DATA FROM EACH PAGE; CURRENTLY PULLING FROM ONLY FIRST PAGE!!!!
 ```{r}
-
-WP_USER <- 'bill.quinn@marist.edu'
-WP_KEY <- 'f45D rE4U BoIR w6xq Yle7 ktEE'
 API_prefix <- "https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience"
 
 req <- request(API_prefix)
@@ -115,7 +112,7 @@ library(HistData)
 
 data("Cholera")
 
-treemap(Cholera,
+t <- treemap(Cholera,
         index=c("region","district"),
         vSize="cholera_deaths",
         vColor = "region",
@@ -129,6 +126,8 @@ treemap(Cholera,
         border.col = "white",
         bg.labels = 255,
         position.legend = "none")
+
+
 ```
 
 
@@ -147,4 +146,26 @@ treemap(treeData,
         border.col = "white",
         bg.labels = 255,
         position.legend = "none")
+```
+
+```{r}
+# dataset
+group <- c(rep("group-1",4),rep("group-2",2),rep("group-3",3))
+subgroup <- paste("subgroup" , c(1,2,3,4,1,2,1,2,3), sep="-")
+value <- c(13,5,22,12,11,7,3,1,23)
+data <- data.frame(group,subgroup,value)
+
+p <- treemap(data,
+            index=c("group","subgroup"),
+            vSize="value",
+            type="index",
+            palette = "Set2",
+            bg.labels=c("white"),
+            align.labels=list(
+              c("center", "center"), 
+              c("right", "bottom")
+            )  
+          )
+
+
 ```
