@@ -25,6 +25,7 @@ library(ggplot2)
 library(ggraph)
 library(igraph)
 library(plotly)
+library(treemap)
 
 print (getwd())
 # Import functions.
@@ -70,12 +71,80 @@ dataframe <- clean_up_dataframe(resp)
 
 ### Bar Plot
 ```{r}
-bar_data <- dataframe %>% count(benefit)
+bar_data <- dataframe %>% count(technology)
 
 p <- bar_data |>
-      ggplot(aes(x = n, y = benefit, fill = benefit)) +
+      ggplot(aes(x = n, y = technology, fill = technology)) +
       geom_bar(stat = "identity")
 
 ggplotly(p)
 ```
 
+### Tree Map
+```{r}
+treeData <-  dataframe %>% group_by(title, experience) %>% summarize(count = n())
+#treemap(treeData, index = c("title", "experience"), vSize="count", type="index")
+
+t <- plot_ly(data = treeData, branchvalues = "total", type = "treemap", 
+             parents = ~title, labels = ~experience, values = ~count)
+
+#ggplotly(t)
+t <- plot_ly(data = G20, branchvalues = "total", type = "treemap", 
+             parents = ~region, labels = ~country, values = ~gdp_mil_usd)
+
+t
+```
+
+```{r}
+library(treemapify)
+
+G20 <- G20
+
+p <- ggplot(treeData, aes(area = count, fill = experience, label = title)) +
+  geom_treemap() +
+  geom_treemap_text(place = "center")
+
+p
+#ggplotly(p)
+```
+
+```{r}
+# https://www.codingthepast.com/2024/05/09/Treemaps-in-R.html
+library(treemap)
+library(HistData)
+
+data("Cholera")
+
+treemap(Cholera,
+        index=c("region","district"),
+        vSize="cholera_deaths",
+        vColor = "region",
+        type = "categorical",
+        # formatting options:
+        #palette = brewer.pal(n = 5, name = "Accent"),
+        align.labels=list(
+          c("left", "top"), 
+          c("right", "bottom")
+        ),     
+        border.col = "white",
+        bg.labels = 255,
+        position.legend = "none")
+```
+
+
+```{r}
+treemap(treeData,
+        index=c("experience","title"),
+        vSize="count",
+        vColor = "experience",
+        type = "categorical",
+        # formatting options:
+        #palette = brewer.pal(n = 5, name = "Accent"),
+        align.labels=list(
+          c("left", "top"), 
+          c("right", "bottom")
+        ),     
+        border.col = "white",
+        bg.labels = 255,
+        position.legend = "none")
+```

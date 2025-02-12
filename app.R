@@ -1,4 +1,5 @@
 library(tidyverse)
+library(dplyr)
 library(shiny)
 library(httr2)
 library(jsonlite)
@@ -8,8 +9,8 @@ library(ggplot2)
 library(ggraph)
 library(igraph)
 library(plotly)
+library(treemap)
 
-# source("constants.R")
 source("functions.R")
 
 URL <- "https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience"
@@ -54,48 +55,84 @@ ui <- page_navbar(
     
     nav_panel("Table", DT::dataTableOutput("table")),
 
+    nav_panel("TEST", dataTableOutput("testTable")),
+
     nav_panel(
         "Bar Plot", 
         selectInput("barSelect", "Select Input:", 
-        list('experience'='Experiences', 'benefit'='Benefits', 'technology'='Technologies')), 
+        list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology')), 
         plotlyOutput("barplot")
+    ),
+
+    nav_panel(
+        "Tree Map",
+        plotlyOutput("treemap")
     )
-    
-  ), # navset_card_underline() closure ----
-    
-fluid = TRUE) # navbarPage() closure
+
+), fluid = TRUE
+) # navbarPage() closure
 
 # Define server logic.
 server <- function(input, output) {
-  # Render User Inputs: ----
-  reactive_df <- reactive({
+# Render User Inputs: ----
+reactive_df <- reactive({
     react_data <- data
     if (length(input$title) > 0) {
-      react_data <- react_data %>% filter(title %in% input$title)
+    react_data <- react_data %>% filter(title %in% input$title)
     }
     if (length(input$technology) > 0) {
-      react_data <- react_data %>% filter(technology %in% input$technology)
+    react_data <- react_data %>% filter(technology %in% input$technology)
     }
     if (length(input$experience) > 0) {
-      react_data <- react_data %>% filter(experience %in% input$experience)
+    react_data <- react_data %>% filter(experience %in% input$experience)
     }
     if (length(input$benefit) > 0) {
-      react_data <- react_data %>% filter(benefit %in% input$benefit)
+    react_data <- react_data %>% filter(benefit %in% input$benefit)
     }
-    react_data
-  })
+    return(react_data)
+})
   
-  # Table Output ----
-  output$table <- DT::renderDataTable({ 
-    reactive_df() 
-  })
+# Table Output ----
+output$table <- DT::renderDataTable({reactive_df()})
 
-#   Bar Plot Output ----
+# Bar Plot Output ----
+barData <- reactive({
+    req(input$barSelect)
+    reactive_df() %>% dplyr::count(!!sym(input$barSelect))
+    })
+
 output$barplot <- renderPlotly(
-    p <- reactive_df() %>% count(input$barSelect) |>
-    ggplot(aes(x = n, y = input$barSelect, fill = input$barSelect)) +
-    geom_bar(stat = "identity")
+    barData() |>
+    ggplot(aes(x = n, y = !!sym(input$barSelect), fill = !!sym(input$barSelect))) +
+    geom_bar(stat = "identity"))
+
+# Tree Map Output ---
+treeData <- reactive({
+    reactive_df() %>% group_by(title, experience) %>% summarize(count = n())
+})
+output$testTable <- renderDataTable({treeData()})
+
+output$treemap <- renderPlot(
+    treemap::treemap(treeData(),
+        index=c("experience", "title"),
+        vSize="count",
+        vColor = "experience",
+        type = "categorical",
+        # formatting options:
+        #palette = brewer.pal(n = 5, name = "Accent"),
+        align.labels=list(
+          c("left", "top"), 
+          c("right", "bottom")
+        ),     
+        border.col = "white",
+        bg.labels = 255,
+        position.legend = "none")
 )
+
+}
+
+# Run the application 
+shinyApp(ui = ui, server = server)
 
 #   # Output Timeline ----
 #   output$timeline <- renderPlotly( 
@@ -104,24 +141,3 @@ output$barplot <- renderPlotly(
 #       layout(showLegend = F, title = "Timeline with Rangeslider",
 #              xaxis = list(rangeslider = list(visible = T)))
 #     )
-}
-
-# Run the application 
-shinyApp(ui = ui, server = server)
-
-# # Create histogram of most common experience in title.
-# histogram <- reactive({
-#   subset() %>%
-#     count(title, experience) %>%
-#     ggplot(aes(x = reorder(title, -n), y = n, fill = experience)) +
-#     geom_bar(stat = "identity") +
-#     coord_flip() +
-#     labs(x = "Source Narrative", y = "Count", fill = "Experience") +
-#     theme_minimal() +
-#     theme(legend.position = "bottom") +
-#     ggtitle("Experiences by Source Narrative")
-# })
-# 
-# # Output Histogram ----
-# output$hist <- renderPlot( histogram() )
-

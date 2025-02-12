@@ -23,5 +23,5 @@ clean_up_dataframe <- function(data){
     'id', 'author', 'date', 'benefit', 'experience', 'technology', 'title', 'QID'
   )
   
-  return (dataframe)
+  return (tibble(dataframe))
 }
