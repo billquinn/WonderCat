@@ -11,19 +11,19 @@ library(igraph)
 library(plotly)
 library(treemap)
 library(treemapify)
+library(visNetwork)
 
 source("functions.R")
 
 URL <- "https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience"
 resp <- call_api(URL)
-data <- clean_up_dataframe(resp)
+data <- api_to_dataframe(resp)
 
 # Define UI for application: using bslib library for layout.
 ui <- page_navbar(
   
   # App title ----
-  title = "WonderCat",
-  id = 'nav',
+  title = "WonderCat", id = 'nav',
   
   # Build persistent sidebar ----
   sidebar = sidebar(
@@ -60,15 +60,13 @@ ui <- page_navbar(
 
     nav_panel(
         "Bar Plot", 
-        selectInput("barSelect", "Select Input:", 
-        list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology')), 
+        selectInput("barSelect", "Select Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology')), 
         plotlyOutput("barplot")
     ),
 
-    nav_panel(
-        "Tree Map",
-        plotOutput("treemap")
-    )
+    nav_panel("Tree Map", plotOutput("treemap")),
+
+    nav_panel("Network", visNetworkOutput("network"))
 
 ), fluid = TRUE
 ) # navbarPage() closure
@@ -112,15 +110,24 @@ treeData <- reactive({
     reactive_df() %>% group_by(title, experience) %>% summarize(count = n())
 })
 
-output$testTable <- renderDataTable({treeData()})
-
 output$treemap <- renderPlot(
     ggplot(treeData(), aes(area = count, label = title, fill = experience, subgroup = experience)) + 
         geom_treemap() +
+        geom_treemap_subgroup_border() +
         geom_treemap_text(fontface = "italic", colour = "black", place = "topleft", grow = FALSE) + 
         geom_treemap_subgroup_border() +
         geom_treemap_subgroup_text(place = "centre", grow = T, alpha = 0.3, colour = "black", fontface = "italic", min.size = 0)
 )
+
+# Network Output ---
+network <- reactive({
+    net <- create_network_data(reactive_df())
+    return(net)
+})
+
+output$network <- renderVisNetwork({
+    visNetwork(network()$nodes, network()$links)
+})
 
 }
 
