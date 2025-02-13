@@ -16,6 +16,7 @@ knit: reprex::reprex_render
 ```{r}
 library(tidyverse)
 library(shiny)
+library(httr)
 library(httr2)
 library(jsonlite)
 library(dplyr)
@@ -35,25 +36,40 @@ source(paste0(getwd(), 'Documents/DH/GitHub/WonderCat/WonderCat', '/functions.R'
 ```
 
 ## API Call
-
-NEED TO PULL DATA FROM EACH PAGE; CURRENTLY PULLING FROM ONLY FIRST PAGE!!!!
+#### httr
 ```{r}
-API_prefix <- "https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience"
+
+```
+
+#### httr2
+```{r}
+#API_prefix <- "https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience"
+API_prefix <- "https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience?page=1&per_page=100"
 
 req <- request(API_prefix)
 
 #resp <- req |> req_perform() |> resp_body_json(check_type = TRUE, simplifyVector = TRUE)
 
-is_complete <- function(resp) {
-  length(resp_body_json(resp)$data) == 0
-}
+#is_complete <- function(resp) {
+#  length(resp_body_json(resp)$data) == 0
+#}
 
-resps <- req_perform_iterative(
-  req,
-  next_req = iterate_with_offset("page_index", resp_complete = is_complete),
-  max_reqs = Inf
-) |>
-  resp_body_json(check_type = TRUE, simplifyVector = TRUE)
+#resps <- req_perform_iterative(
+#  req,
+#  next_req = iterate_with_offset("page_index", resp_complete = is_complete),
+#  max_reqs = Inf
+#)
+
+# resps <- req_perform_iterative(
+#   req,
+#   next_req = iterate_with_offset(
+#     "page_index", resp_pages = function(resp) resp_body_json(resp)$pages
+#   ),
+#   max_reqs = Inf
+# )
+
+#data <- resps[[1]] %>% resp_body_json(check_type = TRUE, simplifyVector = TRUE)
+ # resp_body_json(check_type = TRUE, simplifyVector = TRUE)
 ```
 
 ## Create DataFrame
@@ -76,7 +92,7 @@ clean_up_dataframe <- function(data){
   return (dataframe)
 }
 
-dataframe <- clean_up_dataframe(resp)
+dataframe <- clean_up_dataframe(resps)
 ```
 
 ### Bar Plot

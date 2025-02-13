@@ -15,7 +15,7 @@ library(visNetwork)
 
 source("functions.R")
 
-URL <- "https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience"
+URL <- "https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience?page=1&per_page=50"
 resp <- call_api(URL)
 data <- api_to_dataframe(resp)
 
