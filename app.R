@@ -55,11 +55,8 @@ ui <- page_navbar(
   navset_card_underline(
     
     nav_panel("Table", DT::dataTableOutput("table")),
-
-    nav_panel("TEST", dataTableOutput("testTable")),
-
-    nav_panel(
-        "Bar Plot", 
+    
+    nav_panel("Bar Plot", 
         selectInput("barSelect", "Select Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology')), 
         plotlyOutput("barplot")
     ),
@@ -126,7 +123,8 @@ network <- reactive({
 })
 
 output$network <- renderVisNetwork({
-    visNetwork(network()$nodes, network()$links)
+    visNetwork(network()$nodes, network()$links) %>%
+    visOptions(highlightNearest = TRUE, selectedBy = "label")
 })
 
 }

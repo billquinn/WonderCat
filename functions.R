@@ -29,14 +29,17 @@ api_to_dataframe <- function(data){
 # Network Functions
 create_network_data <- function(dataframe){
   # Create links from columns: source -> technology -> experience.
-  title_exp = dataframe %>% select(title, technology)
-  colnames(title_exp) = c('from', 'to')
+  title_tech = dataframe %>% select(title, technology)
+  colnames(title_tech) = c('from', 'to')
 
-  exp_tech = dataframe %>% select(technology, experience)
-  colnames(exp_tech) = c('from', 'to')
+  tech_exp = dataframe %>% select(technology, experience)
+  colnames(tech_exp) = c('from', 'to')
+
+  exp_user = dataframe %>% select(experience, author)
+  colnames(exp_user) = c("from", "to")
 
   # Bind links dataframe and remove any rows with NA.
-  links = rbind(title_exp, exp_tech)  %>%
+  links = rbind(title_tech, tech_exp, exp_user)  %>%
     filter(grepl('\\w+', from)) %>%
     filter(grepl('\\w+', to))
 
@@ -48,16 +51,20 @@ create_network_data <- function(dataframe){
   colnames(sources) = 'label'
   sources$category = 'source'
 
-  technologys = dataframe['technology']
-  colnames(technologys) = 'label'
-  technologys$category = 'technology'
+  technologies = dataframe['technology']
+  colnames(technologies) = 'label'
+  technologies$category = 'technology'
 
   experiences = dataframe['experience']
   colnames(experiences) = 'label'
   experiences$category = 'experience'
 
+  users = dataframe["author"]
+  colnames(users) = "label"
+  users$category = "author"
+
   # Combine all nodes and remove whitespace entries.
-  nodes = rbind(sources, technologys, experiences) %>% filter(grepl('\\w+', label))
+  nodes = rbind(sources, technologies, experiences, users) %>% filter(grepl('\\w+', label))
 
   # Create node size variable
   nodes = nodes %>% group_by(label, category) %>% summarize(size = n())
@@ -73,8 +80,9 @@ create_network_data <- function(dataframe){
   links$to = nodes$id[ match( unlist(links$to), nodes$label)]
 
   # Remove variables.
-  rm(title_exp, exp_tech, sources, experiences, technologys)
+  rm(title_tech, tech_exp, sources, experiences, technologies, users)
 
+  # Set Styling.
   # We'll start by adding new node and edge attributes to our dataframes. 
   vis.nodes <- nodes
   vis.links <- links
@@ -87,7 +95,7 @@ create_network_data <- function(dataframe){
   vis.nodes$borderWidth <- 2 # Node border width
 
   # c("slategrey", "tomato", "gold")
-  colorMap = c(tecnique = "slategrey", experience = "tomato", source = "gold")
+  colorMap = c(tecnique = "slategrey", experience = "tomato", source = "gold", author = "#94797E")
   vis.nodes$color.background <- colorMap[vis.nodes$category]
 
 
@@ -100,8 +108,6 @@ create_network_data <- function(dataframe){
   vis.links$arrows <- "to" # arrows: 'from', 'to', or 'middle'
   vis.links$smooth <- TRUE    # should the edges be curved?
   vis.links$shadow <- FALSE    # edge shadow
-  
-  # visnet <- visNetwork(vis.nodes, vis.links)
 
   return(list(nodes = vis.nodes, links = vis.links))
 }
