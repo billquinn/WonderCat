@@ -1,9 +1,0 @@
-seaborn
-plotly
-shiny
-shinywidgets
-numpy
-pandas
-networkx
-requests
-# base64

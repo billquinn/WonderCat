@@ -32,13 +32,17 @@ library(visNetwork)
 
 print (getwd())
 # Import functions.
-source(paste0(getwd(), 'Documents/DH/GitHub/WonderCat/WonderCat', '/functions.R'))
+source(paste0(getwd(), '/functions.R'))
 ```
 
 ## API Call
 #### httr
 ```{r}
+URL <- "https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience?page=1&per_page=100"
 
+resp <- GET(URL)
+data <- fromJSON(rawToChar(resp$content))
+dataframe <- clean_up_dataframe(data)
 ```
 
 #### httr2
@@ -193,6 +197,48 @@ links$to = nodes$id[ match( unlist(links$to), nodes$label)]
 
 # Remove variables.
 rm(title_tech, tech_exp, sources, experiences, technologies, users)
+
+# Set Styling.
+# We'll start by adding new node and edge attributes to our dataframes. 
+vis.nodes <- nodes
+vis.links <- links
+
+vis.nodes$shape  <- "dot"  
+vis.nodes$shadow <- TRUE # Nodes will drop shadow
+vis.nodes$title  <- vis.nodes$label # Text on click
+vis.nodes$label <- vis.nodes$label # Node label
+vis.nodes$size   <- vis.nodes$size * 10 # Node size
+vis.nodes$borderWidth <- 2 # Node border width
+
+# c("slategrey", "tomato", "gold")
+colorMap = c(tecnique = "slategrey", experience = "tomato", source = "gold", author = "#94797E")
+vis.nodes$color.background <- colorMap[vis.nodes$category]
+
+
+vis.nodes$color.border <- "black"
+vis.nodes$color.highlight.background <- "orange"
+vis.nodes$color.highlight.border <- "darkred"
+
+vis.links$width <- links$weight # line width
+vis.links$color <- "gray"    # line color  
+vis.links$arrows <- "to" # arrows: 'from', 'to', or 'middle'
+vis.links$smooth <- TRUE    # should the edges be curved?
+vis.links$shadow <- FALSE    # edge shadow
+
+visnet <- visNetwork(vis.nodes, vis.links)
+
+visOptions(
+  visnet,
+  highlightNearest = TRUE,
+  selectedBy = "label"
+)
+```
+
+### Network (importing nodes and links)
+```{r}
+# Import data.
+nodes <- read_delim(paste0(getwd(), "/nodes.tsv"))
+links <- read_delim(paste0(getwd(), "/links.tsv"))
 
 # Set Styling.
 # We'll start by adding new node and edge attributes to our dataframes. 

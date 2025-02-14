@@ -1,0 +1,339 @@
+	label	category	size	id
+0	1	user	8	0
+1	4	user	1	1
+2	5	user	234	2
+3	1 Thessalonians	title	1	3
+4	30 Rock	title	2	4
+5	A Farewell to Arms	title	1	5
+6	A Funny Thing Happened on the Way to the Forum	title	1	6
+7	A Portrait of the Artist as a Young Man	title	1	7
+8	A Song of Ice and Fire	title	1	8
+9	A Tale of Two Cities	title	1	9
+10	A Wild Sheep Chase	title	1	10
+11	A Wrinkle in Time	title	1	11
+12	Acceptance of Loss	experience	7	12
+13	Alcestis	title	1	13
+14	Alice's Adventures in Wonderland	title	1	14
+15	Alienation	experience	14	15
+16	All about H. Hatterr	title	1	16
+17	Almighty Heart	technology	14	17
+18	Almighty Heart + Satiric Narration	technology	1	18
+19	Almighty Heart + Soliloquy	technology	1	19
+20	Amadis de Gaula	title	1	20
+21	Americanah	title	1	21
+22	An Apology for the Life of Mrs. Shamela Andrews	title	1	22
+23	Anarchy Rhymer	technology	8	23
+24	And Then There Were None	title	1	24
+25	Animal Farm	title	1	25
+26	Anne of Green Gables	title	1	26
+27	Antigone	title	1	27
+28	Apology	technology	2	28
+29	Awe	experience	5	29
+30	Babbitt	title	1	30
+31	Batrachomyomachia	title	1	31
+32	Becoming	title	1	32
+33	Being Wrong	experience	6	33
+34	Bel Canto	title	1	34
+35	Beloved	title	2	35
+36	Bioshock	title	1	36
+37	Blazing Saddles	title	1	37
+38	Bloodchild	title	1	38
+39	Book of the Dead	title	1	39
+40	Bottle Rocket	title	1	40
+41	Broad City	title	1	41
+42	Brokeback Mountain	title	1	42
+43	Buffy the Vampire Slayer	title	1	43
+44	Call Me By Your Name	title	1	44
+45	Call the Midwife	title	1	45
+46	Casablanca	title	1	46
+47	Chinese Ode included in the Shijing of the Five Classics	title	1	47
+48	Choose Your Own Accomplice	technology	1	48
+49	Clarissa, or, the History of a Young Lady	title	1	49
+50	Cloud Atlas	title	1	50
+51	Comic Wink	technology	5	51
+52	Comic Wink + Reality Shifter	technology	5	52
+53	Confessions	title	2	53
+54	Confusion	experience	2	54
+55	Connection	experience	8	55
+56	Conversion Narrative	technology	1	56
+57	Courage	experience	9	57
+58	Crazy Ex-Girlfriend	title	1	58
+59	Crossing Brooklyn Ferry	title	1	59
+60	Curiosity	experience	12	60
+61	David Copperfield	title	1	61
+62	Disagreeing Narrators	technology	1	62
+63	Disclaimer	title	1	63
+64	Disgrace	title	1	64
+65	Dissociation	experience	1	65
+66	Distress	experience	1	66
+67	Do Not God Gentle into That Good Night	title	1	67
+68	Don Quixote	title	2	68
+69	Double Alien	technology	4	69
+70	Double Identification	experience	1	70
+71	Dragnet	title	1	71
+72	Dream of the Red Chamber	title	2	72
+73	Dream of the World	technology	5	73
+74	El Cantar de Mio Cid	title	1	74
+75	Eminent Victorians	title	1	75
+76	Emma	title	2	76
+77	Empathy	experience	13	77
+78	Empathy Generator	technology	7	78
+79	Empowerment	experience	2	79
+80	Enigma	technology	1	80
+81	Epic Simile	technology	2	81
+82	Equilateral Love Triange	technology	4	82
+83	Eustress	experience	1	83
+84	Existential Nausea	experience	1	84
+85	Fanny Hill, or Memoirs of a Woman of Pleasure	title	1	85
+86	Fleabag	title	1	86
+87	Fox in Socks	title	1	87
+88	Frankenstein	title	1	88
+89	Frederick	title	1	89
+90	Free Indirect Discourse	technology	6	90
+91	Fun Home	title	1	91
+92	Generous Love	experience	6	92
+93	Genesis	title	1	93
+94	Gilgamesh	title	1	94
+95	Gladiator	title	1	95
+96	Go Tell it on the Mountain	title	1	96
+97	God Voice	technology	5	97
+98	Gone Girl	title	1	98
+99	Graciosa and Percinet	title	1	99
+100	Gratification	experience	12	100
+101	Gratitude Booster	technology	2	101
+102	Grey's Anatomy	title	1	102
+103	Grief Releaser	technology	1	103
+104	Guilt Lifter	technology	1	104
+105	Gulliver's Travels	title	2	105
+106	Hamartia	technology	4	106
+107	Hamlet	title	4	107
+108	Histoires ou contes du temps passé	title	1	108
+109	Horse Feathers	title	1	109
+110	House	title	1	110
+111	Human God Voice	technology	7	111
+112	Hurt Delay	technology	1	112
+113	I Know Why the Caged Bird Sings	title	1	113
+114	I Love Lucy	title	1	114
+115	I Should Not Dare to Leave My Friend	title	1	115
+116	I Voice	technology	11	116
+117	I have tucked our love inside the lyric/ Like silver in a pocket	title	1	117
+118	I'm not one for tall, swaggering generals...	title	1	118
+119	Identification	experience	9	119
+120	Immersion	experience	2	120
+121	In Cold Blood	title	1	121
+122	In Search of Lost Time	title	1	122
+123	Infinite Jest	title	1	123
+124	Insinuation	technology	2	124
+125	Invisible Man	title	1	125
+126	Irony	technology	10	126
+127	Jane Eyre	title	2	127
+128	Jude the Obscure	title	1	128
+129	King Solomon's Mines	title	1	129
+130	L'Orfeo	title	1	130
+131	La Vie de Marianne	title	1	131
+132	Labyrinths	title	1	132
+133	Law and Order	title	1	133
+134	Le Cid	title	1	134
+135	Letters from a Peruvian Woman	title	1	135
+136	Letters on Natural Magic	title	1	136
+137	Life Evolver	technology	3	137
+138	Like Water for Chocolate	title	1	138
+139	Little Women	title	1	139
+140	Logic	technology	2	140
+141	Love	experience	17	141
+142	Lucky Twist	technology	4	142
+143	Lysistrata	title	1	143
+144	Mahābhārata	title	1	144
+145	Mary Poppins	title	1	145
+146	Me Before You	title	1	146
+147	Meno	title	1	147
+148	Meta-Horror	technology	1	148
+149	Middlemarch	title	1	149
+150	Mind Wandering	experience	8	150
+151	Miranda	title	1	151
+152	Moral Omniscience	experience	3	152
+153	Moral Suasion	technology	1	153
+154	Morte D'arthur	title	1	154
+155	Mother Courage and Her Children	title	1	155
+156	Mother Goose's Melody	title	1	156
+157	Mr. Nobody	title	1	157
+158	Mrs. Dalloway	title	1	158
+159	My Antonia	title	1	159
+160	My Bondage and My Freedom	title	1	160
+161	My Brilliant Friend	title	1	161
+162	Mystery Plays	title	1	162
+163	Naked Lunch	title	1	163
+164	Narrative of the Life of Frederick Douglass, An American Slave	title	1	164
+165	Narrative without Core Values	technology	1	165
+166	New Atlantis	title	1	166
+167	Nimbleness	experience	1	167
+168	Odyssey	title	1	168
+169	Oedipus	title	2	169
+170	Oedipus Tyrannus	title	2	170
+171	On the Origin of Species	title	1	171
+172	One Flew over the Cuckoo's Nest	title	1	172
+173	One Hundred Years of Solitude	title	2	173
+174	Opportunity to Observe	technology	1	174
+175	Opportunity to Observe + Pivot into Positive Emotion	technology	2	175
+176	Optimism	experience	4	176
+177	Oresteia	title	1	177
+178	Orlando Furioso	title	1	178
+179	Our Sister Killjoy	title	1	179
+180	Pamela	title	1	180
+181	Pan's Labyrinth	title	1	181
+182	Paranoia	experience	11	182
+183	Parody	technology	2	183
+184	Partial Dopamine	technology	3	184
+185	Partial Dopamine + Perspective of a Child	technology	1	185
+186	Passing	title	1	186
+187	Persepolis 2: The Story of a Return	title	1	187
+188	Peyton Place	title	1	188
+189	Pilgrimage	title	1	189
+190	Pippi Longstocking	title	1	190
+191	Pivot into Positive Emotion	technology	1	191
+192	Plot Twist	technology	1	192
+193	Poetic History	technology	7	193
+194	Poetic Justice	technology	3	194
+195	Poetic Language	technology	1	195
+196	Poetic Narrative	technology	1	196
+197	Portnoy's Complaint	title	1	197
+198	Promising Young Woman	title	1	198
+199	Pyramid Texts	title	1	199
+200	Père Goriot	title	1	200
+201	Rashomon	title	1	201
+202	Rashōmon	title	1	202
+203	Reader, suppose you were an idiot...	title	1	203
+204	Ready to Grow	experience	3	204
+205	Reality Shifter	technology	6	205
+206	Red Herring	technology	6	206
+207	Relearning	experience	9	207
+208	Released Emotion Brake	experience	2	208
+209	Resilience	experience	2	209
+210	Revenge Plot	technology	4	210
+211	Richard III	title	1	211
+212	Righteousness	experience	5	212
+213	Rigoletto	title	1	213
+214	Robinson Crusoe	title	1	214
+215	Roma	title	1	215
+216	Sanskrit Rigveda	title	1	216
+217	Sappho's Lyrics	title	2	217
+218	Saturday	title	1	218
+219	Second Look	technology	13	219
+220	Second Method	technology	4	220
+221	Secret Discloser	technology	3	221
+222	Self-Acceptance	experience	10	222
+223	Self-Affirmation	technology	1	223
+224	Self-Efficacy	experience	1	224
+225	Self-Irony	experience	11	225
+226	Self-Love	experience	2	226
+227	Self-Self-Affirmation	technology	1	227
+228	Self-Trust	experience	2	228
+229	Sense and Sensibility	title	1	229
+230	Shame Reducer	technology	1	230
+231	Sir Gawain and the Green Knight	title	1	231
+232	Sister Carrie	title	1	232
+233	Skepticism	experience	1	233
+234	Slaughterhouse Five	title	1	234
+235	So Long a Letter	title	1	235
+236	Sober Uplift	experience	1	236
+237	Soliloquy	technology	5	237
+238	Soliloquy in a Soliloquy	technology	5	238
+239	Sorrow Resolver	technology	5	239
+240	Story in the Story	technology	3	240
+241	Stream of Consciousness	technology	9	241
+242	Stretch	technology	1	242
+243	Superiority	experience	4	243
+244	Superman	title	1	244
+245	Suspended Judgment	experience	6	245
+246	Suspense	technology	12	246
+247	Test	title	1	247
+248	The Adventures of Huckleberry Finn	title	1	248
+249	The Age of Innocence	title	1	249
+250	The Autobiography of Malcolm X	title	1	250
+251	The Black Cat	title	1	251
+252	The Blacks: A Clown Show	title	1	252
+253	The Blue Fairy Book	title	1	253
+254	The Book of Job	title	1	254
+255	The Book of Nonsense	title	1	255
+256	The Bridges of Madison County	title	1	256
+257	The Calcutta Chromosome	title	1	257
+258	The Canterbury Tales	title	1	258
+259	The Castle of Otranto	title	1	259
+260	The Children Act	title	1	260
+261	The Cocktail Party	title	1	261
+262	The Columbian Orator	title	1	262
+263	The Crying of Lot 49	title	1	263
+264	The Divine Comedy	title	1	264
+265	The Early Diary (1768-1778)	title	1	265
+266	The Epic of Sundiata	title	1	266
+267	The Essence of Christianity	title	1	267
+268	The Facetious Nights of Straparola (Adamantina and the Doll)	title	1	268
+269	The Frogs	title	1	269
+270	The Godfather	title	1	270
+271	The Gold Rush	title	1	271
+272	The Great Railway Bazaar: By Train Through Asia	title	1	272
+273	The History of Love	title	1	273
+274	The Hitchhiker's Guide to the Galaxy	title	1	274
+275	The Iliad	title	2	275
+276	The Intuitionist	title	1	276
+277	The Kesh Temple Hymn	title	1	277
+278	The Left Hand of Darkness	title	1	278
+279	The Life of Jesus	title	1	279
+280	The Marriage Plot	title	1	280
+281	The Meditations of Marcus Aurelius	title	1	281
+282	The Metamorphosis	title	1	282
+283	The Mill on the Floss	title	1	283
+284	The Murders in the Rue Morgue	title	1	284
+285	The Redundancy of Courage	title	1	285
+286	The Right Stuff	title	1	286
+287	The Sandman	title	1	287
+288	The Scarlet Letter	title	1	288
+289	The Secret Diary of Adrian Mole, Aged 13 3/4	title	1	289
+290	The Sorrows of Young Werther	title	2	290
+291	The Sound and the Fury	title	1	291
+292	The Story of Job (Ludlul bēl nēmeqi)	title	1	292
+293	The String of Pearls	title	1	293
+294	The Sun Also Rises	title	1	294
+295	The Terror	title	1	295
+296	The Thirty-Nine Steps	title	1	296
+297	The Time Traveler's Wife	title	1	297
+298	The Tragedy of Julius Caesar	title	1	298
+299	The Trial	title	1	299
+300	The Unbearable Lightness of Being	title	1	300
+301	The Westcar Papyrus	title	1	301
+302	The Wisdom of Ptahhotep	title	1	302
+303	The Women's Room	title	1	303
+304	The Year of Magical Thinking	title	1	304
+305	The Yellow Wallpaper	title	1	305
+306	Things Fall Apart	title	1	306
+307	"Thinking ""What If?"""	experience	16	307
+308	Thyestes	title	1	308
+309	To Kill a Mockingbird	title	1	309
+310	Togetherness	experience	1	310
+311	Tom Jones	title	1	311
+312	Total Recall	title	1	312
+313	Toy Story	title	1	313
+314	Tranquility	experience	7	314
+315	Tristan und Isolde	title	1	315
+316	Turn of the Screw	title	1	316
+317	Twilight	title	1	317
+318	Ubik	title	1	318
+319	Ulysses	title	1	319
+320	Untrustworthy Narrator	technology	1	320
+321	Utopia	title	1	321
+322	Varied Catalogue of Rhetorical Models	technology	1	322
+323	Varney the Vampire	title	2	323
+324	Veronica Mars	title	1	324
+325	Vigilance Trigger	technology	12	325
+326	"Voice of ""You and Me"""	technology	1	326
+327	Waiting for Godot	title	1	327
+328	We	title	1	328
+329	Willehalm	title	1	329
+330	Winnie the Pooh	title	1	330
+331	Wish Fulfillment	technology	1	331
+332	Wonder	experience	3	332
+333	Zhuangzi	title	1	333
+334	here is the deepest secret nobody knows/ I carry your heart (I carry it in my heart)	title	1	334
+335	testing	title	1	335
+336	xxx-I need to enter something new	experience	1	336
+337	xxx-I need to enter something new	technology	1	337

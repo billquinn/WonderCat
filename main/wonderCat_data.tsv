@@ -1,0 +1,973 @@
+	QID	pubDate	countryOriginLabel	genreLabel	id	author	date	benefit	experience	technology	title
+0	Q184222	1915	Austria-Hungary	epic literature	291	5	2025-01-09T18:52:29	Creative Breakthrough	Relearning	Poetic Narrative	The Metamorphosis
+1	Q174361		Ancient Egypt		102	5	2024-11-15T14:33:55	Obedience	Awe	God Voice	Book of the Dead
+2	Q191663	1387	England	English literature	208	5	2025-01-09T02:24:14	Realistic Appreciation of Love	Generous Love	Free Indirect Discourse	The Canterbury Tales
+3	Q183513		United States	LGBT-related television series	351	5	2025-01-09T20:39:58	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Buffy the Vampire Slayer
+4	Q214723	1925	United States	silent film	268	5	2025-01-09T18:20:02	Resilience	Optimism	Lucky Twist	The Gold Rush
+5	Q215410	1884	United States	adventure fiction	228	5	2025-01-09T17:06:44	Connection	Identification	Soliloquy	The Adventures of Huckleberry Finn
+6	Q214723	1925	United States	silent film	268	5	2025-01-09T18:20:02	Resilience	Optimism	Lucky Twist	The Gold Rush
+7	Q184222	1915	Austria	absurdist literature	291	5	2025-01-09T18:52:29	Creative Breakthrough	Relearning	Poetic Narrative	The Metamorphosis
+8	Q214723	1925	United States	social comedy film	268	5	2025-01-09T18:20:02	Resilience	Optimism	Lucky Twist	The Gold Rush
+9	Q172230		United Kingdom	LGBT-related television series	181	1	2025-01-09T01:09:46	Tend and Befriend	Courage	Human God Voice	Call the Midwife
+10	Q214723	1925	United States	romantic comedy	268	5	2025-01-09T18:20:02	Resilience	Optimism	Lucky Twist	The Gold Rush
+11	Q184222	1915	Austria-Hungary	absurdist literature	291	5	2025-01-09T18:52:29	Creative Breakthrough	Relearning	Poetic Narrative	The Metamorphosis
+12	Q214723	1925	United States	social comedy film	268	5	2025-01-09T18:20:02	Resilience	Optimism	Lucky Twist	The Gold Rush
+13	Q214723	1925	United States	romantic comedy	268	5	2025-01-09T18:20:02	Resilience	Optimism	Lucky Twist	The Gold Rush
+14	Q214132	1939	England	crime fiction	188	5	2025-01-09T01:50:07	Purpose	Curiosity	Suspense	And Then There Were None
+15	Q171048	1995	United States	buddy film	234	5	2025-01-09T17:16:51	Connection	Identification	Soliloquy in a Soliloquy	Toy Story
+16	Q209170	1964	United States	live-action animated film	350	5	2025-01-09T20:39:09	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Mary Poppins
+17	Q215410	1884	United States	picaresque novel	228	5	2025-01-09T17:06:44	Connection	Identification	Soliloquy	The Adventures of Huckleberry Finn
+18	Q214723	1925	United States	comedy film	268	5	2025-01-09T18:20:02	Resilience	Optimism	Lucky Twist	The Gold Rush
+19	Q184222	1915	Austria-Hungary	body horror literature	291	5	2025-01-09T18:52:29	Creative Breakthrough	Relearning	Poetic Narrative	The Metamorphosis
+20	Q214723	1925	United States	comedy film	268	5	2025-01-09T18:20:02	Resilience	Optimism	Lucky Twist	The Gold Rush
+21	Q214723	1925	United States	silent film	268	5	2025-01-09T18:20:02	Resilience	Optimism	Lucky Twist	The Gold Rush
+22	Q209170	1964	United States	family film	350	5	2025-01-09T20:39:09	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Mary Poppins
+23	Q181943		United States	American television sitcom	340	5	2025-01-09T20:24:51	Innovative Thinking	"Thinking ""What If?"""	Comic Wink	I Love Lucy
+24	Q183513		United States	drama television series	351	5	2025-01-09T20:39:58	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Buffy the Vampire Slayer
+25	Q181943		United States	sitcom	340	5	2025-01-09T20:24:51	Innovative Thinking	"Thinking ""What If?"""	Comic Wink	I Love Lucy
+26	Q189350		United States	sitcom	344	5	2025-01-09T20:31:49	Innovative Thinking	"Thinking ""What If?"""	Comic Wink + Reality Shifter	30 Rock
+27	Q189350		United States	sitcom	320	5	2025-01-09T19:30:07	Peace of Mind	Self-Irony	Irony	30 Rock
+28	Q182961	1847	United Kingdom of Great Britain and Ireland	autobiographical novel	250	1	2025-01-09T17:51:45	Intimacy	Love	Secret Discloser	Jane Eyre
+29	Q182961	1847	United Kingdom of Great Britain and Ireland	autobiographical novel	245	5	2025-01-09T17:42:16	Intimacy	Love	I Voice	Jane Eyre
+30	Q181943		United States	comedy television series	340	5	2025-01-09T20:24:51	Innovative Thinking	"Thinking ""What If?"""	Comic Wink	I Love Lucy
+31	Q214723	1925	United States	social comedy film	268	5	2025-01-09T18:20:02	Resilience	Optimism	Lucky Twist	The Gold Rush
+32	Q183513		United States	werewolf television program	351	5	2025-01-09T20:39:58	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Buffy the Vampire Slayer
+33	Q182961	1847	United Kingdom of Great Britain and Ireland	romance novel	250	1	2025-01-09T17:51:45	Intimacy	Love	Secret Discloser	Jane Eyre
+34	Q182961	1847	United Kingdom of Great Britain and Ireland	romance novel	245	5	2025-01-09T17:42:16	Intimacy	Love	I Voice	Jane Eyre
+35	Q214723	1925	United States	romantic comedy	268	5	2025-01-09T18:20:02	Resilience	Optimism	Lucky Twist	The Gold Rush
+36	Q212340	1960	United States	bildungsroman	196	5	2025-01-09T02:02:47	Connection	Double Identification	Soliloquy in a Soliloquy	To Kill a Mockingbird
+37	Q172230		United Kingdom	drama television series	181	1	2025-01-09T01:09:46	Tend and Befriend	Courage	Human God Voice	Call the Midwife
+38	Q172230		United Kingdom	medical drama	181	1	2025-01-09T01:09:46	Tend and Befriend	Courage	Human God Voice	Call the Midwife
+39	Q209170	1965	United States	musical film	350	5	2025-01-09T20:39:09	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Mary Poppins
+40	Q209170	1965	United States	fantasy film	350	5	2025-01-09T20:39:09	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Mary Poppins
+41	Q184222	1915	Austria	epic literature	291	5	2025-01-09T18:52:29	Creative Breakthrough	Relearning	Poetic Narrative	The Metamorphosis
+42	Q214723	1925	United States	silent film	268	5	2025-01-09T18:20:02	Resilience	Optimism	Lucky Twist	The Gold Rush
+43	Q214723	1925	United States	comedy film	268	5	2025-01-09T18:20:02	Resilience	Optimism	Lucky Twist	The Gold Rush
+44	Q183513		United States	vampire television program	351	5	2025-01-09T20:39:58	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Buffy the Vampire Slayer
+45	Q184222	1915	Austria-Hungary	absurdist literature	291	5	2025-01-09T18:52:29	Creative Breakthrough	Relearning	Poetic Narrative	The Metamorphosis
+46	Q182961	1847	United Kingdom of Great Britain and Ireland	Gothic fiction	250	1	2025-01-09T17:51:45	Intimacy	Love	Secret Discloser	Jane Eyre
+47	Q182961	1847	United Kingdom of Great Britain and Ireland	Gothic fiction	245	5	2025-01-09T17:42:16	Intimacy	Love	I Voice	Jane Eyre
+48	Q209170	1965	United States	comedy film	350	5	2025-01-09T20:39:09	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Mary Poppins
+49	Q171048	1995	United States	buddy film	234	5	2025-01-09T17:16:51	Connection	Identification	Soliloquy in a Soliloquy	Toy Story
+50	Q214723	1925	United States	social comedy film	268	5	2025-01-09T18:20:02	Resilience	Optimism	Lucky Twist	The Gold Rush
+51	Q214723	1925	United States	romantic comedy	268	5	2025-01-09T18:20:02	Resilience	Optimism	Lucky Twist	The Gold Rush
+52	Q178869	1967	Argentina	magic realism	290	5	2025-01-09T18:50:56	Creative Breakthrough	Relearning	Poetic Language	One Hundred Years of Solitude
+53	Q178869	1967	Argentina	magic realism	283	5	2025-01-09T18:41:31	Creative Breakthrough	Relearning	Poetic History	One Hundred Years of Solitude
+54	Q209170	1965	United States	film based on a novel	350	5	2025-01-09T20:39:09	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Mary Poppins
+55	Q183513		United States	paranormal television program	351	5	2025-01-09T20:39:58	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Buffy the Vampire Slayer
+56	Q209170	1964	United States	musical film	350	5	2025-01-09T20:39:09	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Mary Poppins
+57	Q209170	1964	United States	fantasy film	350	5	2025-01-09T20:39:09	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Mary Poppins
+58	Q183513		United States	youth series	351	5	2025-01-09T20:39:58	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Buffy the Vampire Slayer
+59	Q209170	1965	United States	musical film	350	5	2025-01-09T20:39:09	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Mary Poppins
+60	Q209170	1965	United States	fantasy film	350	5	2025-01-09T20:39:09	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Mary Poppins
+61	Q171048	1996	United States	buddy film	234	5	2025-01-09T17:16:51	Connection	Identification	Soliloquy in a Soliloquy	Toy Story
+62	Q172230		United Kingdom	historical drama	181	1	2025-01-09T01:09:46	Tend and Befriend	Courage	Human God Voice	Call the Midwife
+63	Q214723	1925	United States	comedy film	268	5	2025-01-09T18:20:02	Resilience	Optimism	Lucky Twist	The Gold Rush
+64	Q209170	1964	United States	comedy film	350	5	2025-01-09T20:39:09	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Mary Poppins
+65	Q183513		United States	horror television series	351	5	2025-01-09T20:39:58	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Buffy the Vampire Slayer
+66	Q209170	1965	United States	comedy film	350	5	2025-01-09T20:39:09	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Mary Poppins
+67	Q212340	1960	United States	Southern Gothic	196	5	2025-01-09T02:02:47	Connection	Double Identification	Soliloquy in a Soliloquy	To Kill a Mockingbird
+68	Q181488	1726	United Kingdom	satire	337	5	2025-01-09T20:21:23	Peace of Mind	Suspended Judgment	Untrustworthy Narrator	Gulliver's Travels
+69	Q181488	1726	United Kingdom	satire	313	5	2025-01-09T19:22:10	Peace of Mind	Self-Irony	Irony	Gulliver's Travels
+70	Q184222	1915	Austria	body horror literature	291	5	2025-01-09T18:52:29	Creative Breakthrough	Relearning	Poetic Narrative	The Metamorphosis
+71	Q209170	1964	United States	film based on a novel	350	5	2025-01-09T20:39:09	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Mary Poppins
+72	Q209170	1965	United States	film based on a novel	350	5	2025-01-09T20:39:09	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Mary Poppins
+73	Q183513		United States	fantasy television series	351	5	2025-01-09T20:39:58	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Buffy the Vampire Slayer
+74	Q184222	1915	Austria	epic literature	291	5	2025-01-09T18:52:29	Creative Breakthrough	Relearning	Poetic Narrative	The Metamorphosis
+75	Q182961	1847	United Kingdom of Great Britain and Ireland	education novel	250	1	2025-01-09T17:51:45	Intimacy	Love	Secret Discloser	Jane Eyre
+76	Q182961	1847	United Kingdom of Great Britain and Ireland	education novel	245	5	2025-01-09T17:42:16	Intimacy	Love	I Voice	Jane Eyre
+77	Q172230		United Kingdom	film based on book	181	1	2025-01-09T01:09:46	Tend and Befriend	Courage	Human God Voice	Call the Midwife
+78	Q189811	1850	United Kingdom	bildungsroman	197	5	2025-01-09T02:04:13	Forgiveness	Empathy	Empathy Generator	David Copperfield
+79	Q189234	1850	Italy	opera	178	5	2025-01-09T00:56:47	Connection	Connection	Second Method	Rigoletto
+80	Q181488	1726	United Kingdom	fantasy	337	5	2025-01-09T20:21:23	Peace of Mind	Suspended Judgment	Untrustworthy Narrator	Gulliver's Travels
+81	Q181488	1726	United Kingdom	fantasy	313	5	2025-01-09T19:22:10	Peace of Mind	Self-Irony	Irony	Gulliver's Travels
+82	Q209170	1965	United States	live-action animated film	350	5	2025-01-09T20:39:09	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Mary Poppins
+83	Q184222	1915	Austria-Hungary	epic literature	291	5	2025-01-09T18:52:29	Creative Breakthrough	Relearning	Poetic Narrative	The Metamorphosis
+84	Q171048	1996	United States	buddy film	234	5	2025-01-09T17:16:51	Connection	Identification	Soliloquy in a Soliloquy	Toy Story
+85	Q209170	1965	United States	family film	350	5	2025-01-09T20:39:09	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Mary Poppins
+86	Q184222	1915	Austria	absurdist literature	291	5	2025-01-09T18:52:29	Creative Breakthrough	Relearning	Poetic Narrative	The Metamorphosis
+87	Q209170	1964	United States	musical film	350	5	2025-01-09T20:39:09	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Mary Poppins
+88	Q209170	1964	United States	fantasy film	350	5	2025-01-09T20:39:09	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Mary Poppins
+89	Q212340	1960	United States	social problem fiction	196	5	2025-01-09T02:02:47	Connection	Double Identification	Soliloquy in a Soliloquy	To Kill a Mockingbird
+90	Q209170	1964	United States	live-action animated film	350	5	2025-01-09T20:39:09	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Mary Poppins
+91	Q209170	1965	United States	live-action animated film	350	5	2025-01-09T20:39:09	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Mary Poppins
+92	Q181488	1726	United Kingdom	dystopian fiction	337	5	2025-01-09T20:21:23	Peace of Mind	Suspended Judgment	Untrustworthy Narrator	Gulliver's Travels
+93	Q181488	1726	United Kingdom	dystopian fiction	313	5	2025-01-09T19:22:10	Peace of Mind	Self-Irony	Irony	Gulliver's Travels
+94	Q184222	1915	Austria	body horror literature	291	5	2025-01-09T18:52:29	Creative Breakthrough	Relearning	Poetic Narrative	The Metamorphosis
+95	Q209170	1964	United States	comedy film	350	5	2025-01-09T20:39:09	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Mary Poppins
+96	Q209170	1964	United States	family film	350	5	2025-01-09T20:39:09	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Mary Poppins
+97	Q212340	1960	United States	legal fiction	196	5	2025-01-09T02:02:47	Connection	Double Identification	Soliloquy in a Soliloquy	To Kill a Mockingbird
+98	Q189350		United States	satirical film or television program	344	5	2025-01-09T20:31:49	Innovative Thinking	"Thinking ""What If?"""	Comic Wink + Reality Shifter	30 Rock
+99	Q189350		United States	satirical film or television program	320	5	2025-01-09T19:30:07	Peace of Mind	Self-Irony	Irony	30 Rock
+100	Q215410	1884	United States	humor	228	5	2025-01-09T17:06:44	Connection	Identification	Soliloquy	The Adventures of Huckleberry Finn
+101	Q215410	1884	United States	satire	228	5	2025-01-09T17:06:44	Connection	Identification	Soliloquy	The Adventures of Huckleberry Finn
+102	Q209170	1965	United States	family film	350	5	2025-01-09T20:39:09	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Mary Poppins
+103	Q209170	1964	United States	film based on a novel	350	5	2025-01-09T20:39:09	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Mary Poppins
+104	Q189811	1850	United Kingdom	autobiographical novel	197	5	2025-01-09T02:04:13	Forgiveness	Empathy	Empathy Generator	David Copperfield
+105	Q184222	1915	Austria-Hungary	body horror literature	291	5	2025-01-09T18:52:29	Creative Breakthrough	Relearning	Poetic Narrative	The Metamorphosis
+106	Q128518	2000	United States	historical film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+107	Q128518	2023	United States	melodrama	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+108	Q171048	1995	United States	fantasy film	234	5	2025-01-09T17:16:51	Connection	Identification	Soliloquy in a Soliloquy	Toy Story
+109	Q132689	1942	United States	romance film	308	5	2025-01-09T19:13:45	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Casablanca
+110	Q132689	1942	United States	war film	308	5	2025-01-09T19:13:45	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Casablanca
+111	Q128518	2000	United States	adventure film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+112	Q135465	1952	Japan	crime film	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+113	Q131115			epistle	295	5	2025-01-09T18:57:28	Gratitude	Resilience	Gratitude Booster	1 Thessalonians
+114	Q128518	2023	United States	drama film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+115	Q171048	1995	United States	comedy film	234	5	2025-01-09T17:16:51	Connection	Identification	Soliloquy in a Soliloquy	Toy Story
+116	Q128518	2000	United Kingdom	historical film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+117	Q128518	2023	United Kingdom	melodrama	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+118	Q135465	1951	Japan	samurai cinema	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+119	Q135465	1950	Japan	samurai cinema	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+120	Q128518	2000	United States	epic film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+121	Q135465	1952	Japan	drama film	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+122	Q135465	1952	Japan	crime film	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+123	Q148643			Greek tragedy	364	5	2025-01-09T20:56:26	Generosity	Wonder	Stretch	Oedipus
+124	Q148643			Greek tragedy	363	5	2025-01-09T20:55:14	Faith	Wonder	Plot Twist	Oedipus
+125	Q148643			Greek tragedy	311	5	2025-01-09T19:19:44	Healing	Self-Efficacy	Hurt Delay	Oedipus Tyrannus
+126	Q148643			Greek tragedy	116	5	2024-11-15T16:23:10	Forgiveness	Empathy	Empathy Generator	Oedipus Tyrannus
+127	Q128518	2000	United Kingdom	adventure film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+128	Q135465	1952	Japan	flashback film	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+129	Q128518	2023	United Kingdom	drama film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+130	Q128518	2000	United States	action film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+131	Q135465	1951	Japan	film based on literature	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+132	Q135465	1952	Japan	drama film	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+133	Q128518	2000	United Kingdom	epic film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+134	Q135465	1950	Japan	film based on literature	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+135	Q171048	1995	United States	adventure film	234	5	2025-01-09T17:16:51	Connection	Identification	Soliloquy in a Soliloquy	Toy Story
+136	Q135465	1952	Japan	flashback film	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+137	Q132689	1942	United States	film noir	308	5	2025-01-09T19:13:45	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Casablanca
+138	Q128518	2023	United States	historical film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+139	Q171048	1995	United States	fantasy film	234	5	2025-01-09T17:16:51	Connection	Identification	Soliloquy in a Soliloquy	Toy Story
+140	Q151883	1774	Germany	sentimental novel	227	5	2025-01-09T17:05:07	Connection	Identification	Soliloquy	The Sorrows of Young Werther
+141	Q151883	1774	Germany	sentimental novel	146	5	2025-01-08T23:50:19	Healthy Grief	Acceptance of Loss	Sorrow Resolver	The Sorrows of Young Werther
+142	Q128518	2000	United Kingdom	action film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+143	Q128518	2023	United States	adventure film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+144	Q135465	1950	Japan	crime film	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+145	Q135465	1951	Japan	crime film	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+146	Q135465	1951	Japan	medieval film	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+147	Q128518	2023	United Kingdom	historical film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+148	Q135465	1950	Japan	medieval film	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+149	Q132689	1943	United States	drama film	308	5	2025-01-09T19:13:45	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Casablanca
+150	Q128518	2000	United States	sword-and-sandal film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+151	Q151883	1774	Germany	diary literature	227	5	2025-01-09T17:05:07	Connection	Identification	Soliloquy	The Sorrows of Young Werther
+152	Q151883	1774	Germany	diary literature	146	5	2025-01-08T23:50:19	Healthy Grief	Acceptance of Loss	Sorrow Resolver	The Sorrows of Young Werther
+153	Q135465	1952	Japan	samurai cinema	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+154	Q132689	1943	United States	flashback film	308	5	2025-01-09T19:13:45	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Casablanca
+155	Q128518	2023	United States	epic film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+156	Q132689	1942	United States	war film	308	5	2025-01-09T19:13:45	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Casablanca
+157	Q135465	1950	Japan	drama film	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+158	Q135465	1951	Japan	drama film	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+159	Q128518	2023	United Kingdom	adventure film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+160	Q132689	1943	United States	drama film	308	5	2025-01-09T19:13:45	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Casablanca
+161	Q135465	1950	Japan	flashback film	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+162	Q135465	1951	Japan	flashback film	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+163	Q132689	1943	United States	flashback film	308	5	2025-01-09T19:13:45	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Casablanca
+164	Q151883	1774	Germany	epistolary novel	227	5	2025-01-09T17:05:07	Connection	Identification	Soliloquy	The Sorrows of Young Werther
+165	Q151883	1774	Germany	epistolary novel	146	5	2025-01-08T23:50:19	Healthy Grief	Acceptance of Loss	Sorrow Resolver	The Sorrows of Young Werther
+166	Q132689	1943	United States	romance film	308	5	2025-01-09T19:13:45	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Casablanca
+167	Q135465	1952	Japan	samurai cinema	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+168	Q128518	2023	United States	action film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+169	Q128518	2000	United Kingdom	sword-and-sandal film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+170	Q128518	2023	United Kingdom	epic film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+171	Q135465	1952	Japan	film based on literature	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+172	Q132689	1943	United States	romance film	308	5	2025-01-09T19:13:45	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Casablanca
+173	Q132689	1942	United States	drama film	308	5	2025-01-09T19:13:45	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Casablanca
+174	Q132689	1942	United States	flashback film	308	5	2025-01-09T19:13:45	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Casablanca
+175	Q128518	2023	United Kingdom	action film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+176	Q135465	1952	Japan	film based on literature	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+177	Q132689	1942	United States	romance film	308	5	2025-01-09T19:13:45	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Casablanca
+178	Q135465	1952	Japan	medieval film	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+179	Q135515	1929	United States	Southern Gothic	170	1	2025-01-09T00:35:41	Resilience	Confusion	Stream of Consciousness	The Sound and the Fury
+180	Q128518	2023	United States	sword-and-sandal film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+181	Q135465	1950	Japan	samurai cinema	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+182	Q135465	1951	Japan	samurai cinema	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+183	Q128518	2000	United States	melodrama	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+184	Q132689	1943	United States	film noir	308	5	2025-01-09T19:13:45	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Casablanca
+185	Q135465	1952	Japan	medieval film	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+186	Q128518	2023	United Kingdom	sword-and-sandal film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+187	Q135465	1951	Japan	crime film	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+188	Q132689	1943	United States	film noir	308	5	2025-01-09T19:13:45	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Casablanca
+189	Q135465	1950	Japan	crime film	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+190	Q135465	1950	Japan	film based on literature	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+191	Q135465	1951	Japan	film based on literature	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+192	Q128518	2000	United Kingdom	melodrama	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+193	Q135465	1951	Japan	drama film	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+194	Q135465	1950	Japan	drama film	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+195	Q135465	1951	Japan	flashback film	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+196	Q135465	1950	Japan	flashback film	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+197	Q132689	1943	United States	war film	308	5	2025-01-09T19:13:45	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Casablanca
+198	Q132689	1942	United States	film noir	308	5	2025-01-09T19:13:45	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Casablanca
+199	Q132689	1942	United States	drama film	308	5	2025-01-09T19:13:45	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Casablanca
+200	Q132689	1943	United States	war film	308	5	2025-01-09T19:13:45	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Casablanca
+201	Q135465	1950	Japan	medieval film	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+202	Q132689	1942	United States	flashback film	308	5	2025-01-09T19:13:45	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Casablanca
+203	Q135465	1951	Japan	medieval film	153	5	2025-01-09T00:04:02	Self-Scrutiny	Alienation	Second Look	Rashomon
+204	Q4577			wisdom literature	114	5	2024-11-15T16:19:53	Forgiveness	Empathy	Apology	The Book of Job
+205	Q6511	1922	United States	modernist literature	171	5	2025-01-09T00:38:28		Confusion	Stream of Consciousness	Ulysses
+206	Q6511	1922	French Third Republic	experimental literature	171	5	2025-01-09T00:38:28		Confusion	Stream of Consciousness	Ulysses
+207	Q480	1615	Spain	adventure fiction	343	5	2025-01-09T20:30:00	Innovative Thinking	"Thinking ""What If?"""	Comic Wink + Reality Shifter	Don Quixote
+208	Q480	1615	Spain	adventure fiction	321	5	2025-01-09T19:31:36	Peace of Mind	Self-Irony	Irony	Don Quixote
+209	Q62407	1949	Germany	drama fiction	156	5	2025-01-09T00:08:28	Self-Scrutiny	Alienation	Second Look	Mother Courage and Her Children
+210	Q4529			neo-noir	168	5	2025-01-09T00:31:59	Humility about One's Ideas	Being Wrong	Red Herring	Veronica Mars
+211	Q8265	1792	Qing dynasty	zhanghui novel	306	5	2025-01-09T19:11:36	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Dream of the Red Chamber
+212	Q8265	1792	Qing dynasty	zhanghui novel	301	5	2025-01-09T19:05:55	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Dream of the Red Chamber
+213	Q480	1615	Spain	parody	343	5	2025-01-09T20:30:00	Innovative Thinking	"Thinking ""What If?"""	Comic Wink + Reality Shifter	Don Quixote
+214	Q480	1615	Spain	parody	321	5	2025-01-09T19:31:36	Peace of Mind	Self-Irony	Irony	Don Quixote
+215	Q6511	1922	United Kingdom of Great Britain and Ireland	autobiography	171	5	2025-01-09T00:38:28		Confusion	Stream of Consciousness	Ulysses
+216	Q480	1605	Spain	found manuscript	343	5	2025-01-09T20:30:00	Innovative Thinking	"Thinking ""What If?"""	Comic Wink + Reality Shifter	Don Quixote
+217	Q480	1605	Spain	found manuscript	321	5	2025-01-09T19:31:36	Peace of Mind	Self-Irony	Irony	Don Quixote
+218	Q41567	1602	England	tragedy	229	5	2025-01-09T17:07:42	Connection	Identification	Soliloquy	Hamlet
+219	Q41567	1602	England	tragedy	147	5	2025-01-08T23:53:39	Healthy Grief	Acceptance of Loss	Sorrow Resolver	Hamlet
+220	Q41567	1602	England	tragedy	145	5	2025-01-08T23:48:11	Healthy Grief	Acceptance of Loss	Guilt Lifter	Hamlet
+221	Q41567	1602	England	tragedy	144	5	2025-01-08T23:43:43	Healthy Grief	Acceptance of Loss	Grief Releaser	Hamlet
+222	Q20124	1859	United Kingdom	treatise	187	5	2025-01-09T01:46:24	Purpose	Curiosity	Suspense	On the Origin of Species
+223	Q40205	2004	United Kingdom	fantasy	305	5	2025-01-09T19:10:30	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Cloud Atlas
+224	Q8275		Ancient Greece	epic poem	107	5	2024-11-15T16:04:10	Tend and Befriend	Courage	Epic Simile	The Iliad
+225	Q8275		Ancient Greece	epic poem	106	5	2024-11-15T14:54:15	Tend and Befriend	Courage	Human God Voice	The Iliad
+226	Q35160		Ancient Greece	epic poem	224	5	2025-01-09T02:47:42	Unrealistic Romantic Expectations	Gratification	Wish Fulfillment	Odyssey
+227	Q6511	1922	United Kingdom of Great Britain and Ireland	serialized fiction	171	5	2025-01-09T00:38:28		Confusion	Stream of Consciousness	Ulysses
+228	Q6511	1922	United Kingdom of Great Britain and Ireland	metafiction	171	5	2025-01-09T00:38:28		Confusion	Stream of Consciousness	Ulysses
+229	Q480	1615	Spain	chivalric romance	343	5	2025-01-09T20:30:00	Innovative Thinking	"Thinking ""What If?"""	Comic Wink + Reality Shifter	Don Quixote
+230	Q480	1615	Spain	chivalric romance	321	5	2025-01-09T19:31:36	Peace of Mind	Self-Irony	Irony	Don Quixote
+231	Q6511	1922	French Third Republic	high literature	171	5	2025-01-09T00:38:28		Confusion	Stream of Consciousness	Ulysses
+232	Q8265	1868	Qing dynasty	family saga	306	5	2025-01-09T19:11:36	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Dream of the Red Chamber
+233	Q8265	1868	Qing dynasty	family saga	301	5	2025-01-09T19:05:55	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Dream of the Red Chamber
+234	Q20124	1859	United Kingdom	scientific literature	187	5	2025-01-09T01:46:24	Purpose	Curiosity	Suspense	On the Origin of Species
+235	Q6511	1922	France	experimental literature	171	5	2025-01-09T00:38:28		Confusion	Stream of Consciousness	Ulysses
+236	Q6511	1922	United Kingdom of Great Britain and Ireland	modernist literature	171	5	2025-01-09T00:38:28		Confusion	Stream of Consciousness	Ulysses
+237	Q8265	1868	Qing dynasty	xiaoshuo	306	5	2025-01-09T19:11:36	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Dream of the Red Chamber
+238	Q8265	1868	Qing dynasty	xiaoshuo	301	5	2025-01-09T19:05:55	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Dream of the Red Chamber
+239	Q6511	1922	United States	experimental literature	171	5	2025-01-09T00:38:28		Confusion	Stream of Consciousness	Ulysses
+240	Q40205	2004	United Kingdom	science fiction	305	5	2025-01-09T19:10:30	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Cloud Atlas
+241	Q8265	1800	Qing dynasty	family saga	306	5	2025-01-09T19:11:36	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Dream of the Red Chamber
+242	Q8265	1800	Qing dynasty	family saga	301	5	2025-01-09T19:05:55	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Dream of the Red Chamber
+243	Q44523	2005	United States	vampire fiction	186	5	2025-01-09T01:45:02	Purpose	Curiosity	Suspense	Twilight
+244	Q57270	2007	Australia	science fiction video game	336	5	2025-01-09T20:20:00	Bias Reduction	Suspended Judgment	Double Alien	Bioshock
+245	Q8265	1800	Qing dynasty	xiaoshuo	306	5	2025-01-09T19:11:36	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Dream of the Red Chamber
+246	Q8265	1800	Qing dynasty	xiaoshuo	301	5	2025-01-09T19:05:55	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Dream of the Red Chamber
+247	Q6511	1922	France	high literature	171	5	2025-01-09T00:38:28		Confusion	Stream of Consciousness	Ulysses
+248	Q45875	1996	United States	fantasy	112	5	2024-11-15T16:12:32	Tend and Befriend	Courage	Human God Voice	A Song of Ice and Fire
+249	Q8272			epic poem	58	5	2024-09-20T17:57:05	Obedience	Awe	God Voice	Gilgamesh
+250	Q8276			epic poem	236	5	2025-01-09T17:19:15	Belief	Immersion	Story in the Story	Mahābhārata
+251	Q40185			epic poem	270	5	2025-01-09T18:25:14	Vigilance	Paranoia	Vigilance Trigger	The Divine Comedy
+252	Q9184			religious text	105	5	2024-11-15T14:44:50	Obedience	Awe	God Voice	Genesis
+253	Q4529			drama television series	168	5	2025-01-09T00:31:59	Humility about One's Ideas	Being Wrong	Red Herring	Veronica Mars
+254	Q8265	1868	Qing dynasty	zhanghui novel	306	5	2025-01-09T19:11:36	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Dream of the Red Chamber
+255	Q8265	1868	Qing dynasty	zhanghui novel	301	5	2025-01-09T19:05:55	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Dream of the Red Chamber
+256	Q36097	1925	Germany	dystopian fiction	273	5	2025-01-09T18:27:57	Vigilance	Paranoia	Vigilance Trigger	The Trial
+257	Q44523	2005	United States	young adult fiction	186	5	2025-01-09T01:45:02	Purpose	Curiosity	Suspense	Twilight
+258	Q36097	1925	Austria	dystopian fiction	273	5	2025-01-09T18:27:57	Vigilance	Paranoia	Vigilance Trigger	The Trial
+259	Q6511	1922	United States	high literature	171	5	2025-01-09T00:38:28		Confusion	Stream of Consciousness	Ulysses
+260	Q6511	1922	French Third Republic	autobiography	171	5	2025-01-09T00:38:28		Confusion	Stream of Consciousness	Ulysses
+261	Q480	1615	Spain	found manuscript	343	5	2025-01-09T20:30:00	Innovative Thinking	"Thinking ""What If?"""	Comic Wink + Reality Shifter	Don Quixote
+262	Q480	1615	Spain	found manuscript	321	5	2025-01-09T19:31:36	Peace of Mind	Self-Irony	Irony	Don Quixote
+263	Q57270	2007	Australia	video game with LGBT character	336	5	2025-01-09T20:20:00	Bias Reduction	Suspended Judgment	Double Alien	Bioshock
+264	Q40205	2004	United Kingdom	epistolary novel	305	5	2025-01-09T19:10:30	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Cloud Atlas
+265	Q57270	2007	Australia	first-person shooter	336	5	2025-01-09T20:20:00	Bias Reduction	Suspended Judgment	Double Alien	Bioshock
+266	Q6511	1922	French Third Republic	serialized fiction	171	5	2025-01-09T00:38:28		Confusion	Stream of Consciousness	Ulysses
+267	Q48922	1516	Italy	chivalric romance	218	5	2025-01-09T02:37:52	Unrealistic Romantic Expectations	Gratification	Almighty Heart	Orlando Furioso
+268	Q6511	1922	United Kingdom of Great Britain and Ireland	experimental literature	171	5	2025-01-09T00:38:28		Confusion	Stream of Consciousness	Ulysses
+269	Q6511	1922	French Third Republic	metafiction	171	5	2025-01-09T00:38:28		Confusion	Stream of Consciousness	Ulysses
+270	Q8265	1800	Qing dynasty	zhanghui novel	306	5	2025-01-09T19:11:36	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Dream of the Red Chamber
+271	Q8265	1800	Qing dynasty	zhanghui novel	301	5	2025-01-09T19:05:55	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Dream of the Red Chamber
+272	Q48922	1532	Italy	chivalric romance	218	5	2025-01-09T02:37:52	Unrealistic Romantic Expectations	Gratification	Almighty Heart	Orlando Furioso
+273	Q57270	2007	United States	science fiction video game	336	5	2025-01-09T20:20:00	Bias Reduction	Suspended Judgment	Double Alien	Bioshock
+274	Q19871	1952	France	theatre of the absurd	194	5	2025-01-09T01:59:30	Peace of Mind	Dissociation	Opportunity to Observe	Waiting for Godot
+275	Q480	1605	Spain	adventure fiction	343	5	2025-01-09T20:30:00	Innovative Thinking	"Thinking ""What If?"""	Comic Wink + Reality Shifter	Don Quixote
+276	Q480	1605	Spain	adventure fiction	321	5	2025-01-09T19:31:36	Peace of Mind	Self-Irony	Irony	Don Quixote
+277	Q36097	1925	Germany	absurdist literature	273	5	2025-01-09T18:27:57	Vigilance	Paranoia	Vigilance Trigger	The Trial
+278	Q83799	1924	Russian Socialist Federative Soviet Republic	alternate history	314	5	2025-01-09T19:23:12	Peace of Mind	Self-Irony	Irony	We
+279	Q6511	1922	French Third Republic	modernist literature	171	5	2025-01-09T00:38:28		Confusion	Stream of Consciousness	Ulysses
+280	Q36097	1925	Austria	absurdist literature	273	5	2025-01-09T18:27:57	Vigilance	Paranoia	Vigilance Trigger	The Trial
+281	Q23558		United States	medical drama	164	5	2025-01-09T00:25:30	Humility about One's Ideas	Being Wrong	Red Herring	House
+282	Q480	1605	Spain	parody	343	5	2025-01-09T20:30:00	Innovative Thinking	"Thinking ""What If?"""	Comic Wink + Reality Shifter	Don Quixote
+283	Q480	1605	Spain	parody	321	5	2025-01-09T19:31:36	Peace of Mind	Self-Irony	Irony	Don Quixote
+284	Q4529			youth series	168	5	2025-01-09T00:31:59	Humility about One's Ideas	Being Wrong	Red Herring	Veronica Mars
+285	Q4529			crime television series	168	5	2025-01-09T00:31:59	Humility about One's Ideas	Being Wrong	Red Herring	Veronica Mars
+286	Q57270	2007	United States	video game with LGBT character	336	5	2025-01-09T20:20:00	Bias Reduction	Suspended Judgment	Double Alien	Bioshock
+287	Q6511	1922	France	autobiography	171	5	2025-01-09T00:38:28		Confusion	Stream of Consciousness	Ulysses
+288	Q57270	2007	United States	first-person shooter	336	5	2025-01-09T20:20:00	Bias Reduction	Suspended Judgment	Double Alien	Bioshock
+289	Q45875	1996	United States	high fantasy	112	5	2024-11-15T16:12:32	Tend and Befriend	Courage	Human God Voice	A Song of Ice and Fire
+290	Q83799	1924	Russian Socialist Federative Soviet Republic	philosophical fiction	314	5	2025-01-09T19:23:12	Peace of Mind	Self-Irony	Irony	We
+291	Q40205	2004	United Kingdom	post-apocalyptic fiction	305	5	2025-01-09T19:10:30	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Cloud Atlas
+292	Q6511	1922	United Kingdom of Great Britain and Ireland	high literature	171	5	2025-01-09T00:38:28		Confusion	Stream of Consciousness	Ulysses
+293	Q480	1605	Spain	chivalric romance	343	5	2025-01-09T20:30:00	Innovative Thinking	"Thinking ""What If?"""	Comic Wink + Reality Shifter	Don Quixote
+294	Q480	1605	Spain	chivalric romance	321	5	2025-01-09T19:31:36	Peace of Mind	Self-Irony	Irony	Don Quixote
+295	Q6511	1922	France	serialized fiction	171	5	2025-01-09T00:38:28		Confusion	Stream of Consciousness	Ulysses
+296	Q6511	1922	France	metafiction	171	5	2025-01-09T00:38:28		Confusion	Stream of Consciousness	Ulysses
+297	Q8265	1792	Qing dynasty	family saga	306	5	2025-01-09T19:11:36	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Dream of the Red Chamber
+298	Q8265	1792	Qing dynasty	family saga	301	5	2025-01-09T19:05:55	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Dream of the Red Chamber
+299	Q6511	1922	United States	autobiography	171	5	2025-01-09T00:38:28		Confusion	Stream of Consciousness	Ulysses
+300	Q6511	1922	United States	serialized fiction	171	5	2025-01-09T00:38:28		Confusion	Stream of Consciousness	Ulysses
+301	Q6511	1922	United States	metafiction	171	5	2025-01-09T00:38:28		Confusion	Stream of Consciousness	Ulysses
+302	Q6511	1922	France	modernist literature	171	5	2025-01-09T00:38:28		Confusion	Stream of Consciousness	Ulysses
+303	Q8265	1792	Qing dynasty	xiaoshuo	306	5	2025-01-09T19:11:36	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Dream of the Red Chamber
+304	Q8265	1792	Qing dynasty	xiaoshuo	301	5	2025-01-09T19:05:55	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Dream of the Red Chamber
+305	Q83799	1924	Russian Socialist Federative Soviet Republic	dystopian fiction	314	5	2025-01-09T19:23:12	Peace of Mind	Self-Irony	Irony	We
+306	Q44523	2005	United States	romantic fiction	186	5	2025-01-09T01:45:02	Purpose	Curiosity	Suspense	Twilight
+307	Q83799	1924	Russian Socialist Federative Soviet Republic	science fiction	314	5	2025-01-09T19:23:12	Peace of Mind	Self-Irony	Irony	We
+308	Q62407	1949	Germany	epic theatre	156	5	2025-01-09T00:08:28	Self-Scrutiny	Alienation	Second Look	Mother Courage and Her Children
+309	Q240911				362	5	2025-01-09T21:27:04	Faith	Wonder	Enigma	Mystery Plays
+310	Q222018	1990	Mexico	dystopian film	303	5	2025-01-09T19:08:35	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Total Recall
+311	Q265954	1969	United States	metafiction	158	5	2025-01-09T00:11:15	Self-Scrutiny	Alienation	Second Look	Slaughterhouse Five
+312	Q265954	1969	United States	anti-war fiction	158	5	2025-01-09T00:11:15	Self-Scrutiny	Alienation	Second Look	Slaughterhouse Five
+313	Q222018	1990	Mexico	cyberpunk	303	5	2025-01-09T19:08:35	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Total Recall
+314	Q222018	1990	Mexico	adventure film	303	5	2025-01-09T19:08:35	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Total Recall
+315	Q372941		Roman Empire	autobiography	180	5	2025-01-09T01:07:37	Humility about One's Nature	Self-Irony	Conversion Narrative	Confessions
+316	Q216006	2006	Spain	cinematic fairy tale	288	5	2025-01-09T18:48:25	Creative Breakthrough	Relearning	Poetic History	Pan's Labyrinth
+317	Q248096	1749	England	bildungsroman	327	5	2025-01-09T19:59:45	Realistic Appreciation of Love	Sober Uplift	Almighty Heart + Satiric Narration	Tom Jones
+318	Q265954	1969	United States	satirical fiction	158	5	2025-01-09T00:11:15	Self-Scrutiny	Alienation	Second Look	Slaughterhouse Five
+319	Q222018	1990	United States	speculative fiction film	303	5	2025-01-09T19:08:35	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Total Recall
+320	Q241077			Greek tragedy	115	5	2024-11-15T16:21:05	Forgiveness	Empathy	Apology	Antigone
+321	Q249769			Greek tragedy	300	5	2025-01-09T19:04:46	Community	Righteousness	Revenge Plot	Oresteia
+322	Q216006	2007	Spain	cinematic fairy tale	288	5	2025-01-09T18:48:25	Creative Breakthrough	Relearning	Poetic History	Pan's Labyrinth
+323	Q222018	1990	Mexico	film based on literature	303	5	2025-01-09T19:08:35	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Total Recall
+324	Q308918	1859	United Kingdom	historical fiction	109	5	2024-11-15T16:06:44	Tend and Befriend	Courage	Human God Voice	A Tale of Two Cities
+325	Q265954	1969	United States	black comedy	158	5	2025-01-09T00:11:15	Self-Scrutiny	Alienation	Second Look	Slaughterhouse Five
+326	Q265954	1969	United States	science fiction	158	5	2025-01-09T00:11:15	Self-Scrutiny	Alienation	Second Look	Slaughterhouse Five
+327	Q243556	1969	United States	crime fiction	174	5	2025-01-09T00:50:23	Connection	Connection	Partial Dopamine	The Godfather
+328	Q222018	1990	United States	dystopian film	303	5	2025-01-09T19:08:35	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Total Recall
+329	Q216006	2007	Spain	drama film	288	5	2025-01-09T18:48:25	Creative Breakthrough	Relearning	Poetic History	Pan's Labyrinth
+330	Q216006	2007	Spain	fantasy film	288	5	2025-01-09T18:48:25	Creative Breakthrough	Relearning	Poetic History	Pan's Labyrinth
+331	Q222018	1990	Mexico	action film	303	5	2025-01-09T19:08:35	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Total Recall
+332	Q321423		United States	Q121401577	167	5	2025-01-09T00:30:55	Humility about One's Ideas	Being Wrong	Red Herring	Law and Order
+333	Q265954	1969	United States	time-travel fiction	158	5	2025-01-09T00:11:15	Self-Scrutiny	Alienation	Second Look	Slaughterhouse Five
+334	Q222018	1990	United States	cyberpunk	303	5	2025-01-09T19:08:35	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Total Recall
+335	Q222018	1990	United States	adventure film	303	5	2025-01-09T19:08:35	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Total Recall
+336	Q216006	2006	Spain	fantasy film	288	5	2025-01-09T18:48:25	Creative Breakthrough	Relearning	Poetic History	Pan's Labyrinth
+337	Q216006	2006	Spain	magic realist film	288	5	2025-01-09T18:48:25	Creative Breakthrough	Relearning	Poetic History	Pan's Labyrinth
+338	Q222018	1990	Mexico	science fiction film	303	5	2025-01-09T19:08:35	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Total Recall
+339	Q216006	2007	Spain	magic realist film	288	5	2025-01-09T18:48:25	Creative Breakthrough	Relearning	Poetic History	Pan's Labyrinth
+340	Q222018	1990	United States	film based on literature	303	5	2025-01-09T19:08:35	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Total Recall
+341	Q223880	1815	United Kingdom	romantic fiction	474	4	2025-01-15T19:26:15	Bias Reduction	Alienation	Almighty Heart + Soliloquy	Test
+342	Q223880	1815	United Kingdom	romantic fiction	210	5	2025-01-09T02:27:09	Realistic Appreciation of Love	Generous Love	Free Indirect Discourse	Emma
+343	Q223880	1815	United Kingdom	romantic fiction	118	5	2024-11-15T16:27:33	Forgiveness	Empathy	Empathy Generator	Emma
+344	Q308918	1859	United Kingdom	social problem fiction	109	5	2024-11-15T16:06:44	Tend and Befriend	Courage	Human God Voice	A Tale of Two Cities
+345	Q222018	1990	United States	action film	303	5	2025-01-09T19:08:35	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Total Recall
+346	Q216006	2006	Spain	drama film	288	5	2025-01-09T18:48:25	Creative Breakthrough	Relearning	Poetic History	Pan's Labyrinth
+347	Q216006	2006	Spain	fantasy film	288	5	2025-01-09T18:48:25	Creative Breakthrough	Relearning	Poetic History	Pan's Labyrinth
+348	Q216006	2007	Spain	cinematic fairy tale	288	5	2025-01-09T18:48:25	Creative Breakthrough	Relearning	Poetic History	Pan's Labyrinth
+349	Q284395	1992	United States	romantic fiction	233	5	2025-01-09T17:15:51	Connection	Identification	Soliloquy in a Soliloquy	The Bridges of Madison County
+350	Q265954	1969	United States	war fiction	158	5	2025-01-09T00:11:15	Self-Scrutiny	Alienation	Second Look	Slaughterhouse Five
+351	Q222018	1990	United States	science fiction film	303	5	2025-01-09T19:08:35	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Total Recall
+352	Q216006	2006	Spain	cinematic fairy tale	288	5	2025-01-09T18:48:25	Creative Breakthrough	Relearning	Poetic History	Pan's Labyrinth
+353	Q248096	1749	England	picaresque novel	327	5	2025-01-09T19:59:45	Realistic Appreciation of Love	Sober Uplift	Almighty Heart + Satiric Narration	Tom Jones
+354	Q274744	1811	United Kingdom	bildungsroman	209	5	2025-01-09T02:25:37	Realistic Appreciation of Love	Generous Love	Free Indirect Discourse	Sense and Sensibility
+355	Q379286	1959	France	speculative fiction	275	5	2025-01-09T18:29:30	Vigilance	Paranoia	Vigilance Trigger	Naked Lunch
+356	Q321423		United States	police procedural	167	5	2025-01-09T00:30:55	Humility about One's Ideas	Being Wrong	Red Herring	Law and Order
+357	Q404158		Habsburg Netherlands	literature	332	5	2025-01-09T20:14:57	Bias Reduction	Suspended Judgment	Disagreeing Narrators	Utopia
+358	Q216006	2007	Spain	magic realist film	288	5	2025-01-09T18:48:25	Creative Breakthrough	Relearning	Poetic History	Pan's Labyrinth
+359	Q216006	2006	Spain	cinematic fairy tale	288	5	2025-01-09T18:48:25	Creative Breakthrough	Relearning	Poetic History	Pan's Labyrinth
+360	Q235795	1929	United States	war novel	246	5	2025-01-09T17:43:43	Intimacy	Love	I Voice	A Farewell to Arms
+361	Q313129	1871	United Kingdom of Great Britain and Ireland	realist novel	354	5	2025-01-09T20:42:56	Gratitude	Togetherness	"Voice of ""You and Me"""	Middlemarch
+362	Q320713	http://www.wikidata.org/.well-known/genid/ed1abe5741d1dea15688e1787714e908	Kingdom of Castile	chanson de geste	215	5	2025-01-09T02:34:03	Unrealistic Romantic Expectations	Gratification	Almighty Heart	El Cantar de Mio Cid
+363	Q216006	2006	Spain	magic realist film	288	5	2025-01-09T18:48:25	Creative Breakthrough	Relearning	Poetic History	Pan's Labyrinth
+364	Q216006	2006	Spain	drama film	288	5	2025-01-09T18:48:25	Creative Breakthrough	Relearning	Poetic History	Pan's Labyrinth
+365	Q216006	2006	Spain	fantasy film	288	5	2025-01-09T18:48:25	Creative Breakthrough	Relearning	Poetic History	Pan's Labyrinth
+366	Q240617	1835	France	historical fiction	297	5	2025-01-09T18:59:49	Community	Righteousness	Revenge Plot	Père Goriot
+367	Q216006	2007	Spain	drama film	288	5	2025-01-09T18:48:25	Creative Breakthrough	Relearning	Poetic History	Pan's Labyrinth
+368	Q216006	2007	Spain	fantasy film	288	5	2025-01-09T18:48:25	Creative Breakthrough	Relearning	Poetic History	Pan's Labyrinth
+369	Q274744	1811	United Kingdom	romantic fiction	209	5	2025-01-09T02:25:37	Realistic Appreciation of Love	Generous Love	Free Indirect Discourse	Sense and Sensibility
+370	Q222018	1990	Mexico	speculative fiction film	303	5	2025-01-09T19:08:35	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Total Recall
+371	Q216006	2006	Spain	magic realist film	288	5	2025-01-09T18:48:25	Creative Breakthrough	Relearning	Poetic History	Pan's Labyrinth
+372	Q520306		United States		269	5	2025-01-09T18:21:27	Resilience	Optimism	Lucky Twist	Superman
+373	Q523076	1869	United States	autobiography	202	5	2025-01-09T02:10:49	Forgiveness	Empathy	Hamartia	Anne of Green Gables
+374	Q523076	1869	United States	autobiography	201	5	2025-01-09T02:09:30	Forgiveness	Empathy	Hamartia	Little Women
+375	Q483034	1719	United Kingdom	robinsonade	226	5	2025-01-09T17:03:38	Connection	Identification	Soliloquy	Robinson Crusoe
+376	Q591301		Ancient Egypt		235	5	2025-01-09T17:18:14	Belief	Immersion	Story in the Story	The Westcar Papyrus
+377	Q465360	1918	Ireland	Künstlerroman	154	5	2025-01-09T00:05:41	Self-Scrutiny	Alienation	Second Look	A Portrait of the Artist as a Young Man
+378	Q732022	2010	Canada	arthouse science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+379	Q523076	1869	United States	realist novel	202	5	2025-01-09T02:10:49	Forgiveness	Empathy	Hamartia	Anne of Green Gables
+380	Q523076	1869	United States	realist novel	201	5	2025-01-09T02:09:30	Forgiveness	Empathy	Hamartia	Little Women
+381	Q732022	2010	Canada	drama film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+382	Q732022	2010	Canada	fantasy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+383	Q637787			drama fiction	230	5	2025-01-09T17:10:53	Connection	Identification	Soliloquy	Le Cid
+384	Q617357	1969	United States	futuristic fiction	276	5	2025-01-09T18:30:20	Vigilance	Paranoia	Vigilance Trigger	Ubik
+385	Q625923	1898	United Kingdom	fantasy	353	5	2025-01-09T20:41:47	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Turn of the Screw
+386	Q732022	2010	Canada	science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+387	Q465108		Zhou dynasty	poetry	238	5	2025-01-09T17:26:23	Intimacy	Love	I Voice	Chinese Ode included in the Shijing of the Five Classics
+388	Q645882	1894	Ancient Egypt	incantation	103	5	2024-11-15T14:35:11	Obedience	Awe	God Voice	Pyramid Texts
+389	Q732022	2010	Canada	comedy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+390	Q732022	2010	Canada	romance film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+391	Q637787			tragicomedy	230	5	2025-01-09T17:10:53	Connection	Identification	Soliloquy	Le Cid
+392	Q732022	2009	Canada	science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+393	Q622400	1968	United Kingdom	fiction literature	157	5	2025-01-09T00:09:40	Self-Scrutiny	Alienation	Second Look	Things Fall Apart
+394	Q625923	1898	United Kingdom	Gothic fiction	353	5	2025-01-09T20:41:47	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Turn of the Screw
+395	Q732022	2010	Belgium	drama film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+396	Q732022	2010	Belgium	fantasy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+397	Q465360	1918	Ireland	bildungsroman	154	5	2025-01-09T00:05:41	Self-Scrutiny	Alienation	Second Look	A Portrait of the Artist as a Young Man
+398	Q625923	1898	United Kingdom	horror fiction	353	5	2025-01-09T20:41:47	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Turn of the Screw
+399	Q732022	2010	Belgium	comedy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+400	Q732022	2010	Belgium	science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+401	Q483034	1719	United Kingdom	pirate fiction	226	5	2025-01-09T17:03:38	Connection	Identification	Soliloquy	Robinson Crusoe
+402	Q727413		India	religious text	104	5	2024-11-15T14:43:38	Obedience	Awe	God Voice	Sanskrit Rigveda
+403	Q727413		India	religious literature	104	5	2024-11-15T14:43:38	Obedience	Awe	God Voice	Sanskrit Rigveda
+404	Q465395	1822	New York City	horror fiction	352	5	2025-01-09T20:40:59	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	The Black Cat
+405	Q645882	1894	Ancient Egypt	ancient Egyptian funerary texts	103	5	2024-11-15T14:35:11	Obedience	Awe	God Voice	Pyramid Texts
+406	Q732022	2010	Canada	arthouse science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+407	Q652011			historical play	117	5	2024-11-15T16:24:22	Forgiveness	Empathy	Empathy Generator	Richard III
+408	Q732022	2010	Canada	drama film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+409	Q732022	2010	Canada	fantasy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+410	Q732022	2009	Belgium	arthouse science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+411	Q732022	2009	Belgium	drama film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+412	Q732022	2009	Belgium	fantasy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+413	Q732022	2010	Canada	arthouse science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+414	Q732022	2010	Canada	drama film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+415	Q732022	2010	Canada	fantasy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+416	Q732022	2010	Canada	comedy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+417	Q732022	2010	Canada	romance film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+418	Q514565	1996	United States	comedy film	262	5	2025-01-09T18:04:06	Creativity	Mind Wandering	Anarchy Rhymer	Bottle Rocket
+419	Q465395	1843	New York City	horror fiction	352	5	2025-01-09T20:40:59	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	The Black Cat
+420	Q514565	1996	United States	comedy film	262	5	2025-01-09T18:04:06	Creativity	Mind Wandering	Anarchy Rhymer	Bottle Rocket
+421	Q732022	2009	Belgium	comedy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+422	Q732022	2009	Belgium	romance film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+423	Q625923	1898	United Kingdom	ghost story	353	5	2025-01-09T20:41:47	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Turn of the Screw
+424	Q465360	1918	Ireland	autobiographical novel	154	5	2025-01-09T00:05:41	Self-Scrutiny	Alienation	Second Look	A Portrait of the Artist as a Young Man
+425	Q548576	1765	England	Gothic novel	195	5	2025-01-09T02:01:06	Belief	Distress	Story in the Story	The Castle of Otranto
+426	Q732022	2010	Canada	comedy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+427	Q732022	2010	Canada	romance film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+428	Q732022	2010	Canada	science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+429	Q514565	1996	United States	buddy film	262	5	2025-01-09T18:04:06	Creativity	Mind Wandering	Anarchy Rhymer	Bottle Rocket
+430	Q514565	1996	United States	buddy film	262	5	2025-01-09T18:04:06	Creativity	Mind Wandering	Anarchy Rhymer	Bottle Rocket
+431	Q732022	2010	Canada	arthouse science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+432	Q732022	2010	Canada	drama film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+433	Q548576	1764	England	Gothic novel	195	5	2025-01-09T02:01:06	Belief	Distress	Story in the Story	The Castle of Otranto
+434	Q732022	2010	Canada	fantasy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+435	Q732022	2009	Canada	arthouse science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+436	Q732022	2009	Canada	drama film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+437	Q732022	2009	Canada	fantasy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+438	Q732022	2010	Canada	comedy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+439	Q732022	2010	Canada	romance film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+440	Q732022	2010	Belgium	science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+441	Q523076	1869	United States	bildungsroman	202	5	2025-01-09T02:10:49	Forgiveness	Empathy	Hamartia	Anne of Green Gables
+442	Q523076	1869	United States	bildungsroman	201	5	2025-01-09T02:09:30	Forgiveness	Empathy	Hamartia	Little Women
+443	Q483034	1719	United Kingdom	developmental novel	226	5	2025-01-09T17:03:38	Connection	Identification	Soliloquy	Robinson Crusoe
+444	Q483034	1719	United Kingdom	autobiography	226	5	2025-01-09T17:03:38	Connection	Identification	Soliloquy	Robinson Crusoe
+445	Q732022	2009	Canada	comedy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+446	Q732022	2009	Canada	romance film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+447	Q617357	1969	United States	science fiction	276	5	2025-01-09T18:30:20	Vigilance	Paranoia	Vigilance Trigger	Ubik
+448	Q622400	1958	United Kingdom	fiction literature	157	5	2025-01-09T00:09:40	Self-Scrutiny	Alienation	Second Look	Things Fall Apart
+449	Q732022	2010	Belgium	arthouse science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+450	Q732022	2010	Belgium	drama film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+451	Q732022	2010	Belgium	fantasy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+452	Q514565	1996	United States	heist film	262	5	2025-01-09T18:04:06	Creativity	Mind Wandering	Anarchy Rhymer	Bottle Rocket
+453	Q483034	1719	United Kingdom	adventure fiction	226	5	2025-01-09T17:03:38	Connection	Identification	Soliloquy	Robinson Crusoe
+454	Q514565	1996	United States	heist film	262	5	2025-01-09T18:04:06	Creativity	Mind Wandering	Anarchy Rhymer	Bottle Rocket
+455	Q732022	2010	Belgium	comedy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+456	Q732022	2010	Belgium	romance film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+457	Q724008		Duchy of Mantua	favola in musica	177	5	2025-01-09T00:54:51	Connection	Connection	Second Method	L'Orfeo
+458	Q732022	2010	Canada	science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+459	Q501351	1926	United States		148	5	2025-01-08T23:55:10	Healthy Grief	Acceptance of Loss	Sorrow Resolver	The Sun Also Rises
+460	Q732022	2009	Belgium	science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+461	Q732022	2010	Canada	science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+462	Q523076	1869	United States	family saga	202	5	2025-01-09T02:10:49	Forgiveness	Empathy	Hamartia	Anne of Green Gables
+463	Q523076	1869	United States	family saga	201	5	2025-01-09T02:09:30	Forgiveness	Empathy	Hamartia	Little Women
+464	Q523076	1869	United States	developmental novel	202	5	2025-01-09T02:10:49	Forgiveness	Empathy	Hamartia	Anne of Green Gables
+465	Q523076	1869	United States	developmental novel	201	5	2025-01-09T02:09:30	Forgiveness	Empathy	Hamartia	Little Women
+466	Q862709				341	5	2025-01-09T20:25:55	Innovative Thinking	"Thinking ""What If?"""	Comic Wink	A Funny Thing Happened on the Way to the Forum
+467	Q857313	1962	United States		274	5	2025-01-09T18:28:45	Vigilance	Paranoia	Vigilance Trigger	One Flew over the Cuckoo's Nest
+468	Q732022	2010	France	science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+469	Q732022	2010	France	comedy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+470	Q732022	2010	France	romance film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+471	Q798227	1817	Prussia	high literature	348	5	2025-01-09T20:36:30	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	The Sandman
+472	Q732022	2009	France	science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+473	Q746253			dialogue	312	5	2025-01-09T19:20:56	Peace of Mind	Self-Irony	Irony	Meno
+474	Q887192	1932	United States	parody film	349	5	2025-01-09T20:37:21	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Horse Feathers
+475	Q851847	1747	France	epistolary novel	220	5	2025-01-09T02:40:21	Unrealistic Romantic Expectations	Gratification	Almighty Heart	Letters from a Peruvian Woman
+476	Q753907			Old Comedy	339	5	2025-01-09T20:23:53	Innovative Thinking	"Thinking ""What If?"""	Comic Wink	Lysistrata
+477	Q815376			Old Comedy	338	5	2025-01-09T20:22:38	Innovative Thinking	"Thinking ""What If?"""	Comic Wink	The Frogs
+478	Q732022	2010	Belgium	arthouse science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+479	Q732022	2010	Germany	arthouse science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+480	Q732022	2010	Belgium	drama film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+481	Q732022	2010	Germany	drama film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+482	Q732022	2010	Belgium	fantasy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+483	Q732022	2010	Germany	fantasy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+484	Q732022	2010	Belgium	arthouse science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+485	Q732022	2010	Germany	arthouse science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+486	Q732022	2010	Germany	drama film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+487	Q732022	2010	Germany	fantasy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+488	Q732022	2010	Belgium	comedy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+489	Q732022	2010	Germany	comedy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+490	Q732022	2010	Belgium	romance film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+491	Q732022	2010	Germany	romance film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+492	Q732022	2010	France	arthouse science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+493	Q732022	2010	Germany	comedy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+494	Q732022	2010	Belgium	romance film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+495	Q732022	2010	Germany	romance film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+496	Q732022	2010	France	drama film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+497	Q732022	2010	France	fantasy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+498	Q798227	1817	Kingdom of Prussia	horror literature	348	5	2025-01-09T20:36:30	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	The Sandman
+499	Q732022	2010	Germany	science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+500	Q732022	2010	France	arthouse science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+501	Q732022	2010	France	drama film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+502	Q732022	2010	France	fantasy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+503	Q732022	2010	Belgium	arthouse science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+504	Q732022	2010	Germany	arthouse science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+505	Q732022	2010	Belgium	drama film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+506	Q732022	2010	Germany	drama film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+507	Q732022	2010	Belgium	fantasy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+508	Q732022	2010	Germany	fantasy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+509	Q732022	2010	France	comedy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+510	Q732022	2010	France	romance film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+511	Q798227	1817	Germany	horror literature	348	5	2025-01-09T20:36:30	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	The Sandman
+512	Q732022	2009	Germany	arthouse science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+513	Q798227	1817	Kingdom of Prussia	high literature	348	5	2025-01-09T20:36:30	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	The Sandman
+514	Q732022	2009	Germany	drama film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+515	Q732022	2009	Germany	fantasy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+516	Q732022	2010	France	comedy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+517	Q732022	2010	France	romance film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+518	Q732022	2010	France	science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+519	Q732022	2010	Belgium	comedy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+520	Q732022	2010	Germany	comedy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+521	Q732022	2010	Belgium	romance film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+522	Q732022	2010	Germany	romance film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+523	Q756715		Kingdom of England	chivalric romance	183	5	2025-01-09T01:13:35	Purpose	Curiosity	Suspense	Sir Gawain and the Green Knight
+524	Q732022	2010	France	arthouse science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+525	Q732022	2010	France	drama film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+526	Q732022	2010	France	fantasy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+527	Q732022	2009	Germany	comedy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+528	Q732022	2009	Germany	romance film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+529	Q798227	1817	Germany	high literature	348	5	2025-01-09T20:36:30	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	The Sandman
+530	Q732022	2009	France	arthouse science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+531	Q732022	2009	France	drama film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+532	Q732022	2009	France	fantasy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+533	Q732022	2010	France	comedy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+534	Q732022	2010	France	romance film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+535	Q732022	2010	Belgium	science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+536	Q732022	2010	Germany	science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+537	Q732022	2009	France	comedy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+538	Q732022	2009	France	romance film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+539	Q732022	2010	Germany	science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+540	Q887192	1932	United States	American football film	349	5	2025-01-09T20:37:21	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Horse Feathers
+541	Q907568	1850	United States	historical fiction	272	5	2025-01-09T18:27:02	Vigilance	Paranoia	Vigilance Trigger	The Scarlet Letter
+542	Q732022	2010	France	science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+543	Q732022	2010	Germany	arthouse science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+544	Q732022	2010	Germany	drama film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+545	Q907568	1850	United States	romantic fiction	272	5	2025-01-09T18:27:02	Vigilance	Paranoia	Vigilance Trigger	The Scarlet Letter
+546	Q732022	2010	Germany	fantasy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+547	Q887192	1932	United States	comedy film	349	5	2025-01-09T20:37:21	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	Horse Feathers
+548	Q732022	2010	France	science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+549	Q752584	1925	United Kingdom	modernist literature	357	5	2025-01-09T20:47:17	Peace of Mind	Tranquility	Stream of Consciousness	Mrs. Dalloway
+550	Q732022	2010	Belgium	science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+551	Q732022	2010	Germany	science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+552	Q732022	2010	Germany	comedy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+553	Q732022	2010	Germany	romance film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+554	Q798227	1817	Prussia	horror literature	348	5	2025-01-09T20:36:30	Innovative Thinking	"Thinking ""What If?"""	Reality Shifter	The Sandman
+555	Q732022	2009	Germany	science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+556	Q732022	2010	France	arthouse science fiction film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+557	Q732022	2010	France	drama film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+558	Q732022	2010	France	fantasy film	304	5	2025-01-09T19:09:29	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Mr. Nobody
+559	Q1197185	1984	United States	adventure film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+560	Q1233830	1627	United Kingdom	science fiction	326	5	2025-01-09T19:58:41	Vigilance	Skepticism	Vigilance Trigger	New Atlantis
+561	Q1396889	1945	England	fable	318	5	2025-01-09T19:27:34	Peace of Mind	Self-Irony	Irony	Animal Farm
+562	Q1450848	1982	United Kingdom	epistolary novel	232	5	2025-01-09T17:14:31	Connection	Identification	Soliloquy in a Soliloquy	The Secret Diary of Adrian Mole, Aged 13 3/4
+563	Q1406929			poetry	237	5	2025-01-09T17:24:21	Community	Moral Omniscience	Poetic Justice	The Story of Job (Ludlul bēl nēmeqi)
+564	Q1197185	1983	United States	drama film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+565	Q1197185	1984	United States	historical film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+566	Q1396889	1945	England	roman à clef	318	5	2025-01-09T19:27:34	Peace of Mind	Self-Irony	Irony	Animal Farm
+567	Q1197185	1984	United States	film based on book	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+568	Q1197185	1984	United States	adventure film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+569	Q1766503	1950			225	5	2025-01-09T17:02:17	Healing	Gratification	Pivot into Positive Emotion	The Cocktail Party
+570	Q1197185	1984	United States	drama film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+571	Q1197185	1984	United States	drama film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+572	Q1246408			Greek tragedy	292	5	2025-01-09T18:53:45	Healing	Released Emotion Brake	Opportunity to Observe + Pivot into Positive Emotion	Alcestis
+573	Q1396889	1945	England	satirical fiction	318	5	2025-01-09T19:27:34	Peace of Mind	Self-Irony	Irony	Animal Farm
+574	Q1197185	1984	United States	historical film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+575	Q1197185	1986	United States	drama film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+576	Q1286961	1900	United States		200	5	2025-01-09T02:08:11	Forgiveness	Empathy	Hamartia	Sister Carrie
+577	Q1197185	1984	United States	drama film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+578	Q1197185	1984	United States	film based on book	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+579	Q1197185	1983	United States	historical film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+580	Q1197185	1984	United States	adventure film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+581	Q1197185	1983	United States	drama film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+582	Q1396889	1945	England	dystopian fiction	318	5	2025-01-09T19:27:34	Peace of Mind	Self-Irony	Irony	Animal Farm
+583	Q1444052	1953	United States	African American literature	199	5	2025-01-09T02:06:55	Forgiveness	Empathy	Empathy Generator	Go Tell it on the Mountain
+584	Q1197185	1984	United States	drama film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+585	Q1444052	1953	United States	autobiographical novel	199	5	2025-01-09T02:06:55	Forgiveness	Empathy	Empathy Generator	Go Tell it on the Mountain
+586	Q1197185	1983	United States	film based on book	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+587	Q1197185	1983	United States	adventure film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+588	Q1197185	1984	United States	drama film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+589	Q1197185	1984	United States	historical film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+590	Q1212645	2003	United States	romantic fiction	252	5	2025-01-09T17:53:56	Intimacy	Love	Almighty Heart	The Time Traveler's Wife
+591	Q1197185	1984	United States	historical film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+592	Q1723053	2005	United Kingdom		359	5	2025-01-09T20:49:34	Peace of Mind	Tranquility	Stream of Consciousness	Saturday
+593	Q1197185	1986	United States	historical film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+594	Q1197185	1984	United States	film based on book	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+595	Q1197185	1984	United States	film based on book	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+596	Q1197185	1984	United States	historical film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+597	Q1197185	1984	United States	adventure film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+598	Q1212645	2003	United States	fantasy	252	5	2025-01-09T17:53:56	Intimacy	Love	Almighty Heart	The Time Traveler's Wife
+599	Q1197185	1984	United States	adventure film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+600	Q1197185	1984	United States	drama film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+601	Q1328064	-0600		homeric epos	330	5	2025-01-09T20:12:43	Anxiety	Superiority	Parody	Batrachomyomachia
+602	Q1197185	1983	United States	historical film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+603	Q1197185	1986	United States	film based on book	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+604	Q1197185	1986	United States	adventure film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+605	Q1197185	1984	United States	historical film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+606	Q1197185	1984	United States	drama film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+607	Q1197185	1984	United States	film based on book	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+608	Q1197185	1984	United States	adventure film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+609	Q1247551		United States	soap opera	110	5	2024-11-15T16:08:22	Tend and Befriend	Courage	Human God Voice	Peyton Place
+610	Q1197185	1984	United States	historical film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+611	Q1197185	1983	United States	film based on book	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+612	Q1197185	1983	United States	adventure film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+613	Q1450848	1982	United Kingdom	young adult literature	232	5	2025-01-09T17:14:31	Connection	Identification	Soliloquy in a Soliloquy	The Secret Diary of Adrian Mole, Aged 13 3/4
+614	Q1197185	1984	United States	film based on book	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+615	Q1197185	1984	United States	adventure film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+616	Q1197185	1984	United States	film based on book	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+617	Q1197185	1984	United States	adventure film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+618	Q1212645	2003	United States	science fiction	252	5	2025-01-09T17:53:56	Intimacy	Love	Almighty Heart	The Time Traveler's Wife
+619	Q1197185	1984	United States	historical film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+620	Q1324254	1850		opera	179	5	2025-01-09T00:58:50	Connection	Connection	Second Method	Tristan und Isolde
+621	Q1197185	1984	United States	drama film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+622	Q1170769	1841	Germany		204	5	2025-01-09T02:13:55	Gratitude without Inferiority	Empowerment	Logic	The Essence of Christianity
+623	Q1197185	1984	United States	historical film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+624	Q1212645	2003	United States	time-travel fiction	252	5	2025-01-09T17:53:56	Intimacy	Love	Almighty Heart	The Time Traveler's Wife
+625	Q1197185	1984	United States	drama film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+626	Q1197185	1984	United States	film based on book	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+627	Q1197185	1984	United States	adventure film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+628	Q1197185	1984	United States	film based on book	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+629	Q1197185	1984	United States	adventure film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+630	Q1197185	1984	United States	drama film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+631	Q1450848	1982	United Kingdom	fictional diary	232	5	2025-01-09T17:14:31	Connection	Identification	Soliloquy in a Soliloquy	The Secret Diary of Adrian Mole, Aged 13 3/4
+632	Q1395765	1748	United Kingdom	erotica	221	5	2025-01-09T02:42:15	Unrealistic Romantic Expectations	Gratification	Almighty Heart	Fanny Hill, or Memoirs of a Woman of Pleasure
+633	Q1197185	1984	United States	historical film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+634	Q1247551		United States	television series based on a novel	110	5	2024-11-15T16:08:22	Tend and Befriend	Courage	Human God Voice	Peyton Place
+635	Q1328064	-0600		parody	330	5	2025-01-09T20:12:43	Anxiety	Superiority	Parody	Batrachomyomachia
+636	Q1233830	1627	United Kingdom	fantasy	326	5	2025-01-09T19:58:41	Vigilance	Skepticism	Vigilance Trigger	New Atlantis
+637	Q1450848	1982	United Kingdom	comic novel	232	5	2025-01-09T17:14:31	Connection	Identification	Soliloquy in a Soliloquy	The Secret Diary of Adrian Mole, Aged 13 3/4
+638	Q1233830	1627	United Kingdom	utopian fiction	326	5	2025-01-09T19:58:41	Vigilance	Skepticism	Vigilance Trigger	New Atlantis
+639	Q1197185	1984	United States	historical film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+640	Q1233830	1627	United Kingdom	philosophical fiction	326	5	2025-01-09T19:58:41	Vigilance	Skepticism	Vigilance Trigger	New Atlantis
+641	Q1395765	1748	United Kingdom	LGBT-related literature	221	5	2025-01-09T02:42:15	Unrealistic Romantic Expectations	Gratification	Almighty Heart	Fanny Hill, or Memoirs of a Woman of Pleasure
+642	Q1197185	1984	United States	film based on book	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+643	Q1197185	1984	United States	adventure film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+644	Q1197185	1984	United States	drama film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+645	Q1197185	1984	United States	film based on book	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+646	Q1247359		United States	police procedural	166	5	2025-01-09T00:29:39	Humility about One's Ideas	Being Wrong	Red Herring	Dragnet
+647	Q1197185	1984	United States	adventure film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+648	Q1197185	1984	United States	historical film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+649	Q1207595	1782	France	treatise	322	5	2025-01-09T19:33:03	Intimacy	Self-Love	Secret Discloser	Confessions
+650	Q1215018	1860	United Kingdom	psychological novel	85	5	2024-10-17T18:16:24	Forgiveness	Empathy	Empathy Generator	The Mill on the Floss
+651	Q1207595	1782	France	autobiography	322	5	2025-01-09T19:33:03	Intimacy	Self-Love	Secret Discloser	Confessions
+652	Q1197185	1984	United States	film based on book	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+653	Q1142887	1966	United States	noir fiction	190	5	2025-01-09T01:52:43	Purpose	Curiosity	Suspense	In Cold Blood
+654	Q1197185	1984	United States	drama film	191	5	2025-01-09T01:54:00	Purpose	Curiosity	Suspense	The Right Stuff
+655	Q2446285	1945	Sweden	children's literature	260	5	2025-01-09T18:02:28	Creativity	Mind Wandering	Anarchy Rhymer	Pippi Longstocking
+656	Q1784288	1952	United Kingdom	science fiction	302	5	2025-01-09T19:07:37	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Invisible Man
+657	Q2707531	1969	United States	black comedy	159	5	2025-01-09T00:12:39	Self-Scrutiny	Alienation	Second Look	Portnoy's Complaint
+658	Q1987925	1847	United Kingdom	vampire fiction	176	5	2025-01-09T00:53:20	Connection	Connection	Second Method	Varney the Vampire
+659	Q1987925	1847	United Kingdom	vampire fiction	172	5	2025-01-09T00:46:44	Connection	Connection	Partial Dopamine	Varney the Vampire
+660	Q2008211	1969	United States	feminist science fiction	333	5	2025-01-09T20:16:13	Bias Reduction	Suspended Judgment	Double Alien	The Left Hand of Darkness
+661	Q2576669	1300		epic poem	216	5	2025-01-09T02:35:21	Unrealistic Romantic Expectations	Gratification	Almighty Heart	Willehalm
+662	Q1784288	1953	United States	social novel	302	5	2025-01-09T19:07:37	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Invisible Man
+663	Q1987925	1845	United Kingdom	vampire fiction	176	5	2025-01-09T00:53:20	Connection	Connection	Second Method	Varney the Vampire
+664	Q1987925	1845	United Kingdom	vampire fiction	172	5	2025-01-09T00:46:44	Connection	Connection	Partial Dopamine	Varney the Vampire
+665	Q2527400	1550	Italy		266	5	2025-01-09T18:13:13	Resilience	Optimism	Lucky Twist	The Facetious Nights of Straparola (Adamantina and the Doll)
+666	Q1784288	1952	United States	social novel	302	5	2025-01-09T19:07:37	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Invisible Man
+667	Q2008211	1969	United States	science fiction	333	5	2025-01-09T20:16:13	Bias Reduction	Suspended Judgment	Double Alien	The Left Hand of Darkness
+668	Q1784288	1953	United Kingdom	social novel	302	5	2025-01-09T19:07:37	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Invisible Man
+669	Q2743569	1741	England	parody	331	5	2025-01-09T20:13:38	Anxiety	Superiority	Parody	An Apology for the Life of Mrs. Shamela Andrews
+670	Q2281600	1965	United States	autobiography	281	5	2025-01-09T18:39:29	Cognitive Flexibility	Ready to Grow	Life Evolver	The Autobiography of Malcolm X
+671	Q1784288	1953	United States	bildungsroman	302	5	2025-01-09T19:07:37	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Invisible Man
+672	Q1784288	1952	United Kingdom	social novel	302	5	2025-01-09T19:07:37	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Invisible Man
+673	Q2008211	1969	United States	gay literature	333	5	2025-01-09T20:16:13	Bias Reduction	Suspended Judgment	Double Alien	The Left Hand of Darkness
+674	Q2344707	1966	United States	postmodern fiction	360	5	2025-01-09T20:50:21	Peace of Mind	Tranquility	Stream of Consciousness	The Crying of Lot 49
+675	Q1784288	1952	United States	bildungsroman	302	5	2025-01-09T19:07:37	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Invisible Man
+676	Q2268391	1963	United States	fantasy	279	5	2025-01-09T18:34:01	Vigilance	Paranoia	Vigilance Trigger	A Wrinkle in Time
+677	Q1784288	1953	United Kingdom	bildungsroman	302	5	2025-01-09T19:07:37	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Invisible Man
+678	Q1777072	1989	Mexico	magic realism	287	5	2025-01-09T18:47:14	Creative Breakthrough	Relearning	Poetic History	Like Water for Chocolate
+679	Q2268391	1962	United States	fantasy	279	5	2025-01-09T18:34:01	Vigilance	Paranoia	Vigilance Trigger	A Wrinkle in Time
+680	Q1784288	1952	United Kingdom	bildungsroman	302	5	2025-01-09T19:07:37	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Invisible Man
+681	Q2279794	1982	Japan	magic realist fiction	286	5	2025-01-09T18:46:29	Creative Breakthrough	Relearning	Poetic History	A Wild Sheep Chase
+682	Q1784288	1953	United States	African American literature	302	5	2025-01-09T19:07:37	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Invisible Man
+683	Q2268391	1963	United States	science fiction	279	5	2025-01-09T18:34:01	Vigilance	Paranoia	Vigilance Trigger	A Wrinkle in Time
+684	Q2268391	1963	United States	science fantasy	279	5	2025-01-09T18:34:01	Vigilance	Paranoia	Vigilance Trigger	A Wrinkle in Time
+685	Q1784288	1953	United States	autobiographical novel	302	5	2025-01-09T19:07:37	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Invisible Man
+686	Q2776448	1918	United States	historical novel	247	5	2025-01-09T17:45:13	Intimacy	Love	I Voice	My Antonia
+687	Q2743569	1741	England	epistolary novel	331	5	2025-01-09T20:13:38	Anxiety	Superiority	Parody	An Apology for the Life of Mrs. Shamela Andrews
+688	Q2576669	1300		narrative poetry	216	5	2025-01-09T02:35:21	Unrealistic Romantic Expectations	Gratification	Almighty Heart	Willehalm
+689	Q1784288	1952	United States	African American literature	302	5	2025-01-09T19:07:37	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Invisible Man
+690	Q2268391	1962	United States	science fiction	279	5	2025-01-09T18:34:01	Vigilance	Paranoia	Vigilance Trigger	A Wrinkle in Time
+691	Q2268391	1962	United States	science fantasy	279	5	2025-01-09T18:34:01	Vigilance	Paranoia	Vigilance Trigger	A Wrinkle in Time
+692	Q1784288	1952	United States	autobiographical novel	302	5	2025-01-09T19:07:37	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Invisible Man
+693	Q1784288	1953	United Kingdom	African American literature	302	5	2025-01-09T19:07:37	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Invisible Man
+694	Q2344707	1966	United States	paranoid fiction	360	5	2025-01-09T20:50:21	Peace of Mind	Tranquility	Stream of Consciousness	The Crying of Lot 49
+695	Q1784288	1953	United Kingdom	autobiographical novel	302	5	2025-01-09T19:07:37	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Invisible Man
+696	Q2609365	1915	United Kingdom	espionage novel	185	5	2025-01-09T01:43:59	Purpose	Curiosity	Suspense	The Thirty-Nine Steps
+697	Q1987925	1847	United Kingdom	Gothic fiction	176	5	2025-01-09T00:53:20	Connection	Connection	Second Method	Varney the Vampire
+698	Q1987925	1847	United Kingdom	Gothic fiction	172	5	2025-01-09T00:46:44	Connection	Connection	Partial Dopamine	Varney the Vampire
+699	Q1784288	1952	United Kingdom	African American literature	302	5	2025-01-09T19:07:37	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Invisible Man
+700	Q2344707	1966	United States	metafiction	360	5	2025-01-09T20:50:21	Peace of Mind	Tranquility	Stream of Consciousness	The Crying of Lot 49
+701	Q1784288	1952	United Kingdom	autobiographical novel	302	5	2025-01-09T19:07:37	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Invisible Man
+702	Q2446285	1945	Sweden	fantasy	260	5	2025-01-09T18:02:28	Creativity	Mind Wandering	Anarchy Rhymer	Pippi Longstocking
+703	Q2048624	1740	England	education novel	222	5	2025-01-09T02:43:25	Unrealistic Romantic Expectations	Gratification	Almighty Heart	Pamela
+704	Q2368110	1951		poetry	240	5	2025-01-09T17:29:22	Intimacy	Love	I Voice	Do Not God Gentle into That Good Night
+705	Q2279794	1982	Japan	surrealist fiction	286	5	2025-01-09T18:46:29	Creative Breakthrough	Relearning	Poetic History	A Wild Sheep Chase
+706	Q1784288	1953	United States	science fiction	302	5	2025-01-09T19:07:37	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Invisible Man
+707	Q1987925	1845	United Kingdom	Gothic fiction	176	5	2025-01-09T00:53:20	Connection	Connection	Second Method	Varney the Vampire
+708	Q1987925	1845	United Kingdom	Gothic fiction	172	5	2025-01-09T00:46:44	Connection	Connection	Partial Dopamine	Varney the Vampire
+709	Q2344707	1966	United States	secret history	360	5	2025-01-09T20:50:21	Peace of Mind	Tranquility	Stream of Consciousness	The Crying of Lot 49
+710	Q2048624	1740	England	epistolary novel	222	5	2025-01-09T02:43:25	Unrealistic Romantic Expectations	Gratification	Almighty Heart	Pamela
+711	Q2699263	1997	United States		213	5	2025-01-09T02:31:09	Realistic Appreciation of Love	Generous Love	Free Indirect Discourse	Brokeback Mountain
+712	Q1784288	1952	United States	science fiction	302	5	2025-01-09T19:07:37	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Invisible Man
+713	Q2609365	1915	United Kingdom	mystery novel	185	5	2025-01-09T01:43:59	Purpose	Curiosity	Suspense	The Thirty-Nine Steps
+714	Q2344707	1966	United States	science fiction	360	5	2025-01-09T20:50:21	Peace of Mind	Tranquility	Stream of Consciousness	The Crying of Lot 49
+715	Q1784288	1953	United Kingdom	science fiction	302	5	2025-01-09T19:07:37	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Invisible Man
+716	Q128518	2000	United States	adventure film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+717	Q1077445	1996	United States	hysterical realism	317	5	2025-01-09T19:26:30	Peace of Mind	Self-Irony	Irony	Infinite Jest
+718	Q957323	1974	United States	Western film	342	5	2025-01-09T20:27:48	Innovative Thinking	"Thinking ""What If?"""	Comic Wink	Blazing Saddles
+719	Q957323	1974	United States	comedy film	342	5	2025-01-09T20:27:48	Innovative Thinking	"Thinking ""What If?"""	Comic Wink	Blazing Saddles
+720	Q128518	2000	United Kingdom	historical film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+721	Q215750			tragedy	151	5	2025-01-09T00:00:02	Self-Scrutiny	Alienation	Second Look	The Tragedy of Julius Caesar
+722	Q464928	1913	France	modernist literature	356	5	2025-01-09T20:45:27	Peace of Mind	Tranquility	Stream of Consciousness	In Search of Lost Time
+723	Q128518	2000	United States	drama film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+724	Q971767	1987	United States	magic realist fiction	285	5	2025-01-09T18:43:34	Creative Breakthrough	Relearning	Poetic History	Beloved
+725	Q971767	1987	United States	magic realist fiction	108	5	2024-11-15T16:05:20	Tend and Befriend	Courage	Epic Simile	Beloved
+726	Q128518	2000	United States	sword-and-sandal film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+727	Q128518	2000	United States	epic film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+728	Q128518	2000	United Kingdom	melodrama	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+729	Q128518	2000	United Kingdom	adventure film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+730	Q957323	1974	United States	Western film	342	5	2025-01-09T20:27:48	Innovative Thinking	"Thinking ""What If?"""	Comic Wink	Blazing Saddles
+731	Q1074987		Eastern Zhou		310	5	2025-01-09T19:18:30	Expanded Inner List of Cultural Norms	Self-Acceptance	Shame Reducer	Zhuangzi
+732	Q957323	1974	United States	comedy film	342	5	2025-01-09T20:27:48	Innovative Thinking	"Thinking ""What If?"""	Comic Wink	Blazing Saddles
+733	Q1045464	1920	United States	novel of manners	198	5	2025-01-09T02:05:33	Forgiveness	Empathy	Empathy Generator	The Age of Innocence
+734	Q128518	2000	United States	action film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+735	Q128518	2000	United Kingdom	drama film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+736	Q1077445	1996	United States	science fiction	317	5	2025-01-09T19:26:30	Peace of Mind	Self-Irony	Irony	Infinite Jest
+737	Q128518	2000	United Kingdom	sword-and-sandal film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+738	Q1137494	1885	United Kingdom	adventure novel	184	5	2025-01-09T01:41:45	Purpose	Curiosity	Suspense	King Solomon's Mines
+739	Q128518	2000	United Kingdom	epic film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+740	Q980534	1748	United Kingdom	epistolary novel	223	5	2025-01-09T02:44:51	Unrealistic Romantic Expectations	Gratification	Almighty Heart	Clarissa, or, the History of a Young Lady
+741	Q459667	1841	United States	detective fiction	165	5	2025-01-09T00:28:14	Humility about One's Ideas	Being Wrong	Red Herring	The Murders in the Rue Morgue
+742	Q216006	2006	Spain	magic realist film	288	5	2025-01-09T18:48:25	Creative Breakthrough	Relearning	Poetic History	Pan's Labyrinth
+743	Q464928	1927	France	modernist literature	356	5	2025-01-09T20:45:27	Peace of Mind	Tranquility	Stream of Consciousness	In Search of Lost Time
+744	Q128518	2000	United States	historical film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+745	Q963743		Ancient Egypt	didactic literature	323	5	2025-01-09T19:34:23	Empowerment	Self-Trust	Self-Affirmation	The Wisdom of Ptahhotep
+746	Q128518	2000	United Kingdom	action film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+747	Q958560	1999	South Africa	campus novel	162	5	2025-01-09T00:19:08	Self-Scrutiny	Alienation	Second Look	Disgrace
+748	Q459667	1841	United States	detective fiction	165	5	2025-01-09T00:28:14	Humility about One's Ideas	Being Wrong	Red Herring	The Murders in the Rue Morgue
+749	Q993664	2005	United States	memoir	149	5	2025-01-08T23:56:36	Healthy Grief	Acceptance of Loss	Sorrow Resolver	The Year of Magical Thinking
+750	Q957323	1974	United States	Western film	342	5	2025-01-09T20:27:48	Innovative Thinking	"Thinking ""What If?"""	Comic Wink	Blazing Saddles
+751	Q128518	2000	United States	adventure film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+752	Q957323	1974	United States	comedy film	342	5	2025-01-09T20:27:48	Innovative Thinking	"Thinking ""What If?"""	Comic Wink	Blazing Saddles
+753	Q128518	2000	United States	sword-and-sandal film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+754	Q128518	2000	United Kingdom	historical film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+755	Q438406		United States	medical drama	113	5	2024-11-15T16:16:30	Tend and Befriend	Courage	Human God Voice	Grey's Anatomy
+756	Q216006	2006	Spain	drama film	288	5	2025-01-09T18:48:25	Creative Breakthrough	Relearning	Poetic History	Pan's Labyrinth
+757	Q92640	1865	United Kingdom	fairy tale	257	5	2025-01-09T17:59:16	Creativity	Mind Wandering	Anarchy Rhymer	Alice's Adventures in Wonderland
+758	Q963743		Ancient Egypt	wisdom literature	323	5	2025-01-09T19:34:23	Empowerment	Self-Trust	Self-Affirmation	The Wisdom of Ptahhotep
+759	Q128518	2000	United States	melodrama	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+760	Q128518	2000	United States	epic film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+761	Q92640	1865	United Kingdom	children's novel	257	5	2025-01-09T17:59:16	Creativity	Mind Wandering	Anarchy Rhymer	Alice's Adventures in Wonderland
+762	Q171048	1996	United States	fantasy film	234	5	2025-01-09T17:16:51	Connection	Identification	Soliloquy in a Soliloquy	Toy Story
+763	Q128518	2000	United Kingdom	adventure film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+764	Q171048	1995	United States	comedy film	234	5	2025-01-09T17:16:51	Connection	Identification	Soliloquy in a Soliloquy	Toy Story
+765	Q128518	2000	United Kingdom	sword-and-sandal film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+766	Q1076912	1915			152	5	2025-01-09T00:01:52	Self-Scrutiny	Alienation	Second Look	Rashōmon
+767	Q128518	2000	United States	drama film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+768	Q128518	2000	United States	action film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+769	Q428680	2006	United States	graphic novel	293	5	2025-01-09T18:55:11	Healing	Released Emotion Brake	Opportunity to Observe + Pivot into Positive Emotion	Fun Home
+770	Q171048	1996	United States	comedy film	234	5	2025-01-09T17:16:51	Connection	Identification	Soliloquy in a Soliloquy	Toy Story
+771	Q128518	2000	United Kingdom	melodrama	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+772	Q128518	2000	United Kingdom	epic film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+773	Q1137494	1885	United Kingdom	lost world fiction	184	5	2025-01-09T01:41:45	Purpose	Curiosity	Suspense	King Solomon's Mines
+774	Q917055	1984		philosophical fiction	307	5	2025-01-09T19:12:35	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	The Unbearable Lightness of Being
+775	Q428680	2006	United States	gay comics	293	5	2025-01-09T18:55:11	Healing	Released Emotion Brake	Opportunity to Observe + Pivot into Positive Emotion	Fun Home
+776	Q128518	2000	United Kingdom	drama film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+777	Q128518	2000	United Kingdom	action film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+778	Q171048	1995	United States	adventure film	234	5	2025-01-09T17:16:51	Connection	Identification	Soliloquy in a Soliloquy	Toy Story
+779	Q966191		United Kingdom	sitcom	345	5	2025-01-09T20:32:56	Innovative Thinking	"Thinking ""What If?"""	Comic Wink + Reality Shifter	Miranda
+780	Q462373	1892	United States	fiction	271	5	2025-01-09T18:26:11	Vigilance	Paranoia	Vigilance Trigger	The Yellow Wallpaper
+781	Q128518	2000	United States	sword-and-sandal film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+782	Q428680	2006	United States	autobiographical comics	293	5	2025-01-09T18:55:11	Healing	Released Emotion Brake	Opportunity to Observe + Pivot into Positive Emotion	Fun Home
+783	Q171048	1996	United States	fantasy film	234	5	2025-01-09T17:16:51	Connection	Identification	Soliloquy in a Soliloquy	Toy Story
+784	Q171048	1996	United States	adventure film	234	5	2025-01-09T17:16:51	Connection	Identification	Soliloquy in a Soliloquy	Toy Story
+785	Q128518	2000	United States	historical film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+786	Q1045464	1920	United States	romance novel	198	5	2025-01-09T02:05:33	Forgiveness	Empathy	Empathy Generator	The Age of Innocence
+787	Q128518	2000	United States	melodrama	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+788	Q452075	1508	Spain	chivalric romance	217	5	2025-01-09T02:36:52	Unrealistic Romantic Expectations	Gratification	Almighty Heart	Amadis de Gaula
+789	Q1142887	1966	United States	non-fiction	190	5	2025-01-09T01:52:43	Purpose	Curiosity	Suspense	In Cold Blood
+790	Q459667	1841	United States	locked room mystery	165	5	2025-01-09T00:28:14	Humility about One's Ideas	Being Wrong	Red Herring	The Murders in the Rue Morgue
+791	Q216006	2006	Spain	drama film	288	5	2025-01-09T18:48:25	Creative Breakthrough	Relearning	Poetic History	Pan's Labyrinth
+792	Q216006	2006	Spain	fantasy film	288	5	2025-01-09T18:48:25	Creative Breakthrough	Relearning	Poetic History	Pan's Labyrinth
+793	Q128518	2000	United States	adventure film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+794	Q971767	1987	United States	historical fiction	285	5	2025-01-09T18:43:34	Creative Breakthrough	Relearning	Poetic History	Beloved
+795	Q971767	1987	United States	historical fiction	108	5	2024-11-15T16:05:20	Tend and Befriend	Courage	Epic Simile	Beloved
+796	Q1136104	1485	England	Arthurian romance	214	5	2025-01-09T02:32:49	Unrealistic Romantic Expectations	Gratification	Almighty Heart	Morte D'arthur
+797	Q171048	1996	United States	comedy film	234	5	2025-01-09T17:16:51	Connection	Identification	Soliloquy in a Soliloquy	Toy Story
+798	Q128518	2000	United States	drama film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+799	Q128518	2000	United Kingdom	sword-and-sandal film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+800	Q128518	2000	United Kingdom	historical film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+801	Q128518	2000	United Kingdom	melodrama	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+802	Q1142887	1966	United States	non-fiction novel	190	5	2025-01-09T01:52:43	Purpose	Curiosity	Suspense	In Cold Blood
+803	Q459667	1841	United States	locked room mystery	165	5	2025-01-09T00:28:14	Humility about One's Ideas	Being Wrong	Red Herring	The Murders in the Rue Morgue
+804	Q128518	2000	United States	epic film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+805	Q92640	1865	United Kingdom	literary nonsense	257	5	2025-01-09T17:59:16	Creativity	Mind Wandering	Anarchy Rhymer	Alice's Adventures in Wonderland
+806	Q128518	2000	United Kingdom	adventure film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+807	Q128518	2000	United Kingdom	drama film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+808	Q128518	2000	United States	drama film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+809	Q1107000	1922	United States	satire	315	5	2025-01-09T19:24:17	Peace of Mind	Self-Irony	Irony	Babbitt
+810	Q404158		Habsburg Netherlands	political philosophy	332	5	2025-01-09T20:14:57	Bias Reduction	Suspended Judgment	Disagreeing Narrators	Utopia
+811	Q128518	2000	United States	action film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+812	Q171048	1996	United States	adventure film	234	5	2025-01-09T17:16:51	Connection	Identification	Soliloquy in a Soliloquy	Toy Story
+813	Q1077445	1996	United States	postmodern literature	317	5	2025-01-09T19:26:30	Peace of Mind	Self-Irony	Irony	Infinite Jest
+814	Q128518	2000	United Kingdom	epic film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+815	Q1136104	1485	England	chivalric romance	214	5	2025-01-09T02:32:49	Unrealistic Romantic Expectations	Gratification	Almighty Heart	Morte D'arthur
+816	Q128518	2000	United States	historical film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+817	Q1142887	1966	United States	true crime	190	5	2025-01-09T01:52:43	Purpose	Curiosity	Suspense	In Cold Blood
+818	Q128518	2000	United Kingdom	drama film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+819	Q216006	2006	Spain	cinematic fairy tale	288	5	2025-01-09T18:48:25	Creative Breakthrough	Relearning	Poetic History	Pan's Labyrinth
+820	Q128518	2000	United States	melodrama	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+821	Q452075	1508	Spain	found manuscript	217	5	2025-01-09T02:36:52	Unrealistic Romantic Expectations	Gratification	Almighty Heart	Amadis de Gaula
+822	Q128518	2000	United Kingdom	action film	111	5	2024-11-15T16:10:59	Tend and Befriend	Courage	Human God Voice	Gladiator
+823	Q4728502				316	5	2025-01-09T19:25:26	Peace of Mind	Self-Irony	Irony	All about H. Hatterr
+824	Q5188653				242	5	2025-01-09T17:31:28	Intimacy	Love	I Voice	Crossing Brooklyn Ferry
+825	Q5195547				294	5	2025-01-09T18:56:15	Gratitude	Resilience	Gratitude Booster	The Kesh Temple Hymn
+826	Q7726887				265	5	2025-01-09T18:08:14	Cognitive Flexibility	Nimbleness	Varied Catalogue of Rhetorical Models	The Columbian Orator
+827	Q3107329	1979	United Kingdom	science fiction comedy	319	5	2025-01-09T19:28:33	Peace of Mind	Self-Irony	Irony	The Hitchhiker's Guide to the Galaxy
+828	Q30610271				355	5	2025-01-09T20:44:04	Peace of Mind	Tranquility	Stream of Consciousness	Pilgrimage
+829	Q42194156				335	5	2025-01-09T20:18:55	Bias Reduction	Suspended Judgment	Double Alien	Persepolis 2: The Story of a Return
+830	Q51499090	1883			169	5	2025-01-09T00:33:16	Humility about One's Ideas	Being Wrong	Red Herring	Letters on Natural Magic
+831	Q60321234				264	5	2025-01-09T18:06:42	Catastrophizing	Moral Omniscience	Poetic Justice	The Blue Fairy Book
+832	Q5591644			fairy tale	267	5	2025-01-09T18:14:45	Resilience	Optimism	Lucky Twist	Graciosa and Percinet
+833	Q27959455	2018	United States	drama film	289	5	2025-01-09T18:49:33	Creative Breakthrough	Relearning	Poetic History	Roma
+834	Q18162235	2014	United Kingdom		211	5	2025-01-09T02:28:46	Realistic Appreciation of Love	Generous Love	Free Indirect Discourse	The Children Act
+835	Q27959455	2018	United States	drama film	289	5	2025-01-09T18:49:33	Creative Breakthrough	Relearning	Poetic History	Roma
+836	Q20737828	1984	United States	science fiction	277	5	2025-01-09T18:31:17	Vigilance	Paranoia	Vigilance Trigger	Bloodchild
+837	Q17079267			monodic lyric	249	5	2025-01-09T17:50:18	Intimacy	Love	Secret Discloser	Sappho's Lyrics
+838	Q17079267			monodic lyric	239	5	2025-01-09T17:28:11	Intimacy	Love	I Voice	Sappho's Lyrics
+839	Q3824677	2011	United States		212	5	2025-01-09T02:29:59	Realistic Appreciation of Love	Generous Love	Free Indirect Discourse	The Marriage Plot
+840	Q27959455	2018	Mexico	drama film	289	5	2025-01-09T18:49:33	Creative Breakthrough	Relearning	Poetic History	Roma
+841	Q5237708	2005	United States		253	5	2025-01-09T17:54:47	Intimacy	Love	Almighty Heart	The History of Love
+842	Q4881733	2001	United States	thriller	251	5	2025-01-09T17:53:01	Intimacy	Love	Almighty Heart	Bel Canto
+843	Q3163506	1969	United States	autobiography	325	5	2025-01-09T19:46:50	Empowerment	Self-Trust	Choose Your Own Accomplice	I Know Why the Caged Bird Sings
+844	Q3163506	1969	United States	autobiographical novel	325	5	2025-01-09T19:46:50	Empowerment	Self-Trust	Choose Your Own Accomplice	I Know Why the Caged Bird Sings
+845	Q3667415	2007	United States	gay fiction	254	5	2025-01-09T17:56:10	Intimacy	Love	Almighty Heart	Call Me By Your Name
+846	Q18162235	2014	United Kingdom		211	5	2025-01-09T02:28:46	Realistic Appreciation of Love	Generous Love	Free Indirect Discourse	The Children Act
+847	Q3107329	1979	United Kingdom	comic novel	319	5	2025-01-09T19:28:33	Peace of Mind	Self-Irony	Irony	The Hitchhiker's Guide to the Galaxy
+848	Q5477055	1965	United States		259	5	2025-01-09T18:01:25	Creativity	Mind Wandering	Anarchy Rhymer	Fox in Socks
+849	Q7767037	1847	United Kingdom of Great Britain and Ireland	fiction	173	5	2025-01-09T00:48:37	Connection	Connection	Partial Dopamine	The String of Pearls
+850	Q42192109	1835			205	5	2025-01-09T02:15:43	Gratitude without Inferiority	Empowerment	Logic	The Life of Jesus
+851	Q3221351	1995	India	science fiction	278	5	2025-01-09T18:32:59	Vigilance	Paranoia	Vigilance Trigger	The Calcutta Chromosome
+852	Q3221351	1995	India	thriller	278	5	2025-01-09T18:32:59	Vigilance	Paranoia	Vigilance Trigger	The Calcutta Chromosome
+853	Q3234313	1958	France	theatre of the absurd	207	5	2025-01-09T02:21:44	Empowerment	Existential Nausea	Narrative without Core Values	The Blacks: A Clown Show
+854	Q3213603	1742	France	memoir novel	219	5	2025-01-09T02:39:07	Unrealistic Romantic Expectations	Gratification	Almighty Heart	La Vie de Marianne
+855	Q3990982		Ancient Rome	Roman tragedy	298	5	2025-01-09T19:01:26	Community	Righteousness	Revenge Plot	Thyestes
+856	Q7767037	1846	United Kingdom of Great Britain and Ireland	fiction	173	5	2025-01-09T00:48:37	Connection	Connection	Partial Dopamine	The String of Pearls
+857	Q7775594	1977	United States		231	5	2025-01-09T17:12:26	Connection	Identification	Soliloquy in a Soliloquy	The Women's Room
+858	Q27959455	2018	Mexico	drama film	289	5	2025-01-09T18:49:33	Creative Breakthrough	Relearning	Poetic History	Roma
+859	Q5477055	1965	United States		259	5	2025-01-09T18:01:25	Creativity	Mind Wandering	Anarchy Rhymer	Fox in Socks
+860	Q27538067		United States	drama television series	56	1	2024-09-20T01:53:46	Vigilance	Paranoia	Vigilance Trigger	The Terror
+861	Q27959455	2018	Mexico	drama film	289	5	2025-01-09T18:49:33	Creative Breakthrough	Relearning	Poetic History	Roma
+862	Q51613242	1831			206	5	2025-01-09T02:17:31	Detached Self-Awareness	Eustress	Meta-Horror	Frankenstein
+863	Q27538067		United States	anthology series	56	1	2024-09-20T01:53:46	Vigilance	Paranoia	Vigilance Trigger	The Terror
+864	Q27959455	2018	United States	drama film	289	5	2025-01-09T18:49:33	Creative Breakthrough	Relearning	Poetic History	Roma
+865	Q19863017		United States	LGBT-related television series	346	5	2025-01-09T20:34:33	Innovative Thinking	"Thinking ""What If?"""	Comic Wink + Reality Shifter	Crazy Ex-Girlfriend
+866	Q27959455	2018	Mexico	drama film	289	5	2025-01-09T18:49:33	Creative Breakthrough	Relearning	Poetic History	Roma
+867	Q50282028		United States	memoir	282	5	2025-01-09T18:40:25	Cognitive Flexibility	Ready to Grow	Life Evolver	Becoming
+868	Q27959455	2018	Mexico	drama film	289	5	2025-01-09T18:49:33	Creative Breakthrough	Relearning	Poetic History	Roma
+869	Q27959455	2018	Mexico	drama film	289	5	2025-01-09T18:49:33	Creative Breakthrough	Relearning	Poetic History	Roma
+870	Q27959455	2018	Mexico	drama film	289	5	2025-01-09T18:49:33	Creative Breakthrough	Relearning	Poetic History	Roma
+871	Q7759996	1991	United Kingdom		161	5	2025-01-09T00:15:02	Self-Scrutiny	Alienation	Second Look	The Redundancy of Courage
+872	Q7549373	1981	Senegal	epistolary novel	150	5	2025-01-08T23:57:48	Healthy Grief	Acceptance of Loss	Sorrow Resolver	So Long a Letter
+873	Q16154159	2013	Nigeria	historical fiction	309	5	2025-01-09T19:14:42	Expanded Inner List of Cultural Norms	Self-Acceptance	Equilateral Love Triange	Americanah
+874	Q16733998	1977	Ghana	fiction	160	5	2025-01-09T00:13:56	Self-Scrutiny	Alienation	Second Look	Our Sister Killjoy
+875	Q27959455	2018	United States	drama film	289	5	2025-01-09T18:49:33	Creative Breakthrough	Relearning	Poetic History	Roma
+876	Q6467743	1962	United States	essay	284	5	2025-01-09T18:42:33	Creative Breakthrough	Relearning	Poetic History	Labyrinths
+877	Q16155320		United States	LGBT-related television series	347	5	2025-01-09T20:35:28	Innovative Thinking	"Thinking ""What If?"""	Comic Wink + Reality Shifter	Broad City
+878	Q27959455	2018	United States	drama film	289	5	2025-01-09T18:49:33	Creative Breakthrough	Relearning	Poetic History	Roma
+879	Q27959455	2018	Mexico	drama film	289	5	2025-01-09T18:49:33	Creative Breakthrough	Relearning	Poetic History	Roma
+880	Q3766392	1926	United Kingdom	children's novel	258	5	2025-01-09T18:00:20	Creativity	Mind Wandering	Anarchy Rhymer	Winnie the Pooh
+881	Q27959455	2018	Mexico	drama film	289	5	2025-01-09T18:49:33	Creative Breakthrough	Relearning	Poetic History	Roma
+882	Q4026918		Mali Empire	epic poem	182	5	2025-01-09T01:12:02	Purpose	Curiosity	Suspense	The Epic of Sundiata
+883	Q4026918		Mali Empire	epic literature	182	5	2025-01-09T01:12:02	Purpose	Curiosity	Suspense	The Epic of Sundiata
+884	Q27959455	2018	Mexico	drama film	289	5	2025-01-09T18:49:33	Creative Breakthrough	Relearning	Poetic History	Roma
+885	Q15052495	1929	United States		155	5	2025-01-09T00:06:59	Self-Scrutiny	Alienation	Second Look	Passing
+886	Q3667415	2007	United States	bildungsroman	254	5	2025-01-09T17:56:10	Intimacy	Love	Almighty Heart	Call Me By Your Name
+887	Q27959455	2018	United States	drama film	289	5	2025-01-09T18:49:33	Creative Breakthrough	Relearning	Poetic History	Roma
+888	Q19863017		United States	musical	346	5	2025-01-09T20:34:33	Innovative Thinking	"Thinking ""What If?"""	Comic Wink + Reality Shifter	Crazy Ex-Girlfriend
+889	Q7737904	1975	United States	travel literature	334	5	2025-01-09T20:17:54	Bias Reduction	Suspended Judgment	Double Alien	The Great Railway Bazaar: By Train Through Asia
+890	Q20657314	2016	United States	romantic fiction	361	5	2025-01-09T20:51:11	Peace of Mind	Tranquility	Stream of Consciousness	Me Before You
+891	Q27959455	2018	United States	drama film	289	5	2025-01-09T18:49:33	Creative Breakthrough	Relearning	Poetic History	Roma
+892	Q19062936	1891			241	5	2025-01-09T17:30:23	Intimacy	Love	I Voice	I Should Not Dare to Leave My Friend
+893	Q27959455	2018	United States	drama film	289	5	2025-01-09T18:49:33	Creative Breakthrough	Relearning	Poetic History	Roma
+894	Q27538067		United States	horror television series	56	1	2024-09-20T01:53:46	Vigilance	Paranoia	Vigilance Trigger	The Terror
+895	Q27959455	2018	United States	drama film	289	5	2025-01-09T18:49:33	Creative Breakthrough	Relearning	Poetic History	Roma
+896	Q5581570	2012	United States	thriller	189	5	2025-01-09T01:51:16	Purpose	Curiosity	Suspense	Gone Girl
+897	Q19020134	1887			255	5	2025-01-09T17:57:11	Creativity	Mind Wandering	Anarchy Rhymer	The Book of Nonsense
+898	Q22263533	2011	Italy	bildungsroman	175	5	2025-01-09T00:51:50	Connection	Connection	Partial Dopamine + Perspective of a Child	My Brilliant Friend
+899	Q19863017		United States	romantic comedy	346	5	2025-01-09T20:34:33	Innovative Thinking	"Thinking ""What If?"""	Comic Wink + Reality Shifter	Crazy Ex-Girlfriend
+900	Q7742392	1999	United States	fantasy	358	5	2025-01-09T20:48:44	Peace of Mind	Tranquility	Stream of Consciousness	The Intuitionist
+901	Q27538067		United States	thriller television series	56	1	2024-09-20T01:53:46	Vigilance	Paranoia	Vigilance Trigger	The Terror
+902	Q6945057		United States	autobiography	280	5	2025-01-09T18:38:20	Cognitive Flexibility	Ready to Grow	Life Evolver	My Bondage and My Freedom
+903	Q27959455	2018	Mexico	drama film	289	5	2025-01-09T18:49:33	Creative Breakthrough	Relearning	Poetic History	Roma
+904	Q27959455	2018	United States	drama film	289	5	2025-01-09T18:49:33	Creative Breakthrough	Relearning	Poetic History	Roma
+905	Q16155320		United States	American television sitcom	347	5	2025-01-09T20:35:28	Innovative Thinking	"Thinking ""What If?"""	Comic Wink + Reality Shifter	Broad City
+906	Q27959455	2018	United States	drama film	289	5	2025-01-09T18:49:33	Creative Breakthrough	Relearning	Poetic History	Roma
+907	Q19863017		United States	comedy drama	346	5	2025-01-09T20:34:33	Innovative Thinking	"Thinking ""What If?"""	Comic Wink + Reality Shifter	Crazy Ex-Girlfriend
+908	Q27959455	2018	United States	drama film	289	5	2025-01-09T18:49:33	Creative Breakthrough	Relearning	Poetic History	Roma
+909	Q27959455	2018	Mexico	drama film	289	5	2025-01-09T18:49:33	Creative Breakthrough	Relearning	Poetic History	Roma
+910	Q6467743	1962	United States	magic realist fiction	284	5	2025-01-09T18:42:33	Creative Breakthrough	Relearning	Poetic History	Labyrinths
+911	Q3667415	2007	United States	romance	254	5	2025-01-09T17:56:10	Intimacy	Love	Almighty Heart	Call Me By Your Name
+912	Q3107329	1979	United Kingdom	science fiction novel	319	5	2025-01-09T19:28:33	Peace of Mind	Self-Irony	Irony	The Hitchhiker's Guide to the Galaxy
+913	Q7742392	1999	United States	science fiction	358	5	2025-01-09T20:48:44	Peace of Mind	Tranquility	Stream of Consciousness	The Intuitionist
+914	Q5372505	1918		biography	193	5	2025-01-09T01:58:07	Purpose	Curiosity	Suspense	Eminent Victorians
+915	Q3213603	1731	France	memoir novel	219	5	2025-01-09T02:39:07	Unrealistic Romantic Expectations	Gratification	Almighty Heart	La Vie de Marianne
+916	Q2904743	1845	United States	autobiography	296	5	2025-01-09T18:58:44	Community	Righteousness	Moral Suasion	Narrative of the Life of Frederick Douglass, An American Slave
+917	Q62595383	2020	United Kingdom	black comedy	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+918	Q62595383	2020	United Kingdom	rape and revenge film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+919	Q120663907				324	5	2025-01-09T19:35:51	Empowerment	Self-Love	Self-Self-Affirmation	The Meditations of Marcus Aurelius
+920	Q62595383	2021	United States	drama film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+921	Q62595383	2021	United States	vigilante film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+922	Q62595383	2021	United Kingdom	crime film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+923	Q62595383	2020	United Kingdom	thriller film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+924	Q62595383	2021	United Kingdom	drama film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+925	Q62595383	2021	United Kingdom	vigilante film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+926	Q62595383	2021	United States	crime film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+927	Q62595383	2021	United States	black comedy	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+928	Q62595383	2021	United States	rape and revenge film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+929	Q62595383	2021	United States	drama film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+930	Q62595383	2021	United States	vigilante film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+931	Q62595383	2021	United States	thriller film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+932	Q62595383	2021	United Kingdom	crime film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+933	Q62595383	2021	United Kingdom	black comedy	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+934	Q62595383	2021	United Kingdom	rape and revenge film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+935	Q62595383	2021	United Kingdom	drama film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+936	Q62595383	2021	United Kingdom	vigilante film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+937	Q62595383	2021	United Kingdom	thriller film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+938	Q62595383	2020	United States	crime film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+939	Q62595383	2021	United States	black comedy	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+940	Q62595383	2021	United States	rape and revenge film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+941	Q62595383	2020	United States	drama film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+942	Q62595383	2020	United States	vigilante film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+943	Q99179657	1772	Kingdom of Great Britain		256	5	2025-01-09T17:58:19	Creativity	Mind Wandering	Anarchy Rhymer	Mother Goose's Melody
+944	Q62595383	2021	United States	thriller film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+945	Q62595383	2020	United Kingdom	crime film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+946	Q62595383	2021	United Kingdom	black comedy	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+947	Q62595383	2021	United Kingdom	rape and revenge film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+948	Q112241985		United States	thriller	163	1	2025-01-09T00:22:47	Self-Scrutiny	Alienation	Second Look	Disclaimer
+949	Q62595383	2020	United Kingdom	drama film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+950	Q62595383	2020	United Kingdom	vigilante film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+951	Q62595383	2020	United States	crime film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+952	Q62595383	2021	United Kingdom	thriller film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+953	Q62595383	2020	United States	black comedy	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+954	Q112241985		United Kingdom	thriller	163	1	2025-01-09T00:22:47	Self-Scrutiny	Alienation	Second Look	Disclaimer
+955	Q62595383	2020	United States	rape and revenge film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+956	Q62595383	2020	United States	drama film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+957	Q62595383	2020	United States	vigilante film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+958	Q62595383	2020	United Kingdom	crime film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+959	Q105756377		United Kingdom		248	1	2025-01-09T17:48:38	Intimacy	Love	I Voice	Fleabag
+960	Q62595383	2020	United States	thriller film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+961	Q62595383	2020	United Kingdom	black comedy	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+962	Q107919904	1967			261	5	2025-01-09T18:03:17	Creativity	Mind Wandering	Anarchy Rhymer	Frederick
+963	Q62595383	2020	United Kingdom	rape and revenge film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+964	Q111906658	1697			263	5	2025-01-09T18:05:29	Catastrophizing	Moral Omniscience	Poetic Justice	Histoires ou contes du temps passé
+965	Q62595383	2020	United Kingdom	drama film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+966	Q62595383	2020	United Kingdom	vigilante film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+967	Q62595383	2020	United Kingdom	thriller film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+968	Q62595383	2020	United States	black comedy	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+969	Q62595383	2020	United States	rape and revenge film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+970	Q62595383	2021	United States	crime film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman
+971	Q62595383	2020	United States	thriller film	299	1	2025-01-09T19:02:59	Community	Righteousness	Revenge Plot	Promising Young Woman

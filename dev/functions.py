@@ -18,12 +18,6 @@ wp_credentials = WP_USER + WP_KEY
 wp_token = base64.b64encode(wp_credentials.encode())
 wp_header = {'Authorization': 'Basic ' + wp_token.decode('utf-8')}
 
-def read_wordpress_posts():
-    api_url = f'{api_prefix}'
-    response = requests.get(api_url)
-    response_json = response.json()
-    print(response_json)
-
 def get_total_pagecount():
     api_url = f'{api_prefix}?page=1&per_page=100'
     response = requests.get(api_url)
