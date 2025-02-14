@@ -64,6 +64,8 @@ ui <- page_navbar(
         selectInput("barSelect", "Select Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology')), 
         plotlyOutput("barplot")
     ),
+    
+    nav_panel("Timeline", plotlyOutput("timeline")),
 
     nav_panel("Tree Map", plotOutput("treemap")),
 
@@ -120,6 +122,14 @@ output$treemap <- renderPlot(
         geom_treemap_subgroup_text(place = "centre", grow = T, alpha = 0.3, colour = "black", fontface = "italic", min.size = 0)
 )
 
+# Output Timeline ----
+output$timeline <- renderPlotly(
+  plot_ly(reactive_df(), type = "scatter") %>% # , mode = ""
+    add_trace(x = ~pubDate, y = ~benefit, color=~as.factor(benefit)) %>%
+    layout(showLegend = F, title = "Timeline with Rangeslider",
+           xaxis = list(rangeslider = list(visible = T)))
+)
+
 # Network Output ---
 network <- reactive({
     net <- create_network_data(reactive_df())
@@ -135,11 +145,3 @@ output$network <- renderVisNetwork({
 
 # Run the application 
 shinyApp(ui = ui, server = server)
-
-#   # Output Timeline ----
-#   output$timeline <- renderPlotly( 
-#     plot_ly(reactive_df(), type = "scatter") %>% # , mode = ""
-#       add_trace(x = ~pubDate, y = ~benefit) %>%
-#       layout(showLegend = F, title = "Timeline with Rangeslider",
-#              xaxis = list(rangeslider = list(visible = T)))
-#     )
