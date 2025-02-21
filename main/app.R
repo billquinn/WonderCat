@@ -19,15 +19,16 @@ source("functions.R")
 # resp <- call_api(URL)
 # data <- api_to_dataframe(resp)
 
-data <- read_delim(paste0(getwd(), '/../main/wonderCat_data.tsv'), delim = '\t')
-# nodes <- read_delim(paste0(getwd(), '/../main/nodes.tsv'), delim = '\t')
-# links <- read_delim(paste0(getwd(), '/../main/links.tsv'), delim = '\t')
+data <- read_delim("wonderCat_data.tsv", delim = '\t')
+# nodes <- read_delim("nodes.tsv", delim = '\t')
+# links <- read_delim("links.tsv", delim = '\t')
+# data <- read_delim(paste0(getwd(), '/../main/wonderCat_data.tsv'), delim = '\t')
 
 # Define UI for application: using bslib library for layout.
 ui <- page_navbar(
   
   # App title ----
-  title = "WonderCat", id = 'nav',
+  title = "Shiny WonderCat", id = 'nav',
   
   # Build persistent sidebar ----
   sidebar = sidebar(
@@ -67,7 +68,7 @@ ui <- page_navbar(
 
     nav_panel("Tree Map", plotOutput("treemap")),
 
-    nav_panel("Network", visNetworkOutput("network"))
+    nav_panel("Network", p("Network may take a little time to load."), visNetworkOutput("network"))
 
 ), fluid = TRUE
 ) # navbarPage() closure

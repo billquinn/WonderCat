@@ -35,11 +35,11 @@ create_network_data <- function(dataframe){
   tech_exp = dataframe %>% select(technology, experience)
   colnames(tech_exp) = c('from', 'to')
 
-  # exp_user = dataframe %>% select(experience, author)
-  # colnames(exp_user) = c("from", "to")
+  exp_user = dataframe %>% select(experience, author)
+  colnames(exp_user) = c("from", "to")
 
   # Bind links dataframe and remove any rows with NA.
-  links = rbind(title_tech, tech_exp)  %>% # exp_user
+  links = rbind(title_tech, tech_exp, exp_user)  %>% # exp_user
     filter(grepl('\\w+', from)) %>%
     filter(grepl('\\w+', to))
 
@@ -59,12 +59,12 @@ create_network_data <- function(dataframe){
   colnames(experiences) = 'label'
   experiences$category = 'experience'
 
-  # users = dataframe["author"]
-  # colnames(users) = "label"
-  # users$category = "author"
+  users = dataframe["author"]
+  colnames(users) = "label"
+  users$category = "author"
 
   # Combine all nodes and remove whitespace entries.
-  nodes = rbind(titles, technologies, experiences) %>% filter(grepl('\\w+', label)) # users
+  nodes = rbind(titles, technologies, experiences, users) %>% filter(grepl('\\w+', label)) # users
 
   # Create node size variable
   nodes = nodes %>% group_by(label, category) %>% summarize(size = n())
@@ -80,7 +80,7 @@ create_network_data <- function(dataframe){
   links$to = nodes$id[ match( unlist(links$to), nodes$label)]
 
   # Remove variables.
-  rm(title_tech, tech_exp, titles, experiences, technologies) # users
+  rm(title_tech, tech_exp, titles, experiences, technologies, users) # users
 
   # Set Styling.
   # We'll start by adding new node and edge attributes to our dataframes. 
@@ -91,7 +91,7 @@ create_network_data <- function(dataframe){
   vis.nodes$shadow <- TRUE # Nodes will drop shadow
   vis.nodes$title  <- vis.nodes$label # Text on click
   vis.nodes$label <- vis.nodes$label # Node label
-  vis.nodes$size   <- vis.nodes$size # Node size
+  vis.nodes$size   <- 40 #vis.nodes$size # Node size
   vis.nodes$borderWidth <- 2 # Node border width
 
   # c("slategrey", "tomato", "gold")
