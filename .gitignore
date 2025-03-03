@@ -1,3 +1,7 @@
-**/__pychache__/
 constants.py
+__pychache__
 .Rproj.user
+.dev.Rproj
+.RData
+.Rhistory
+.DS_Store
