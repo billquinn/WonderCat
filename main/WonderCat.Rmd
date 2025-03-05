@@ -104,13 +104,31 @@ dataframe <- clean_up_dataframe(resps)
 
 ### Bar Plot
 ```{r}
-bar_data <- dataframe %>% count(technology)
+bar_data <- data %>% count(technology)
 
 p <- bar_data |>
       ggplot(aes(x = n, y = technology, fill = technology)) +
       geom_bar(stat = "identity")
 
 ggplotly(p)
+```
+
+### Quantile Test for Bar Plot
+```{r}
+bar_quantile <- quantile(bar_data %>% pull(all_of(column)), n)
+
+quantile_filter <- function(dataframe, column, min_value, max_value){
+    
+    min_quantile_value <- quantile(dataframe %>% pull(all_of(column)), min_value)
+    max_quantile_value <- quantile(dataframe %>% pull(all_of(column)), max_value)
+    
+    #iris %>% filter(.data[[column]] < quantile_value)
+    dataframe %>% filter(.data[[column]] %in% (min_quantile_value:max_quantile_value))
+    
+  }
+
+# input$quantile = 
+less_iris <- quantile_filter(bar_data, "n", 0.5, 1)
 ```
 
 ### Tree Map

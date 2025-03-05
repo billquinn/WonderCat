@@ -57,6 +57,7 @@ ui <- page_navbar(
     
     nav_panel("Bar Plot", 
         selectInput("barSelect", "Select Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology')), 
+        sliderInput("barSlider", "Filter Count by Quantiles:", min = 0, max = 1, value = c(0, 1), step = 0.25), 
         plotlyOutput("barplot")
     ),
 
@@ -97,7 +98,7 @@ output$table <- DT::renderDataTable({reactive_df()})
 # Bar Plot Output ----
 barData <- reactive({
     req(input$barSelect)
-    reactive_df() %>% dplyr::count(!!sym(input$barSelect))
+    reactive_df() %>% dplyr::count(!!sym(input$barSelect)) %>% quantile(all_of(input$barSelect))
     })
 
 output$barplot <- renderPlotly(
