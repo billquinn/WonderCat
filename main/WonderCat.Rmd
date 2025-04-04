@@ -16,7 +16,7 @@ knit: reprex::reprex_render
 ```{r}
 library(tidyverse)
 library(shiny)
-library(httr)
+# library(httr)
 library(httr2)
 library(jsonlite)
 library(dplyr)
@@ -26,16 +26,14 @@ library(ggplot2)
 library(ggraph)
 library(igraph)
 library(plotly)
-library(treemap)
+# library(treemap)
 library(treemapify)
 library(visNetwork)
 
 print (getwd())
 # Import functions.
-source(paste0(getwd(), '/functions.R'))
+# source(paste0(getwd(), '/functions.R'))
 
-data <- read_delim("wonderCat_data.tsv", delim = '\t')
-wikiData <- read_delim("wikidata.tsv", delim = '\t')
 ```
 
 ## API Call
@@ -50,33 +48,27 @@ dataframe <- clean_up_dataframe(data)
 
 #### httr2
 ```{r}
-#API_prefix <- "https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience"
+url <- "https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience?"
 API_prefix <- "https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience?page=1&per_page=100"
 
 req <- request(API_prefix)
+headers <- req |> req_perform() |> resp_headers()
 
-#resp <- req |> req_perform() |> resp_body_json(check_type = TRUE, simplifyVector = TRUE)
+is_complete <- function(resp) {
+ length(resp_body_json(resp)$data) == 0
+}
 
-#is_complete <- function(resp) {
-#  length(resp_body_json(resp)$data) == 0
-#}
+resps <- req_perform_iterative(
+ req,
+ next_req = iterate_with_offset("?page=", start = 1, offset = 1, resp_pages = NULL, resp_complete = is_complete),
+ max_reqs = Inf
+)
 
-#resps <- req_perform_iterative(
-#  req,
-#  next_req = iterate_with_offset("page_index", resp_complete = is_complete),
-#  max_reqs = Inf
-#)
+resps
 
-# resps <- req_perform_iterative(
-#   req,
-#   next_req = iterate_with_offset(
-#     "page_index", resp_pages = function(resp) resp_body_json(resp)$pages
-#   ),
-#   max_reqs = Inf
-# )
-
-#data <- resps[[1]] %>% resp_body_json(check_type = TRUE, simplifyVector = TRUE)
- # resp_body_json(check_type = TRUE, simplifyVector = TRUE)
+print (length(resps))
+# data <- resps[[1]] %>% 
+#   resp_body_json(check_type = TRUE, simplifyVector = TRUE)
 ```
 
 ## Create DataFrame
