@@ -79,8 +79,6 @@ for (i in 1:length(resps)) {
 
 dataframe <- do.call(rbind, data)
 
-dataframe$date <- as.POSIXct(dataframe$date, format = "%Y-%m-%d")
-
 colnames(dataframe) <- c(
     'id', 'author', 'date', 'benefit', 'experience', 'technology', 'title', 'QID'
   )
