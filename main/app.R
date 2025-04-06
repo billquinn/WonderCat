@@ -1,5 +1,6 @@
 library(tidyverse)
 library(shiny)
+library(httr2)
 library(bslib)
 library(DT)
 library(ggplot2)
@@ -9,7 +10,7 @@ library(visNetwork)
 
 source("functions.R")
 
-data <- read_delim("wonderCat_data.tsv", delim = '\t')
+data <-  call_api_and_build_dataframe("https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience")
 wikiData <- read_delim("wikidata.tsv", delim = '\t')
 
 # Define UI for application: using bslib library for layout.
@@ -47,6 +48,12 @@ ui <- page_navbar(
   # Build "main panel" ----
   navset_card_underline(
     
+    nav_panel("Network", 
+      p("Network may take a little time to load."), 
+      # selectInput("netSelect1", "Select First Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology', "Titles"="title", "Authors"="author")), 
+      # selectInput("netSelect2", "Select Second Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology', "Titles"="title", "Authors"="author"), "title"), 
+      visNetworkOutput("network")),
+    
     nav_panel("Table", DT::dataTableOutput("table")),
     
     nav_panel("Bar Plot", 
@@ -56,12 +63,6 @@ ui <- page_navbar(
     ),
 
     nav_panel("Tree Map", plotOutput("treemap")),
-
-    nav_panel("Network", 
-    p("Network may take a little time to load."), 
-    selectInput("netSelect1", "Select First Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology', "Titles"="title", "Authors"="author")), 
-    selectInput("netSelect2", "Select Second Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology', "Titles"="title", "Authors"="author"), "title"), 
-    visNetworkOutput("network"))
 
 ), fluid = TRUE
 ) # navbarPage() closure
@@ -116,7 +117,8 @@ output$treemap <- renderPlot(
 
 # Network Output ---
 network <- reactive({
-    net <- create_network_data(reactive_df(), input$netSelect1, input$netSelect2)
+    # net <- create_subset_network_data(reactive_df(), input$netSelect1, input$netSelect2)
+    net <- create_full_network_data(reactive_df())
     return(net)
 })
 

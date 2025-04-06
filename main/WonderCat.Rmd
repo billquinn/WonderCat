@@ -46,7 +46,7 @@ data <- fromJSON(rawToChar(resp$content))
 dataframe <- clean_up_dataframe(data)
 ```
 
-#### httr2
+#### Call API (httr2) and Build Dataframe
 ```{r}
 url <- "https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience"
 
@@ -114,7 +114,7 @@ print (dim(dataframe))
 
 ### Bar Plot
 ```{r}
-bar_data <- data %>% count(technology)
+bar_data <- dataframe %>% count(technology)
 
 p <- bar_data |>
       ggplot(aes(x = n, y = technology, fill = technology)) +
