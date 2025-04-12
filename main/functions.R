@@ -13,6 +13,7 @@ call_api_and_build_dataframe <- function(url) {
     )
 
   data <- vector("list", length = length(resps))
+
   for (i in 1:length(resps)) {
     data$i <- i
     data[[i]] <- resps[[i]] %>% resp_body_json(check_type = TRUE, simplifyVector = TRUE) %>% 

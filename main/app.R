@@ -64,8 +64,8 @@ ui <- page_navbar(
 
     nav_panel("Tree Map", plotOutput("treemap")),
 
-), fluid = TRUE
-) # navbarPage() closure
+  ), 
+fluid = TRUE) # navbarPage() closure
 
 # Define server logic.
 server <- function(input, output) {

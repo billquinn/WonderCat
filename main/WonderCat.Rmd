@@ -60,21 +60,33 @@ resps <- req |>
       param_name = "page",
       resp_pages = \(resp) resp_body_json(resp)$info$pages
     )
-  )
+  ) 
+  
+api_to_dataframe <- function (resp) {
+  as_tibble(resp_body_json(resp))
+}
+
+resps |> resps_data(api_to_dataframe)
+  # |>
+  # resp_body_json(check_type = TRUE, simplifyVector = TRUE)
 
 print (length(resps))
 
 data <- vector("list", length = length(resps))
+
 for (i in 1:length(resps)) {
   data$i <- i
-  data[[i]] <- resps[[i]] %>% resp_body_json(check_type = TRUE, simplifyVector = TRUE) %>% 
-    select(id, author, date, benefit, experience, technology, acf) %>% 
-    unnest(c(benefit, experience, technology, acf), names_sep = '.') %>%
-    select(
-      id, author, date, 
-      benefit.name, experience.name, technology.name, 
-      acf.title_of_creative_work, starts_with('acf.wikidata-qid')
-      )
+  data[[i]] <- resps[[i]] %>% resp_body_json(check_type = TRUE, simplifyVector = TRUE)
+  
+  # %>% 
+
+  #   select(id, author, date, benefit, experience, technology, acf) %>% 
+  #   unnest(c(benefit, experience, technology, acf), names_sep = '.') %>%
+  #   select(
+  #     id, author, date, 
+  #     benefit.name, experience.name, technology.name, 
+  #     acf.title_of_creative_work, starts_with('acf.wikidata-qid')
+  #     )
 }
 
 dataframe <- do.call(rbind, data)
@@ -86,6 +98,8 @@ colnames(dataframe) <- c(
   )
 
 dataframe %>% head()
+
+resps %>% resp_body_json(check_type = TRUE, simplifyVector = TRUE)
 ```
 
 ## Create DataFrame
