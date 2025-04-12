@@ -54,7 +54,7 @@ ui <- page_navbar(
       # selectInput("netSelect2", "Select Second Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology', "Titles"="title", "Authors"="author"), "title"), 
       visNetworkOutput("network")),
     
-    nav_panel("Table", DT::dataTableOutput("table")),
+    nav_panel("Table", textOutput("text"), DT::dataTableOutput("table")),
     
     nav_panel("Bar Plot", 
         selectInput("barSelect", "Select Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology')), 
@@ -88,7 +88,13 @@ reactive_df <- reactive({
 })
   
 # Table Output ----
-output$table <- DT::renderDataTable({reactive_df()})
+# output$text <- renderText({ 
+#   reactive_df() %>% pull()
+# })
+
+output$table <- DT::renderDataTable({
+  reactive_df() %>% select(id, author, date, title, technology, experience, benefit, QID)
+})
 
 # Bar Plot Output ----
 barData <- reactive({

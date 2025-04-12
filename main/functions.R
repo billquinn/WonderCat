@@ -26,7 +26,7 @@ call_api_and_build_dataframe <- function(url) {
       select(
         id, author, date, 
         benefit.name, experience.name, technology.name, 
-        acf.title_of_creative_work, starts_with('acf.wikidata-qid')
+        acf.title_of_creative_work, acf.feature, starts_with('acf.wikidata-qid')
         )
   }
 
@@ -35,14 +35,13 @@ call_api_and_build_dataframe <- function(url) {
   dataframe$date <- as.POSIXct(dataframe$date, format = "%Y-%m-%d")
 
   colnames(dataframe) <- c(
-      'id', 'author', 'date', 'benefit', 'experience', 'technology', 'title', 'QID'
+      'id', 'author', 'date', 'benefit', 'experience', 'technology', 'title', 'text', 'QID'
     )
   
   # Remove last row of dataframe.
   dataframe <- head(dataframe, -1)
 
-  return (dataframe)
-
+  return(dataframe)
 }
 
 

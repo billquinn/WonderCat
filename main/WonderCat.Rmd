@@ -78,7 +78,7 @@ for (i in 1:length(resps)) {
     select(
       id, author, date, 
       benefit.name, experience.name, technology.name, 
-      acf.title_of_creative_work, starts_with('acf.wikidata-qid')
+      acf.title_of_creative_work, acf.feature, starts_with('acf.wikidata-qid')
       )
 }
 
@@ -86,7 +86,7 @@ dataframe <- do.call(rbind, data)
 
 dataframe$date <- as.POSIXct(dataframe$date, format = "%Y-%m-%d")
 
-colnames(dataframe) <- c('id', 'author', 'date', 'benefit', 'experience', 'technology', 'title', 'QID')
+colnames(dataframe) <- c('id', 'author', 'date', 'benefit', 'experience', 'technology', 'title', 'text','QID')
 
 dataframe %>% head()
 print (dim(dataframe))
