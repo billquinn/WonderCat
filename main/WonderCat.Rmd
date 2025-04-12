@@ -52,23 +52,19 @@ url <- "https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience"
 
 req <- request(url)
 headers <- req |> req_perform() |> resp_headers()
-total_pages <- req |> req_perform() |> resp_headers("x-wp-totalpages")
+page_info <- req |> req_perform() |> resp_headers("x-wp-totalpages")
+
+total_pages <- as.numeric(page_info[[1]])
 
 resps <- req |>
   req_perform_iterative(
     next_req = iterate_with_offset(
       param_name = "page",
       resp_pages = \(resp) resp_body_json(resp)$info$pages
-    )
+    ),
+    max_reqs = total_pages
   ) 
-  
-api_to_dataframe <- function (resp) {
-  as_tibble(resp_body_json(resp))
-}
 
-resps |> resps_data(api_to_dataframe)
-  # |>
-  # resp_body_json(check_type = TRUE, simplifyVector = TRUE)
 
 print (length(resps))
 
@@ -76,30 +72,26 @@ data <- vector("list", length = length(resps))
 
 for (i in 1:length(resps)) {
   data$i <- i
-  data[[i]] <- resps[[i]] %>% resp_body_json(check_type = TRUE, simplifyVector = TRUE)
-  
-  # %>% 
-
-  #   select(id, author, date, benefit, experience, technology, acf) %>% 
-  #   unnest(c(benefit, experience, technology, acf), names_sep = '.') %>%
-  #   select(
-  #     id, author, date, 
-  #     benefit.name, experience.name, technology.name, 
-  #     acf.title_of_creative_work, starts_with('acf.wikidata-qid')
-  #     )
+  data[[i]] <- resps[[i]] %>% resp_body_json(check_type = TRUE, simplifyVector = TRUE) %>% 
+    select(id, author, date, benefit, experience, technology, acf) %>% 
+    unnest(c(benefit, experience, technology, acf), names_sep = '.') %>%
+    select(
+      id, author, date, 
+      benefit.name, experience.name, technology.name, 
+      acf.title_of_creative_work, starts_with('acf.wikidata-qid')
+      )
 }
 
 dataframe <- do.call(rbind, data)
 
 dataframe$date <- as.POSIXct(dataframe$date, format = "%Y-%m-%d")
 
-colnames(dataframe) <- c(
-    'id', 'author', 'date', 'benefit', 'experience', 'technology', 'title', 'QID'
-  )
+colnames(dataframe) <- c('id', 'author', 'date', 'benefit', 'experience', 'technology', 'title', 'QID')
 
 dataframe %>% head()
-
-resps %>% resp_body_json(check_type = TRUE, simplifyVector = TRUE)
+print (dim(dataframe))
+dataframe <- head(dataframe, -1)
+print (dim(dataframe))
 ```
 
 ## Create DataFrame

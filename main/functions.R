@@ -4,12 +4,16 @@
 call_api_and_build_dataframe <- function(url) {
   req <- request(url)
 
+  page_info <- req |> req_perform() |> resp_headers("x-wp-totalpages")
+  total_pages <- as.numeric(page_info[[1]])
+
   resps <- req |>
     req_perform_iterative(
       next_req = iterate_with_offset(
         param_name = "page",
         resp_pages = \(resp) resp_body_json(resp)$info$pages
-      )
+      ),
+      max_reqs = total_pages
     )
 
   data <- vector("list", length = length(resps))
@@ -34,6 +38,9 @@ call_api_and_build_dataframe <- function(url) {
       'id', 'author', 'date', 'benefit', 'experience', 'technology', 'title', 'QID'
     )
   
+  # Remove last row of dataframe.
+  dataframe <- head(dataframe, -1)
+
   return (dataframe)
 
 }
