@@ -88,13 +88,15 @@ reactive_df <- reactive({
 })
   
 # Table Output ----
-# output$text <- renderText({ 
-#   reactive_df() %>% pull()
-# })
+output$table <- DT::renderDataTable(
+  {reactive_df() %>% select(id, author, date, title, technology, experience, benefit, QID)}, 
+  selection = 'single', rownames = FALSE, options = list(dom = 't')
+)
 
-output$table <- DT::renderDataTable({
-  reactive_df() %>% select(id, author, date, title, technology, experience, benefit, QID)
+observeEvent(input$table_rows_selected, {
+  showModal(modalDialog(title = 'Excerpt:', reactive_df()[input$table_rows_selected,]))
 })
+
 
 # Bar Plot Output ----
 barData <- reactive({
