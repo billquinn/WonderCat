@@ -50,6 +50,7 @@ ui <- page_navbar(
     
     nav_panel("Network", 
       p("Network may take a little time to load."), 
+      # Older version allowed for user to choose two columns for a network graph.
       # selectInput("netSelect1", "Select First Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology', "Titles"="title", "Authors"="author")), 
       # selectInput("netSelect2", "Select Second Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology', "Titles"="title", "Authors"="author"), "title"), 
       visNetworkOutput("network")),
@@ -58,8 +59,11 @@ ui <- page_navbar(
     
     nav_panel("Bar Plot", 
         selectInput("barSelect", "Select Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology')), 
-        sliderInput("barSlider", "Filter Count by Quantiles:", min = 0, max = 1, value = c(0, 1), step = 0.25), 
+        sliderInput("barSlider", "Filter Count by Deciles:", min = 1, max = 10, value = c(8, 10), step = 1), 
         plotlyOutput("barplot")
+        # Data table for testing, but might be useful to see a table with the graph.
+        # , 
+        # DT::dataTableOutput('test')
     ),
 
     nav_panel("Tree Map", plotOutput("treemap")),
@@ -94,20 +98,31 @@ output$table <- DT::renderDataTable(
 )
 
 observeEvent(input$table_rows_selected, {
-  showModal(modalDialog(title = 'Excerpt:', reactive_df()[input$table_rows_selected,]))
+  selected_row <- reactive_df()[input$table_rows_selected,]
+  sel_author <- selected_row[[2]]
+  sel_title <- selected_row[[7]]
+  sel_text <- selected_row[[8]]
+  showModal(modalDialog(
+    title = sel_title, 'Submitted by ', sel_author, HTML('<br><br>'), sel_text,
+    easyClose = TRUE
+  ))
 })
 
 
 # Bar Plot Output ----
 barData <- reactive({
     req(input$barSelect)
-    reactive_df() %>% dplyr::count(!!sym(input$barSelect)) %>% quantile(all_of(input$barSelect))
-    })
+    reactive_df() %>% dplyr::count(!!sym(input$barSelect), name = 'count') %>%
+      mutate(decile = ntile(count, 10)) %>%
+      filter(between(decile, input$barSlider[1], input$barSlider[2]))
+})
 
 output$barplot <- renderPlotly(
     barData() |>
-    ggplot(aes(x = n, y = !!sym(input$barSelect), fill = !!sym(input$barSelect))) +
+    ggplot(aes(x = count, y = !!sym(input$barSelect), fill = !!sym(input$barSelect))) +
     geom_bar(stat = "identity"))
+
+# output$test <- DT::renderDataTable({barData()})
 
 # Tree Map Output ---
 treeData <- reactive({
