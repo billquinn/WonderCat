@@ -46,25 +46,30 @@ data <- fromJSON(rawToChar(resp$content))
 dataframe <- clean_up_dataframe(data)
 ```
 
-#### httr2
+#### Call API (httr2) and Build Dataframe
 ```{r}
 url <- "https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience"
 
 req <- request(url)
 headers <- req |> req_perform() |> resp_headers()
-total_pages <- req |> req_perform() |> resp_headers("x-wp-totalpages")
+page_info <- req |> req_perform() |> resp_headers("x-wp-totalpages")
+
+total_pages <- as.numeric(page_info[[1]])
 
 resps <- req |>
   req_perform_iterative(
     next_req = iterate_with_offset(
       param_name = "page",
       resp_pages = \(resp) resp_body_json(resp)$info$pages
-    )
-  )
+    ),
+    max_reqs = total_pages
+  ) 
+
 
 print (length(resps))
 
 data <- vector("list", length = length(resps))
+
 for (i in 1:length(resps)) {
   data$i <- i
   data[[i]] <- resps[[i]] %>% resp_body_json(check_type = TRUE, simplifyVector = TRUE) %>% 
@@ -73,17 +78,22 @@ for (i in 1:length(resps)) {
     select(
       id, author, date, 
       benefit.name, experience.name, technology.name, 
-      acf.title_of_creative_work, starts_with('acf.wikidata-qid')
+      acf.title_of_creative_work, acf.feature, starts_with('acf.wikidata-qid')
       )
 }
 
 dataframe <- do.call(rbind, data)
 
-colnames(dataframe) <- c(
-    'id', 'author', 'date', 'benefit', 'experience', 'technology', 'title', 'QID'
-  )
+colnames(dataframe) <- c('id', 'author', 'date', 'benefit', 'experience', 'technology', 'title', 'text','QID')
+
+dataframe$date <- as.POSIXct(dataframe$date, format = "%Y-%m-%d")
+
+dataframe$date <- as.Date(dataframe$date, format = '%y%m%d')
 
 dataframe %>% head()
+print (dim(dataframe))
+dataframe <- head(dataframe, -1)
+print (dim(dataframe))
 ```
 
 ## Create DataFrame
@@ -112,7 +122,7 @@ print (dim(dataframe))
 
 ### Bar Plot
 ```{r}
-bar_data <- data %>% count(technology)
+bar_data <- dataframe %>% count(technology)
 
 p <- bar_data |>
       ggplot(aes(x = n, y = technology, fill = technology)) +

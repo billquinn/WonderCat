@@ -32,14 +32,15 @@ call_api_and_build_dataframe <- function(url) {
 
   dataframe <- do.call(rbind, data)
 
-  dataframe$date <- as.POSIXct(dataframe$date, format = "%Y-%m-%d")
-
   colnames(dataframe) <- c(
       'id', 'author', 'date', 'benefit', 'experience', 'technology', 'title', 'text', 'QID'
     )
   
   # Remove last row of dataframe.
   dataframe <- head(dataframe, -1)
+
+  dataframe$date <- as.POSIXct(dataframe$date, format = "%Y-%m-%d")
+  dataframe$date <- as.Date(dataframe$date, format = '%y%m%d')
 
   return(dataframe)
 }
