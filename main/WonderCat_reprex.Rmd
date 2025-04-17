@@ -122,11 +122,7 @@ print (dim(dataframe))
 
 ### Bar Plot
 ```{r}
-bar_data <- dataframe %>% count(technology, name = 'count') %>% mutate(decile = ntile(count, 10))
-#  %>%
-#   filter(between(decile, 8, 10))
-
-bar_data
+bar_data <- dataframe %>% count(technology)
 
 p <- bar_data |>
       ggplot(aes(x = n, y = technology, fill = technology)) +
@@ -137,7 +133,7 @@ ggplotly(p)
 
 ### Quantile Test for Bar Plot
 ```{r}
-
+bar_quantile <- quantile(bar_data %>% pull(all_of(column)), n)
 
 quantile_filter <- function(dataframe, column, min_value, max_value){
     

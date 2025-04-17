@@ -1,21 +1,16 @@
 library(tidyverse)
-library(dplyr)
 library(shiny)
 library(httr2)
-library(jsonlite)
 library(bslib)
 library(DT)
 library(ggplot2)
-library(ggraph)
-library(igraph)
 library(plotly)
-library(treemap)
 library(treemapify)
 library(visNetwork)
 
 source("functions.R")
 
-data <- read_delim("wonderCat_data.tsv", delim = '\t')
+data <-  call_api_and_build_dataframe("https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience")
 wikiData <- read_delim("wikidata.tsv", delim = '\t')
 
 # Define UI for application: using bslib library for layout.
@@ -53,23 +48,28 @@ ui <- page_navbar(
   # Build "main panel" ----
   navset_card_underline(
     
-    nav_panel("Table", DT::dataTableOutput("table")),
+    nav_panel("Network", 
+      p("Network may take a little time to load."), 
+      # Older version allowed for user to choose two columns for a network graph.
+      # selectInput("netSelect1", "Select First Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology', "Titles"="title", "Authors"="author")), 
+      # selectInput("netSelect2", "Select Second Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology', "Titles"="title", "Authors"="author"), "title"), 
+      visNetworkOutput("network")),
+    
+    nav_panel("Table", textOutput("text"), DT::dataTableOutput("table")),
     
     nav_panel("Bar Plot", 
         selectInput("barSelect", "Select Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology')), 
+        sliderInput("barSlider", "Filter Count by Deciles:", min = 1, max = 10, value = c(8, 10), step = 1), 
         plotlyOutput("barplot")
+        # Data table for testing, but might be useful to see a table with the graph.
+        # , 
+        # DT::dataTableOutput('test')
     ),
 
     nav_panel("Tree Map", plotOutput("treemap")),
 
-    nav_panel("Network", 
-    p("Network may take a little time to load."), 
-    selectInput("netSelect1", "Select First Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology', "Titles"="title", "Authors"="author")), 
-    selectInput("netSelect2", "Select Second Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology', "Titles"="title", "Authors"="author"), "title"), 
-    visNetworkOutput("network"))
-
-), fluid = TRUE
-) # navbarPage() closure
+  ), 
+fluid = TRUE) # navbarPage() closure
 
 # Define server logic.
 server <- function(input, output) {
@@ -92,18 +92,37 @@ reactive_df <- reactive({
 })
   
 # Table Output ----
-output$table <- DT::renderDataTable({reactive_df()})
+output$table <- DT::renderDataTable(
+  {reactive_df() %>% select(id, author, date, title, technology, experience, benefit, QID)}, 
+  selection = 'single', rownames = FALSE, options = list(dom = 't')
+)
+
+observeEvent(input$table_rows_selected, {
+  selected_row <- reactive_df()[input$table_rows_selected,]
+  sel_author <- selected_row[[2]]
+  sel_title <- selected_row[[7]]
+  sel_text <- selected_row[[8]]
+  showModal(modalDialog(
+    title = sel_title, 'Submitted by ', sel_author, HTML('<br><br>'), sel_text,
+    easyClose = TRUE
+  ))
+})
+
 
 # Bar Plot Output ----
 barData <- reactive({
     req(input$barSelect)
-    reactive_df() %>% dplyr::count(!!sym(input$barSelect))
-    })
+    reactive_df() %>% dplyr::count(!!sym(input$barSelect), name = 'count') %>%
+      mutate(decile = ntile(count, 10)) %>%
+      filter(between(decile, input$barSlider[1], input$barSlider[2]))
+})
 
 output$barplot <- renderPlotly(
     barData() |>
-    ggplot(aes(x = n, y = !!sym(input$barSelect), fill = !!sym(input$barSelect))) +
+    ggplot(aes(x = count, y = !!sym(input$barSelect), fill = !!sym(input$barSelect))) +
     geom_bar(stat = "identity"))
+
+# output$test <- DT::renderDataTable({barData()})
 
 # Tree Map Output ---
 treeData <- reactive({
@@ -121,7 +140,8 @@ output$treemap <- renderPlot(
 
 # Network Output ---
 network <- reactive({
-    net <- create_network_data(reactive_df(), input$netSelect1, input$netSelect2)
+    # net <- create_subset_network_data(reactive_df(), input$netSelect1, input$netSelect2)
+    net <- create_full_network_data(reactive_df())
     return(net)
 })
 
