@@ -155,7 +155,9 @@ less_iris <- quantile_filter(bar_data, "n", 0.5, 1)
 
 ### Tree Map
 ```{r}
-treeData <-  dataframe %>% group_by(title, experience) %>% summarize(count = n())
+treeData <-  dataframe %>% 
+  group_by(title, experience) %>% summarize(count = n()) %>%
+  mutate(decile = ntile(count, 10))
 #treemap(treeData, index = c("title", "experience"), vSize="count", type="index")
 
 ggplot(treeData, aes(area = count, label = title, fill = experience, subgroup = experience)) + 

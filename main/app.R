@@ -26,22 +26,22 @@ ui <- page_navbar(
     # Source-Narrative Filter ----
     selectInput(
       "title", "Title Filter:",
-      choices = data$title, multiple = TRUE
+      choices = data[order(data$title),]$title, multiple = TRUE
     ),
     # Technology Filter ----
     selectInput(
       "technology", "Technology Filter:",
-      choices = data$technology, multiple = TRUE
+      choices = data[order(data$technology),]$technology, multiple = TRUE
     ),
     # Experience Filter ----
     selectInput(
       "experience", "Experience Filter:",
-      choices = data$experience, multiple = TRUE
+      choices = data[order(data$experience),]$experience, multiple = TRUE
     ),
     # Benefit Filter ----
     selectInput(
       "benefit", "Benefit Filter:",
-      choices = data$benefit, multiple = TRUE
+      choices = data[order(data$benefit),]$benefit, multiple = TRUE
     ),
   ), 
     
@@ -50,23 +50,28 @@ ui <- page_navbar(
     
     nav_panel("Network", 
       p("Network may take a little time to load."), 
+      visNetworkOutput("network")),
       # Older version allowed for user to choose two columns for a network graph.
       # selectInput("netSelect1", "Select First Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology', "Titles"="title", "Authors"="author")), 
       # selectInput("netSelect2", "Select Second Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology', "Titles"="title", "Authors"="author"), "title"), 
-      visNetworkOutput("network")),
     
     nav_panel("Table", textOutput("text"), DT::dataTableOutput("table")),
     
     nav_panel("Bar Plot", 
+      layout_columns(
         selectInput("barSelect", "Select Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology')), 
-        sliderInput("barSlider", "Filter Count by Deciles:", min = 1, max = 10, value = c(8, 10), step = 1), 
+        sliderInput("barSlider", "Filter Count by Deciles:", min = 1, max = 10, value = c(8, 10), step = 1)
+      ), 
         plotlyOutput("barplot")
-        # Data table for testing, but might be useful to see a table with the graph.
+    ),
+
+    nav_panel("Tree Map", 
+      sliderInput("treeSlider", "Filter Count by Deciles:", min = 1, max = 10, value = c(1, 2), step = 1),
+      plotOutput("treemap"),
+      # Data table for testing, but might be useful to see a table with the graph.
         # , 
         # DT::dataTableOutput('test')
     ),
-
-    nav_panel("Tree Map", plotOutput("treemap")),
 
   ), 
 fluid = TRUE) # navbarPage() closure
@@ -94,7 +99,7 @@ reactive_df <- reactive({
 # Table Output ----
 output$table <- DT::renderDataTable(
   {reactive_df() %>% select(id, author, date, title, technology, experience, benefit, QID)}, 
-  selection = 'single', rownames = FALSE, options = list(dom = 't')
+  selection = 'single', rownames = FALSE, options = list(pageLength = -1, info = FALSE, lengthMenu = list(c(15, -1), c("15", "All")))
 )
 
 observeEvent(input$table_rows_selected, {
@@ -119,14 +124,18 @@ barData <- reactive({
 
 output$barplot <- renderPlotly(
     barData() |>
-    ggplot(aes(x = count, y = !!sym(input$barSelect), fill = !!sym(input$barSelect))) +
-    geom_bar(stat = "identity"))
-
-# output$test <- DT::renderDataTable({barData()})
+    ggplot(aes(x = count, y = reorder(!!sym(input$barSelect), count), fill = !!sym(input$barSelect))) +
+    geom_bar(stat = "identity") +
+    xlab('count') + 
+    ylab(input$barSelect) +
+    theme(legend.position = 'none')
+)
 
 # Tree Map Output ---
 treeData <- reactive({
-    reactive_df() %>% group_by(title, experience) %>% summarize(count = n())
+    reactive_df() %>% group_by(title, experience) %>% summarize(count = n()) %>%
+      mutate(decile = ntile(count, 10)) %>%
+      filter(between(decile, input$treeSlider[1], input$treeSlider[2]))
 })
 
 output$treemap <- renderPlot(
@@ -135,8 +144,11 @@ output$treemap <- renderPlot(
         geom_treemap_subgroup_border() +
         geom_treemap_text(fontface = "italic", colour = "black", place = "topleft", grow = FALSE) + 
         geom_treemap_subgroup_border() +
-        geom_treemap_subgroup_text(place = "centre", grow = T, alpha = 0.3, colour = "black", fontface = "italic", min.size = 0)
+        geom_treemap_subgroup_text(place = "centre", grow = T, alpha = 0.3, colour = "black", fontface = "italic", min.size = 0) +
+        scale_colour_brewer(palette = "Set1")
 )
+
+# output$test <- DT::renderDataTable({barData()})
 
 # Network Output ---
 network <- reactive({
