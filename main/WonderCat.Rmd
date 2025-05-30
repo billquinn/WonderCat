@@ -29,31 +29,29 @@ library(plotly)
 # library(treemap)
 library(treemapify)
 library(visNetwork)
+library(WikidataQueryServiceR)
+library(leaflet)
 
 print (getwd())
 # Import functions.
-# source(paste0(getwd(), '/functions.R'))
+source(paste0(getwd(), '/main/functions.R'))
 
+dataframe <- call_api_and_build_dataframe("https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience")
+wikiData <- get_wikidata(dataframe)
+wikiData <- merge(wikiData, dataframe %>% select(title,QID), by = "QID")
 ```
 
 ## API Call
-#### httr
-```{r}
-URL <- "https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience?page=1&per_page=100"
 
-resp <- GET(URL)
-data <- fromJSON(rawToChar(resp$content))
-dataframe <- clean_up_dataframe(data)
-```
-
-#### Call API (httr2) and Build Dataframe
+### Call API (httr2) and Build Dataframe
 ```{r}
 url <- "https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience"
 
 req <- request(url)
+
+resp <- req_perform(req) %>% resp_body_json()
 headers <- req |> req_perform() |> resp_headers()
 page_info <- req |> req_perform() |> resp_headers("x-wp-totalpages")
-
 total_pages <- as.numeric(page_info[[1]])
 
 resps <- req |>
@@ -63,18 +61,15 @@ resps <- req |>
       resp_pages = \(resp) resp_body_json(resp)$info$pages
     ),
     max_reqs = total_pages
-  ) 
-
-
-print (length(resps))
+  )
 
 data <- vector("list", length = length(resps))
 
 for (i in 1:length(resps)) {
   data$i <- i
-  data[[i]] <- resps[[i]] %>% resp_body_json(check_type = TRUE, simplifyVector = TRUE) %>% 
+  data[[i]] <- resps[[i]] %>% resp_body_json(check_type = FALSE, simplifyVector = TRUE) %>% 
     select(id, author, date, benefit, experience, technology, acf) %>% 
-    unnest(c(benefit, experience, technology, acf), names_sep = '.') %>%
+    unnest(c(benefit, experience, technology, acf), names_sep = '.', keep_empty = TRUE) %>%
     select(
       id, author, date, 
       benefit.name, experience.name, technology.name, 
@@ -119,6 +114,35 @@ clean_up_dataframe <- function(data){
 dataframe <- clean_up_dataframe(data)
 print (dim(dataframe))
 ```
+
+### Wikidata
+```{r}
+QIDS <- dataframe %>% filter(grepl('Q\\d+', QID))
+QIDS <- lapply('wd:', paste0, QIDS[['QID']])
+QIDS <- paste(unlist(QIDS), collapse = ' ')
+
+query <- paste0("
+  SELECT DISTINCT
+        ?item ?pubDate ?genreLabel
+        ?countryOriginLabel ?coordinates
+
+    WHERE {
+        VALUES ?item {",QIDS,"}
+
+        ?item wdt:P31 ?instanceof.
+        OPTIONAL {?item wdt:P136 ?genre}.
+        OPTIONAL {?item wdt:P577 ?pubDate}.
+        ?item wdt:P495 ?countryOrigin .
+        ?countryOrigin wdt:P625 ?coordinates.
+    
+        SERVICE wikibase:label { bd:serviceParam wikibase:language 'en,en'. }}")
+        
+wiki_resp <- query_wikidata(query)
+names(wiki_resp)[names(wiki_resp) == 'item'] <- 'QID'
+wiki_resp$QID <- sub('.*/entity/(Q\\d+)', '\\1', wiki_resp$QID)
+wiki_resp
+```
+
 
 ### Bar Plot
 ```{r}
@@ -167,7 +191,6 @@ ggplot(treeData, aes(area = count, label = title, fill = experience, subgroup = 
   geom_treemap_subgroup_border() +
   geom_treemap_subgroup_text(place = "centre", grow = T, alpha = 0.3, colour = "black", fontface = "italic", min.size = 0)
 ```
-
 
 ```{r}
 treemap(treeData,
@@ -399,4 +422,17 @@ visOptions(
   highlightNearest = TRUE,
   selectedBy = "label"
 )
+```
+
+
+## Wikidata
+```{r}
+
+```
+
+## Leaflet
+```{r}
+leaflet(data = wikiData) %>% 
+  addTiles() %>%
+  addMarkers(label = ~title, clusterOptions = markerClusterOptions())
 ```

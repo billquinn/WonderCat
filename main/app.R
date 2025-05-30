@@ -7,11 +7,13 @@ library(ggplot2)
 library(plotly)
 library(treemapify)
 library(visNetwork)
+library(WikidataQueryServiceR)
+library(leaflet)
 
 source("functions.R")
 
 data <-  call_api_and_build_dataframe("https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience")
-wikiData <- read_delim("wikidata.tsv", delim = '\t')
+wikiResp <- get_wikidata(data)
 
 # Define UI for application: using bslib library for layout.
 ui <- page_navbar(
@@ -73,6 +75,10 @@ ui <- page_navbar(
         # DT::dataTableOutput('test')
     ),
 
+    nav_panel("WikiData", DT::dataTableOutput("wikiTable")),
+
+    nav_panel("World Map", leafletOutput("worldMap"))
+
   ), 
 fluid = TRUE) # navbarPage() closure
 
@@ -102,6 +108,7 @@ output$table <- DT::renderDataTable(
   selection = 'single', rownames = FALSE, options = list(pageLength = -1, info = FALSE, lengthMenu = list(c(15, -1), c("15", "All")))
 )
 
+# Text "Alert" when clicking on data table row ----
 observeEvent(input$table_rows_selected, {
   selected_row <- reactive_df()[input$table_rows_selected,]
   sel_author <- selected_row[[2]]
@@ -162,6 +169,21 @@ output$network <- renderVisNetwork({
     visOptions(highlightNearest = TRUE, selectedBy = "label")
 })
 
+# Wiki-Table Output ----
+wikiData <- reactive({
+  reactive_df() %>% select(title, QID) %>% merge(wikiResp, by = "QID")
+})
+
+output$wikiTable <- DT::renderDataTable({wikiData()}, 
+  selection = 'single', rownames = FALSE, options = list(pageLength = -1, info = FALSE, lengthMenu = list(c(15, -1), c("15", "All")))
+)
+
+# Leaflet Output ----
+output$worldMap <- renderLeaflet({
+  leaflet(data = wikiData() %>% select(title, lon, lat) %>% distinct(title, lon, lat)) %>% 
+    addTiles() %>%
+    addMarkers(label = ~title, clusterOptions = markerClusterOptions())
+})
 }
 
 # Run the application 
