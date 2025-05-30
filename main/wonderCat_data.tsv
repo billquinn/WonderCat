@@ -1,4 +1,10 @@
 id	author	date	benefit	experience	technology	title	QID
+848	6	2025-04-16	Creativity	Wonder	Poetic Language	A Room of One's Own by Virginia Woolf	Q1204366
+847	6	2025-04-16	Creative Breakthrough	Relearning	Poetic History	A Room of One's Own	Q1204366
+846	6	2025-04-16	Connection	Superiority	Insinuation	A Room of One's Own	Q1204366
+845	6	2025-04-16	Resilience	Identification	Soliloquy	A Room of One's Own	Q1204366
+777	6	2025-03-11	Gratitude	Identification	Stream of Consciousness	To the Lighthouse	Q478016
+776	6	2025-03-11	Gratitude	Wonder	Stream of Consciousness	To the Lighthouse	Q478016
 362	5	2025-01-09	Faith	Wonder	Enigma	Mystery Plays	Q240911
 364	5	2025-01-09	Generosity	Wonder	Stretch	Oedipus	Q148643
 363	5	2025-01-09	Faith	Wonder	Plot Twist	Oedipus	Q148643
@@ -64,7 +70,7 @@ id	author	date	benefit	experience	technology	title	QID
 302	5	2025-01-09	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Invisible Man	Q1784288
 301	5	2025-01-09	Expanded Inner List of Cultural Norms	Self-Acceptance	Dream of the World	Dream of the Red Chamber	Q8265
 300	5	2025-01-09	Community	Righteousness	Revenge Plot	Oresteia	Q249769
-299	1	2025-01-09	Community	Righteousness	Revenge Plot	Promising Young Woman	Q62595383
+299	6	2025-01-09	Community	Righteousness	Revenge Plot	Promising Young Woman	Q62595383
 298	5	2025-01-09	Community	Righteousness	Revenge Plot	Thyestes	Q3990982
 297	5	2025-01-09	Community	Righteousness	Revenge Plot	Père Goriot	Q240617
 296	5	2025-01-09	Community	Righteousness	Moral Suasion	Narrative of the Life of Frederick Douglass, An American Slave	Q2904743
@@ -113,9 +119,9 @@ id	author	date	benefit	experience	technology	title	QID
 253	5	2025-01-09	Intimacy	Love	Almighty Heart	The History of Love	Q5237708
 252	5	2025-01-09	Intimacy	Love	Almighty Heart	The Time Traveler's Wife	Q1212645
 251	5	2025-01-09	Intimacy	Love	Almighty Heart	Bel Canto	Q4881733
-250	1	2025-01-09	Intimacy	Love	Secret Discloser	Jane Eyre	Q182961
+250	6	2025-01-09	Intimacy	Love	Secret Discloser	Jane Eyre	Q182961
 249	5	2025-01-09	Intimacy	Love	Secret Discloser	Sappho's Lyrics	Q17079267
-248	1	2025-01-09	Intimacy	Love	I Voice	Fleabag	Q105756377
+248	6	2025-01-09	Intimacy	Love	I Voice	Fleabag	Q105756377
 247	5	2025-01-09	Intimacy	Love	I Voice	My Antonia	Q2776448
 246	5	2025-01-09	Intimacy	Love	I Voice	A Farewell to Arms	Q235795
 245	5	2025-01-09	Intimacy	Love	I Voice	Jane Eyre	Q182961
@@ -182,7 +188,7 @@ id	author	date	benefit	experience	technology	title	QID
 184	5	2025-01-09	Purpose	Curiosity	Suspense	King Solomon's Mines	Q1137494
 183	5	2025-01-09	Purpose	Curiosity	Suspense	Sir Gawain and the Green Knight	Q756715
 182	5	2025-01-09	Purpose	Curiosity	Suspense	The Epic of Sundiata	Q4026918
-181	1	2025-01-09	Tend and Befriend	Courage	Human God Voice	Call the Midwife	Q172230
+181	6	2025-01-09	Tend and Befriend	Courage	Human God Voice	Call the Midwife	Q172230
 180	5	2025-01-09	Humility about One's Nature	Self-Irony	Conversion Narrative	Confessions	Q372941
 179	5	2025-01-09	Connection	Connection	Second Method	Tristan und Isolde	Q1324254
 178	5	2025-01-09	Connection	Connection	Second Method	Rigoletto	Q189234
@@ -193,14 +199,14 @@ id	author	date	benefit	experience	technology	title	QID
 173	5	2025-01-09	Connection	Connection	Partial Dopamine	The String of Pearls	Q7767037
 172	5	2025-01-09	Connection	Connection	Partial Dopamine	Varney the Vampire	Q1987925
 171	5	2025-01-09		Confusion	Stream of Consciousness	Ulysses	Q6511
-170	1	2025-01-09	Resilience	Confusion	Stream of Consciousness	The Sound and the Fury	Q135515
+170	6	2025-01-09	Resilience	Confusion	Stream of Consciousness	The Sound and the Fury	Q135515
 169	5	2025-01-09	Humility about One's Ideas	Being Wrong	Red Herring	Letters on Natural Magic	Q51499090
 168	5	2025-01-09	Humility about One's Ideas	Being Wrong	Red Herring	Veronica Mars	Q4529
 167	5	2025-01-09	Humility about One's Ideas	Being Wrong	Red Herring	Law and Order	Q321423
 166	5	2025-01-09	Humility about One's Ideas	Being Wrong	Red Herring	Dragnet	Q1247359
 165	5	2025-01-09	Humility about One's Ideas	Being Wrong	Red Herring	The Murders in the Rue Morgue	Q459667
 164	5	2025-01-09	Humility about One's Ideas	Being Wrong	Red Herring	House	Q23558
-163	1	2025-01-09	Self-Scrutiny	Alienation	Second Look	Disclaimer	Q112241985
+163	6	2025-01-09	Self-Scrutiny	Alienation	Second Look	Disclaimer	Q112241985
 162	5	2025-01-09	Self-Scrutiny	Alienation	Second Look	Disgrace	Q958560
 161	5	2025-01-09	Self-Scrutiny	Alienation	Second Look	The Redundancy of Courage	Q7759996
 160	5	2025-01-09	Self-Scrutiny	Alienation	Second Look	Our Sister Killjoy	Q16733998
@@ -239,4 +245,4 @@ id	author	date	benefit	experience	technology	title	QID
 102	5	2024-11-15	Obedience	Awe	God Voice	Book of the Dead	Q174361
 85	5	2024-10-17	Forgiveness	Empathy	Empathy Generator	The Mill on the Floss	Q1215018
 58	5	2024-09-20	Obedience	Awe	God Voice	Gilgamesh	Q8272
-56	1	2024-09-20	Vigilance	Paranoia	Vigilance Trigger	The Terror	Q27538067
+56	6	2024-09-20	Vigilance	Paranoia	Vigilance Trigger	The Terror	Q27538067
