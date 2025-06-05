@@ -171,7 +171,7 @@ output$network <- renderVisNetwork({
 
 # Wiki-Table Output ----
 wikiData <- reactive({
-  reactive_df() %>% select(title, QID) %>% merge(wikiResp, by = "QID")
+  reactive_df() %>% select(title, QID) %>% inner_join(wikiResp, by = "QID")
 })
 
 output$wikiTable <- DT::renderDataTable({wikiData()}, 
@@ -180,7 +180,7 @@ output$wikiTable <- DT::renderDataTable({wikiData()},
 
 # Leaflet Output ----
 output$worldMap <- renderLeaflet({
-  leaflet(data = wikiData() %>% select(title, lon, lat) %>% distinct(title, lon, lat)) %>% 
+  leaflet(data = wikiData() %>% nest(genreLabel = genreLabel)) %>% # %>% select(title, lon, lat) %>% distinct(title, lon, lat)
     addTiles() %>%
     addMarkers(label = ~title, clusterOptions = markerClusterOptions())
 })
