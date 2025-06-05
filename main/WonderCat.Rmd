@@ -34,7 +34,7 @@ library(leaflet)
 
 print (getwd())
 # Import functions.
-source(paste0(getwd(), '/main/functions.R'))
+source(paste0(getwd(), '/functions.R'))
 
 dataframe <- call_api_and_build_dataframe("https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience")
 wikiData <- get_wikidata(dataframe)
@@ -70,11 +70,13 @@ for (i in 1:length(resps)) {
   data[[i]] <- resps[[i]] %>% resp_body_json(check_type = FALSE, simplifyVector = TRUE) %>% 
     select(id, author, date, benefit, experience, technology, acf) %>% 
     unnest(c(benefit, experience, technology, acf), names_sep = '.', keep_empty = TRUE) %>%
+    rename('benefit' = contains('benefit.name')) %>% # Renames benefit.name (entry is present) to benefit (no entry).
     select(
       id, author, date, 
-      benefit.name, experience.name, technology.name, 
+      benefit, experience.name, technology.name, 
       acf.title_of_creative_work, acf.feature, starts_with('acf.wikidata-qid')
-      )
+    ) %>%
+    unnest(benefit) # Convert list into string (each "list" has only one value)
 }
 
 dataframe <- do.call(rbind, data)
@@ -91,29 +93,6 @@ dataframe <- head(dataframe, -1)
 print (dim(dataframe))
 ```
 
-## Create DataFrame
-```{r}
-# Clean Up Dataframe
-clean_up_dataframe <- function(data){
-  dataframe <- data %>% 
-    select(id, author, date, benefit, experience, technology, acf) %>% 
-    unnest(c(benefit, experience, technology, acf), names_sep = '.') %>%
-    select(
-      id, author, date, 
-      benefit.name, experience.name, technology.name, 
-      acf.title_of_creative_work, starts_with('acf.wikidata-qid')
-      )
-  
-  colnames(dataframe) <- c(
-    'id', 'author', 'date', 'benefit', 'experience', 'technology', 'title', 'QID'
-  )
-  
-  return (dataframe)
-}
-
-dataframe <- clean_up_dataframe(data)
-print (dim(dataframe))
-```
 
 ### Wikidata
 ```{r}

@@ -23,11 +23,13 @@ call_api_and_build_dataframe <- function(url) {
     data[[i]] <- resps[[i]] %>% resp_body_json(check_type = TRUE, simplifyVector = TRUE) %>% 
       select(id, author, date, benefit, experience, technology, acf) %>% 
       unnest(c(benefit, experience, technology, acf), names_sep = '.', keep_empty = TRUE) %>%
+      rename('benefit' = contains('benefit.name')) %>% # Renames benefit.name (entry is present) to benefit (no entry).
       select(
         id, author, date, 
-        benefit.name, experience.name, technology.name, 
+        benefit, experience.name, technology.name, 
         acf.title_of_creative_work, acf.feature, starts_with('acf.wikidata-qid')
-        )
+        ) %>%
+    unnest(benefit) # Convert list into string (each "list" has only one value)
   }
 
   dataframe <- do.call(rbind, data)
@@ -46,23 +48,65 @@ call_api_and_build_dataframe <- function(url) {
 }
 
 
-# Dataframe Functions
-api_to_dataframe <- function(data){
-  dataframe <- data %>% 
-    select(id, author, date, benefit, experience, technology, acf) %>% 
-    unnest(c(benefit, experience, technology, acf), names_sep = '.') %>%
-    select(
-      id, author, date, 
-      benefit.name, experience.name, technology.name, 
-      acf.title_of_creative_work, starts_with('acf.wikidata-qid')
-      )
-  
-  colnames(dataframe) <- c(
-    'id', 'author', 'date', 'benefit', 'experience', 'technology', 'title', 'QID'
-  )
-  
-  return (tibble(dataframe))
+# WikiData Functions
+get_wikidata <- function(dataframe){
+  # Keep only properly formatted wiki ids.
+  QIDS <- dataframe %>% filter(grepl('Q\\d+', QID))
+  # Create 
+  QIDS <- lapply('wd:', paste0, QIDS[['QID']])
+  QIDS <- paste(unlist(QIDS), collapse = ' ')
+
+  query <- paste0("
+    SELECT DISTINCT
+          ?item ?pubDate ?genreLabel
+          ?countryOriginLabel ?coordinates
+
+      WHERE {
+          VALUES ?item {",QIDS,"}
+
+          ?item wdt:P31 ?instanceof.
+          OPTIONAL {?item wdt:P136 ?genre}.
+          OPTIONAL {?item wdt:P577 ?pubDate}.
+          ?item wdt:P495 ?countryOrigin .
+          ?countryOrigin wdt:P625 ?coordinates.
+      
+          SERVICE wikibase:label { bd:serviceParam wikibase:language 'en,en'. }}")
+        
+  wiki_resp <- query_wikidata(query)
+
+  # Rename column, keeping QID
+  names(wiki_resp)[names(wiki_resp) == 'item'] <- 'QID'
+  wiki_resp$QID <- sub('.*/entity/(Q\\d+)', '\\1', wiki_resp$QID)
+
+  # Clean up dates.
+  wiki_resp$pubDate <- sub('(\\d{4}-\\d{2}-\\d{2}).*', '\\1', wiki_resp$pubDate)
+
+  # Clean up longitude and latitude.
+  wiki_resp$lon <- sub('Point\\(([-]?\\d+\\.?\\d+)\\s([-]?\\d+\\.?\\d+)\\)', '\\1', wiki_resp$coordinates)
+  wiki_resp$lon <- as.numeric(wiki_resp$lon)
+  wiki_resp$lat <- sub('Point\\(([-]?\\d+\\.?\\d+)\\s([-]?\\d+\\.?\\d+)\\)', '\\2', wiki_resp$coordinates)
+  wiki_resp$lat <- as.numeric(wiki_resp$lat)
+
+  return (wiki_resp)
 }
+
+# OLD: Dataframe Functions
+# api_to_dataframe <- function(data){
+#   dataframe <- data %>% 
+#     select(id, author, date, benefit, experience, technology, acf) %>% 
+#     unnest(c(benefit, experience, technology, acf), names_sep = '.') %>%
+#     select(
+#       id, author, date, 
+#       benefit.name, experience.name, technology.name, 
+#       acf.title_of_creative_work, starts_with('acf.wikidata-qid')
+#       )
+  
+#   colnames(dataframe) <- c(
+#     'id', 'author', 'date', 'benefit', 'experience', 'technology', 'title', 'QID'
+#   )
+  
+#   return (tibble(dataframe))
+# }
 
 # Network Function for Building from Subset
 create_subset_network_data <- function(dataframe, columnOne, columnTwo){
@@ -218,46 +262,4 @@ create_full_network_data <- function(dataframe){
   vis.links$shadow <- FALSE    # edge shadow
 
   return(list(nodes = vis.nodes, links = vis.links))
-}
-
-# WikiData Functions
-get_wikidata <- function(dataframe){
-  # Keep only properly formatted wiki ids.
-  QIDS <- dataframe %>% filter(grepl('Q\\d+', QID))
-  # Create 
-  QIDS <- lapply('wd:', paste0, QIDS[['QID']])
-  QIDS <- paste(unlist(QIDS), collapse = ' ')
-
-  query <- paste0("
-    SELECT DISTINCT
-          ?item ?pubDate ?genreLabel
-          ?countryOriginLabel ?coordinates
-
-      WHERE {
-          VALUES ?item {",QIDS,"}
-
-          ?item wdt:P31 ?instanceof.
-          OPTIONAL {?item wdt:P136 ?genre}.
-          OPTIONAL {?item wdt:P577 ?pubDate}.
-          ?item wdt:P495 ?countryOrigin .
-          ?countryOrigin wdt:P625 ?coordinates.
-      
-          SERVICE wikibase:label { bd:serviceParam wikibase:language 'en,en'. }}")
-        
-  wiki_resp <- query_wikidata(query)
-
-  # Rename column, keeping QID
-  names(wiki_resp)[names(wiki_resp) == 'item'] <- 'QID'
-  wiki_resp$QID <- sub('.*/entity/(Q\\d+)', '\\1', wiki_resp$QID)
-
-  # Clean up dates.
-  wiki_resp$pubDate <- sub('(\\d{4}-\\d{2}-\\d{2}).*', '\\1', wiki_resp$pubDate)
-
-  # Clean up longitude and latitude.
-  wiki_resp$lon <- sub('Point\\(([-]?\\d+\\.?\\d+)\\s([-]?\\d+\\.?\\d+)\\)', '\\1', wiki_resp$coordinates)
-  wiki_resp$lon <- as.numeric(wiki_resp$lon)
-  wiki_resp$lat <- sub('Point\\(([-]?\\d+\\.?\\d+)\\s([-]?\\d+\\.?\\d+)\\)', '\\2', wiki_resp$coordinates)
-  wiki_resp$lat <- as.numeric(wiki_resp$lat)
-
-  return (wiki_resp)
 }
