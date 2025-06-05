@@ -71,15 +71,13 @@ get_wikidata <- function(dataframe){
           ?countryOrigin wdt:P625 ?coordinates.
       
           SERVICE wikibase:label { bd:serviceParam wikibase:language 'en,en'. }}")
-        
+          
   wiki_resp <- query_wikidata(query)
-
-  # Rename column, keeping QID
   names(wiki_resp)[names(wiki_resp) == 'item'] <- 'QID'
   wiki_resp$QID <- sub('.*/entity/(Q\\d+)', '\\1', wiki_resp$QID)
 
   # Clean up dates.
-  wiki_resp$pubDate <- sub('(\\d{4}-\\d{2}-\\d{2}).*', '\\1', wiki_resp$pubDate)
+    wiki_resp$pubDate <- sub('(\\d{4}-\\d{2}-\\d{2}).*', '\\1', wiki_resp$pubDate)
 
   # Clean up longitude and latitude.
   wiki_resp$lon <- sub('Point\\(([-]?\\d+\\.?\\d+)\\s([-]?\\d+\\.?\\d+)\\)', '\\1', wiki_resp$coordinates)

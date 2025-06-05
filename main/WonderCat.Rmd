@@ -38,7 +38,8 @@ source(paste0(getwd(), '/functions.R'))
 
 dataframe <- call_api_and_build_dataframe("https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience")
 wikiData <- get_wikidata(dataframe)
-wikiData <- merge(wikiData, dataframe %>% select(title,QID), by = "QID")
+
+wikiData <- inner_join(wikiData, dataframe %>% select(title, QID), by = "QID")
 ```
 
 ## API Call
@@ -119,9 +120,25 @@ query <- paste0("
 wiki_resp <- query_wikidata(query)
 names(wiki_resp)[names(wiki_resp) == 'item'] <- 'QID'
 wiki_resp$QID <- sub('.*/entity/(Q\\d+)', '\\1', wiki_resp$QID)
-wiki_resp
+
+# Clean up dates.
+  wiki_resp$pubDate <- sub('(\\d{4}-\\d{2}-\\d{2}).*', '\\1', wiki_resp$pubDate)
+
+# Clean up longitude and latitude.
+wiki_resp$lon <- sub('Point\\(([-]?\\d+\\.?\\d+)\\s([-]?\\d+\\.?\\d+)\\)', '\\1', wiki_resp$coordinates)
+wiki_resp$lon <- as.numeric(wiki_resp$lon)
+wiki_resp$lat <- sub('Point\\(([-]?\\d+\\.?\\d+)\\s([-]?\\d+\\.?\\d+)\\)', '\\2', wiki_resp$coordinates)
+wiki_resp$lat <- as.numeric(wiki_resp$lat)
+
+# wikiData <- wiki_resp
 ```
 
+## Leaflet
+```{r}
+leaflet(data = wikiData %>% nest(genreLabel = genreLabel)) %>% 
+  addTiles() %>%
+  addMarkers(label = ~title, clusterOptions = markerClusterOptions())
+```
 
 ### Bar Plot
 ```{r}
@@ -401,17 +418,4 @@ visOptions(
   highlightNearest = TRUE,
   selectedBy = "label"
 )
-```
-
-
-## Wikidata
-```{r}
-
-```
-
-## Leaflet
-```{r}
-leaflet(data = wikiData) %>% 
-  addTiles() %>%
-  addMarkers(label = ~title, clusterOptions = markerClusterOptions())
 ```
