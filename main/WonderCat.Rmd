@@ -37,9 +37,9 @@ print (getwd())
 source(paste0(getwd(), '/functions.R'))
 
 dataframe <- call_api_and_build_dataframe("https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience")
-wikiData <- get_wikidata(dataframe)
+wikiResp <- get_wikidata(dataframe)
 
-wikiData <- inner_join(wikiData, dataframe %>% select(title, QID), by = "QID")
+wikiData <- dataframe %>% select(title, QID) %>% inner_join(wikiResp, by = "QID", multiple = "all")
 ```
 
 ## API Call
@@ -129,13 +129,11 @@ wiki_resp$lon <- sub('Point\\(([-]?\\d+\\.?\\d+)\\s([-]?\\d+\\.?\\d+)\\)', '\\1'
 wiki_resp$lon <- as.numeric(wiki_resp$lon)
 wiki_resp$lat <- sub('Point\\(([-]?\\d+\\.?\\d+)\\s([-]?\\d+\\.?\\d+)\\)', '\\2', wiki_resp$coordinates)
 wiki_resp$lat <- as.numeric(wiki_resp$lat)
-
-# wikiData <- wiki_resp
 ```
 
 ## Leaflet
 ```{r}
-leaflet(data = wikiData %>% nest(genreLabel = genreLabel)) %>% 
+leaflet(data = wikiData %>% distinct(QID, .keep_all = TRUE)) %>% 
   addTiles() %>%
   addMarkers(label = ~title, clusterOptions = markerClusterOptions())
 ```
