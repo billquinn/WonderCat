@@ -171,7 +171,7 @@ output$network <- renderVisNetwork({
 
 # Wiki-Table Output ----
 wikiData <- reactive({
-  reactive_df() %>% select(title, QID) %>% inner_join(wikiResp, by = "QID", multiple = "all")
+  reactive_df() %>% select(title, QID) %>% inner_join(wikiResp, by = "QID", multiple = "all") %>% distinct()
 })
 
 output$wikiTable <- DT::renderDataTable({wikiData()}, 

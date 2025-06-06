@@ -29,7 +29,7 @@ call_api_and_build_dataframe <- function(url) {
         benefit, experience.name, technology.name, 
         acf.title_of_creative_work, acf.feature, starts_with('acf.wikidata-qid')
         ) %>%
-    unnest(benefit) # Convert list into string (each "list" has only one value)
+    unnest(benefit, keep_empty = TRUE) # Convert list into string (each "list" has only one value)
   }
 
   dataframe <- do.call(rbind, data)
@@ -77,7 +77,7 @@ get_wikidata <- function(dataframe){
   wiki_resp$QID <- sub('.*/entity/(Q\\d+)', '\\1', wiki_resp$QID)
 
   # Clean up dates.
-    wiki_resp$pubDate <- sub('(\\d{4}-\\d{2}-\\d{2}).*', '\\1', wiki_resp$pubDate)
+  wiki_resp$pubDate <- sub('(\\d{4}-\\d{2}-\\d{2}).*', '\\1', wiki_resp$pubDate)
 
   # Clean up longitude and latitude.
   wiki_resp$lon <- sub('Point\\(([-]?\\d+\\.?\\d+)\\s([-]?\\d+\\.?\\d+)\\)', '\\1', wiki_resp$coordinates)
