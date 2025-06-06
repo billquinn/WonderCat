@@ -37,9 +37,9 @@ print (getwd())
 source(paste0(getwd(), '/functions.R'))
 
 dataframe <- call_api_and_build_dataframe("https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience")
-wikiResp <- get_wikidata(dataframe)
+wikiResp <- get_wikidata(dataframe) %>% group_by(QID) %>% nest(data = c(genreLabel, pubDate))
 
-wikiData <- dataframe %>% select(title, QID) %>% inner_join(wikiResp, by = "QID", multiple = "all")
+wikiData <- dataframe %>% select(title, QID) %>% inner_join(wikiResp, by = "QID", multiple = "all") %>% distinct()
 ```
 
 ## API Call
@@ -77,7 +77,7 @@ for (i in 1:length(resps)) {
       benefit, experience.name, technology.name, 
       acf.title_of_creative_work, acf.feature, starts_with('acf.wikidata-qid')
     ) %>%
-    unnest(benefit) # Convert list into string (each "list" has only one value)
+    unnest(benefit, keep_empty = TRUE) # Convert list into string (each "list" has only one value)
 }
 
 dataframe <- do.call(rbind, data)
