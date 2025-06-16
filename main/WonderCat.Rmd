@@ -70,19 +70,21 @@ data <- vector("list", length = length(resps))
 
 for (i in 1:length(resps)) {
   data$i <- i
-  data[[i]] <- resps[[i]] %>% resp_body_json(check_type = FALSE, simplifyVector = TRUE) %>% 
-    select(id, author, date, benefit, experience, technology, acf) %>% 
+  data[[i]] <- resps[[i]] %>% resp_body_json(check_type = FALSE, simplifyVector = TRUE) %>%  
     unnest(c(benefit, experience, technology, acf), names_sep = '.', keep_empty = TRUE) %>%
     rename('benefit' = contains('benefit.name')) %>% # Renames benefit.name (entry is present) to benefit (no entry).
+    unnest(benefit, acf.wikidata, keep_empty = TRUE) %>% 
     select(
       id, author, date, 
       benefit, experience.name, technology.name, 
-      acf.title_of_creative_work, acf.feature, starts_with('acf.wikidata-qid')
-    ) %>%
-    unnest(benefit, keep_empty = TRUE) # Convert list into string (each "list" has only one value)
+      acf.title_of_creative_work, acf.feature, starts_with('acf.wikidata-qid'), starts_with('entities')
+    ) %>% 
+    unnest(entities, keep_empty = TRUE) # Drill down to Wiki claims.
+    # unnest(id, keep_empty = TRUE) %>%
 }
 
 dataframe <- do.call(rbind, data)
+
 
 colnames(dataframe) <- c('id', 'author', 'date', 'benefit', 'experience', 'technology', 'title', 'text','QID')
 
@@ -95,7 +97,6 @@ print (dim(dataframe))
 dataframe <- head(dataframe, -1)
 print (dim(dataframe))
 ```
-
 
 ### Wikidata
 ```{r}
@@ -133,7 +134,9 @@ wiki_resp$lat <- sub('Point\\(([-]?\\d+\\.?\\d+)\\s([-]?\\d+\\.?\\d+)\\)', '\\2'
 wiki_resp$lat <- as.numeric(wiki_resp$lat)
 ```
 
-## Leaflet
+## Visualizations
+
+### Leaflet
 ```{r}
 leaflet(data = wikiData %>% distinct(QID, .keep_all = TRUE)) %>% 
   addTiles() %>%
