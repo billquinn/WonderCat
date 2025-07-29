@@ -23,8 +23,8 @@ library(dplyr)
 library(bslib)
 library(DT)
 library(ggplot2)
-library(ggraph)
-library(igraph)
+# library(ggraph)
+# library(igraph)
 library(plotly)
 # library(treemap)
 library(treemapify)
@@ -34,12 +34,14 @@ library(leaflet)
 
 print (getwd())
 # Import functions.
-source(paste0(getwd(), '/functions.R'))
+source(paste0(getwd(), '/main/functions.R'))
 
 dataframe <- call_api_and_build_dataframe("https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience")
 wikiResp <- get_wikidata(dataframe)
 
-wikiData <- dataframe %>% select(title, QID) %>% 
+dataframe <- inner_join(wikiResp %>% select(title, QID), dataframe)
+
+wikiData <- dataframe %>% select(QID) %>% 
   inner_join(wikiResp, by = "QID", multiple = "all") %>% 
   group_by(QID) %>% nest(data = c(genreLabel, pubDate)) %>% distinct()
 ```
@@ -106,7 +108,7 @@ QIDS <- paste(unlist(QIDS), collapse = ' ')
 
 query <- paste0("
   SELECT DISTINCT
-        ?item ?pubDate ?genreLabel
+        ?item ?itemLabel ?pubDate ?genreLabel
         ?countryOriginLabel ?coordinates
 
     WHERE {
@@ -125,7 +127,7 @@ names(wiki_resp)[names(wiki_resp) == 'item'] <- 'QID'
 wiki_resp$QID <- sub('.*/entity/(Q\\d+)', '\\1', wiki_resp$QID)
 
 # Clean up dates.
-  wiki_resp$pubDate <- sub('(\\d{4}-\\d{2}-\\d{2}).*', '\\1', wiki_resp$pubDate)
+wiki_resp$pubDate <- sub('(\\d{4}-\\d{2}-\\d{2}).*', '\\1', wiki_resp$pubDate)
 
 # Clean up longitude and latitude.
 wiki_resp$lon <- sub('Point\\(([-]?\\d+\\.?\\d+)\\s([-]?\\d+\\.?\\d+)\\)', '\\1', wiki_resp$coordinates)

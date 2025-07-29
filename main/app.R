@@ -15,6 +15,9 @@ source("functions.R")
 data <-  call_api_and_build_dataframe("https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience")
 wikiResp <- get_wikidata(data)
 
+data <- inner_join(wikiResp %>% select(title, QID), data, by = "QID", multiple = "all") %>%
+  unique()
+
 # Define UI for application: using bslib library for layout.
 ui <- page_navbar(
   
@@ -171,9 +174,10 @@ output$network <- renderVisNetwork({
 
 # Wiki-Table Output ----
 wikiData <- reactive({
-  reactive_df() %>% select(title, QID) %>% 
+  reactive_df() %>% select(QID) %>% 
   inner_join(wikiResp, by = "QID", multiple = "all") %>% 
-  group_by(QID) %>% nest(data = c(genreLabel, pubDate))
+  group_by(QID) %>% nest(data = c(genreLabel, pubDate)) %>% 
+  distinct() %>% subset(select = -data)
 })
 
 output$wikiTable <- DT::renderDataTable({wikiData()}, 
