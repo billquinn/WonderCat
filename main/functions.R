@@ -27,7 +27,7 @@ call_api_and_build_dataframe <- function(url) {
       select(
         id, author, date, 
         benefit, experience.name, technology.name, 
-        acf.title_of_creative_work, acf.feature, starts_with('acf.wikidata-qid')
+        acf.feature, starts_with('acf.wikidata-qid')
         ) %>%
     unnest(benefit, keep_empty = TRUE) # Convert list into string (each "list" has only one value)
   }
@@ -35,7 +35,7 @@ call_api_and_build_dataframe <- function(url) {
   dataframe <- do.call(rbind, data)
 
   colnames(dataframe) <- c(
-      'id', 'author', 'date', 'benefit', 'experience', 'technology', 'title', 'text', 'QID'
+      'id', 'author', 'date', 'benefit', 'experience', 'technology', 'text', 'QID'
     )
   
   # Remove last row of dataframe.
@@ -58,7 +58,7 @@ get_wikidata <- function(dataframe){
 
   query <- paste0("
     SELECT DISTINCT
-          ?item ?pubDate ?genreLabel
+          ?item ?itemLabel ?pubDate ?genreLabel
           ?countryOriginLabel ?coordinates
 
       WHERE {
@@ -84,6 +84,9 @@ get_wikidata <- function(dataframe){
   wiki_resp$lon <- as.numeric(wiki_resp$lon)
   wiki_resp$lat <- sub('Point\\(([-]?\\d+\\.?\\d+)\\s([-]?\\d+\\.?\\d+)\\)', '\\2', wiki_resp$coordinates)
   wiki_resp$lat <- as.numeric(wiki_resp$lat)
+
+  # Rename itemLabel to title.
+  wiki_resp <- rename(wiki_resp, title = "itemLabel")
 
   return (wiki_resp)
 }

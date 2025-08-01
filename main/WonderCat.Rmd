@@ -23,8 +23,8 @@ library(dplyr)
 library(bslib)
 library(DT)
 library(ggplot2)
-library(ggraph)
-library(igraph)
+# library(ggraph)
+# library(igraph)
 library(plotly)
 # library(treemap)
 library(treemapify)
@@ -34,12 +34,17 @@ library(leaflet)
 
 print (getwd())
 # Import functions.
-source(paste0(getwd(), '/functions.R'))
+source(paste0(getwd(), '/main/functions.R'))
 
 dataframe <- call_api_and_build_dataframe("https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience")
-wikiResp <- get_wikidata(dataframe) %>% group_by(QID) %>% nest(data = c(genreLabel, pubDate))
+wikiResp <- get_wikidata(dataframe)
 
-wikiData <- dataframe %>% select(title, QID) %>% inner_join(wikiResp, by = "QID", multiple = "all") %>% distinct()
+dataframe <- inner_join(wikiResp %>% select(title, QID), dataframe, by = "QID", multiple = "all") %>%
+  unique()
+
+wikiData <- dataframe %>% select(QID) %>% 
+  inner_join(wikiResp, by = "QID", multiple = "all") %>% 
+  group_by(QID) %>% nest(data = c(genreLabel, pubDate)) %>% distinct()
 ```
 
 ## API Call
@@ -68,19 +73,21 @@ data <- vector("list", length = length(resps))
 
 for (i in 1:length(resps)) {
   data$i <- i
-  data[[i]] <- resps[[i]] %>% resp_body_json(check_type = FALSE, simplifyVector = TRUE) %>% 
-    select(id, author, date, benefit, experience, technology, acf) %>% 
+  data[[i]] <- resps[[i]] %>% resp_body_json(check_type = FALSE, simplifyVector = TRUE) %>%  
     unnest(c(benefit, experience, technology, acf), names_sep = '.', keep_empty = TRUE) %>%
     rename('benefit' = contains('benefit.name')) %>% # Renames benefit.name (entry is present) to benefit (no entry).
+    unnest(benefit, acf.wikidata, keep_empty = TRUE) %>% 
     select(
       id, author, date, 
       benefit, experience.name, technology.name, 
-      acf.title_of_creative_work, acf.feature, starts_with('acf.wikidata-qid')
-    ) %>%
-    unnest(benefit, keep_empty = TRUE) # Convert list into string (each "list" has only one value)
+      acf.title_of_creative_work, acf.feature, starts_with('acf.wikidata-qid'), starts_with('entities')
+    ) %>% 
+    unnest(entities, keep_empty = TRUE) # Drill down to Wiki claims.
+    # unnest(id, keep_empty = TRUE) %>%
 }
 
 dataframe <- do.call(rbind, data)
+
 
 colnames(dataframe) <- c('id', 'author', 'date', 'benefit', 'experience', 'technology', 'title', 'text','QID')
 
@@ -94,7 +101,6 @@ dataframe <- head(dataframe, -1)
 print (dim(dataframe))
 ```
 
-
 ### Wikidata
 ```{r}
 QIDS <- dataframe %>% filter(grepl('Q\\d+', QID))
@@ -103,7 +109,7 @@ QIDS <- paste(unlist(QIDS), collapse = ' ')
 
 query <- paste0("
   SELECT DISTINCT
-        ?item ?pubDate ?genreLabel
+        ?item ?itemLabel ?pubDate ?genreLabel
         ?countryOriginLabel ?coordinates
 
     WHERE {
@@ -122,7 +128,7 @@ names(wiki_resp)[names(wiki_resp) == 'item'] <- 'QID'
 wiki_resp$QID <- sub('.*/entity/(Q\\d+)', '\\1', wiki_resp$QID)
 
 # Clean up dates.
-  wiki_resp$pubDate <- sub('(\\d{4}-\\d{2}-\\d{2}).*', '\\1', wiki_resp$pubDate)
+wiki_resp$pubDate <- sub('(\\d{4}-\\d{2}-\\d{2}).*', '\\1', wiki_resp$pubDate)
 
 # Clean up longitude and latitude.
 wiki_resp$lon <- sub('Point\\(([-]?\\d+\\.?\\d+)\\s([-]?\\d+\\.?\\d+)\\)', '\\1', wiki_resp$coordinates)
@@ -131,7 +137,9 @@ wiki_resp$lat <- sub('Point\\(([-]?\\d+\\.?\\d+)\\s([-]?\\d+\\.?\\d+)\\)', '\\2'
 wiki_resp$lat <- as.numeric(wiki_resp$lat)
 ```
 
-## Leaflet
+## Visualizations
+
+### Leaflet
 ```{r}
 leaflet(data = wikiData %>% distinct(QID, .keep_all = TRUE)) %>% 
   addTiles() %>%

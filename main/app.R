@@ -15,6 +15,9 @@ source("functions.R")
 data <-  call_api_and_build_dataframe("https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience")
 wikiResp <- get_wikidata(data)
 
+data <- inner_join(wikiResp %>% select(title, QID), data, by = "QID", multiple = "all") %>%
+  unique()
+
 # Define UI for application: using bslib library for layout.
 ui <- page_navbar(
   
@@ -111,11 +114,14 @@ output$table <- DT::renderDataTable(
 # Text "Alert" when clicking on data table row ----
 observeEvent(input$table_rows_selected, {
   selected_row <- reactive_df()[input$table_rows_selected,]
-  sel_author <- selected_row[[2]]
-  sel_title <- selected_row[[7]]
-  sel_text <- selected_row[[8]]
+  sel_title <- selected_row[[1]]
+  sel_author <- selected_row[[4]]
+  sel_tech <- selected_row[[8]]
+  sel_text <- selected_row[[9]]
   showModal(modalDialog(
-    title = sel_title, 'Submitted by ', sel_author, HTML('<br><br>'), sel_text,
+    title = sel_title, 
+      'Feature illustrating ', sel_tech, 'in ', sel_title, 'according to ', sel_author,
+      HTML('<br><br>'), sel_text,
     easyClose = TRUE
   ))
 })
@@ -171,7 +177,10 @@ output$network <- renderVisNetwork({
 
 # Wiki-Table Output ----
 wikiData <- reactive({
-  reactive_df() %>% select(title, QID) %>% inner_join(wikiResp, by = "QID", multiple = "all") %>% distinct()
+  reactive_df() %>% select(QID) %>% 
+  inner_join(wikiResp, by = "QID", multiple = "all") %>% 
+  group_by(QID) %>% nest(data = c(genreLabel, pubDate)) %>% 
+  distinct() %>% subset(select = -data)
 })
 
 output$wikiTable <- DT::renderDataTable({wikiData()}, 
