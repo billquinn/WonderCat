@@ -39,7 +39,8 @@ source(paste0(getwd(), '/main/functions.R'))
 dataframe <- call_api_and_build_dataframe("https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience")
 wikiResp <- get_wikidata(dataframe)
 
-dataframe <- inner_join(wikiResp %>% select(title, QID), dataframe)
+dataframe <- inner_join(wikiResp %>% select(title, QID), dataframe, by = "QID", multiple = "all") %>%
+  unique()
 
 wikiData <- dataframe %>% select(QID) %>% 
   inner_join(wikiResp, by = "QID", multiple = "all") %>% 

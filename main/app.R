@@ -114,11 +114,14 @@ output$table <- DT::renderDataTable(
 # Text "Alert" when clicking on data table row ----
 observeEvent(input$table_rows_selected, {
   selected_row <- reactive_df()[input$table_rows_selected,]
-  sel_author <- selected_row[[2]]
-  sel_title <- selected_row[[7]]
-  sel_text <- selected_row[[8]]
+  sel_title <- selected_row[[1]]
+  sel_author <- selected_row[[4]]
+  sel_tech <- selected_row[[8]]
+  sel_text <- selected_row[[9]]
   showModal(modalDialog(
-    title = sel_title, 'Submitted by ', sel_author, HTML('<br><br>'), sel_text,
+    title = sel_title, 
+      'Feature illustrating ', sel_tech, 'in ', sel_title, 'according to ', sel_author,
+      HTML('<br><br>'), sel_text,
     easyClose = TRUE
   ))
 })
