@@ -37,6 +37,10 @@ print (getwd())
 source(paste0(getwd(), '/main/functions.R'))
 
 dataframe <- call_api_and_build_dataframe("https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience")
+write.csv(dataframe, paste0(getwd(), "/main/wonderCat.csv"), row.names = FALSE)
+
+dataframe <- read_csv(paste0(getwd(), "/main/wonderCat.csv"), col_names = TRUE)
+
 wikiResp <- get_wikidata(dataframe)
 
 dataframe <- inner_join(wikiResp %>% select(title, QID), dataframe, by = "QID", multiple = "all") %>%
@@ -45,6 +49,8 @@ dataframe <- inner_join(wikiResp %>% select(title, QID), dataframe, by = "QID", 
 wikiData <- dataframe %>% select(QID) %>% 
   inner_join(wikiResp, by = "QID", multiple = "all") %>% 
   group_by(QID) %>% nest(data = c(genreLabel, pubDate)) %>% distinct()
+
+net <- create_full_network_data(dataframe)
 ```
 
 ## API Call

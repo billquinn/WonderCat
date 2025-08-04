@@ -12,7 +12,16 @@ library(leaflet)
 
 source("functions.R")
 
-data <-  call_api_and_build_dataframe("https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience")
+# WonderCat API Call
+# data <-  call_api_and_build_dataframe("https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience")
+
+# Stored file.
+data <- read_csv('wonderCat.csv', col_names = TRUE)
+colnames(data) <- c(
+      'id', 'author', 'date', 'benefit', 'experience', 'technology', 'text', 'QID'
+    )
+print(object.size(data))
+
 wikiResp <- get_wikidata(data)
 
 data <- inner_join(wikiResp %>% select(title, QID), data, by = "QID", multiple = "all") %>%
