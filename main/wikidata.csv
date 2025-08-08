@@ -1,93 +1,93 @@
-QID,itemLabel,pubDates,genres,origin,coordinates,long,lat
-Q20124,On the Origin of Species,1859-11-24,"treatise,scientific literature",United Kingdom,Point(-2.0 54.6),-2.0,54.6
-Q105756377,"Fleabag, season 2",,,United Kingdom,Point(-2.0 54.6),-2.0,54.6
-Q1137494,King Solomon's Mines,1885-09-30,"lost world fiction,adventure fiction",United Kingdom,Point(-2.0 54.6),-2.0,54.6
-Q1142887,In Cold Blood,1966-01-01,"non-fiction,non-fiction novel,true crime,noir fiction",United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q214723,The Gold Rush,1925-06-26,"comedy film,silent film,romantic comedy,social comedy film",United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q3163506,I Know Why the Caged Bird Sings,1969-01-01,"autobiography,autobiographical novel",United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q50282028,Becoming,2018-11-13,memoir,United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q189350,30 Rock,,"sitcom,satirical film or television program",United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q189811,David Copperfield,1850-01-01,"bildungsroman,autobiographical novel",United Kingdom,Point(-2.0 54.6),-2.0,54.6
-Q2268391,A Wrinkle in Time,1962-01-01,"science fiction,fantasy,science fantasy",United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q35160,Odyssey,,epic poem,Ancient Greece,Point(23.0 38.5),23.0,38.5
-Q724008,L'Orfeo,,favola in musica,Duchy of Mantua,Point(10.791111 45.156389),10.791111,45.156389
-Q172230,Call the Midwife,,"drama television series,medical drama,historical drama,film based on book,LGBT-related television series",United Kingdom,Point(-2.0 54.6),-2.0,54.6
-Q99179657,Mother Goose’s Melody,1772-01-01,,Kingdom of Great Britain,Point(-0.13333333 51.5),-0.13333333,51.5
-Q112241985,Disclaimer,,thriller,"United States,United Kingdom","Point(-98.5795 39.828175),Point(-2.0 54.6)","-98.5795,-2.0","39.828175,54.6"
-Q2527400,The Facetious Nights of Straparola,,group of literary works,Italy,Point(12.5 42.5),12.5,42.5
-Q151883,The Sorrows of Young Werther,1774-01-01,"epistolary novel,sentimental novel,diary literature",Germany,Point(10.0 51.0),10.0,51.0
-Q44523,Twilight,2005-01-01,"romantic fiction,vampire fiction,young adult fiction",United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q62595383,Promising Young Woman,2020-01-01,"black comedy,drama film,crime film,rape and revenge film,thriller film,vigilante film","United States,United Kingdom","Point(-98.5795 39.828175),Point(-2.0 54.6)","-98.5795,-2.0","39.828175,54.6"
-Q459667,The Murders in the Rue Morgue,1841-04-20,"detective fiction,locked room mystery",United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q178869,One Hundred Years of Solitude,1967-01-01,magic realism,Argentina,Point(-64.0 -34.0),-64.0,-34.0
-Q6467743,Labyrinths,1962-01-01,"essay,magic realist fiction",United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q971767,Beloved,1987-09-01,"historical fiction,magic realist fiction",United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q191663,The Canterbury Tales,,English literature,England,Point(-1.0 53.0),-1.0,53.0
-Q1396889,Animal Farm,1945-08-17,"fable,roman à clef,dystopian fiction,satirical fiction",England,Point(-1.0 53.0),-1.0,53.0
-Q462373,The Yellow Wall Paper,1892-01-01,fiction,United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q1247551,Peyton Place,,"soap opera,television series based on a novel",United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q2743569,An Apology for the Life of Mrs. Shamela Andrews,1741-01-01,"parody,epistolary novel",England,Point(-1.0 53.0),-1.0,53.0
-Q8265,Dream of the Red Chamber,1792-01-01,"xiaoshuo,family saga,zhanghui novel",Qing dynasty,Point(103.0 38.0),103.0,38.0
-Q181943,I Love Lucy,,"sitcom,comedy television series,American television sitcom",United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q548576,The Castle of Otranto,1764-01-01,Gothic novel,England,Point(-1.0 53.0),-1.0,53.0
-Q1987925,Varney the Vampire,1845-01-01,"Gothic fiction,vampire fiction",United Kingdom,Point(-2.0 54.6),-2.0,54.6
-Q184222,The Metamorphosis,1915-01-01,"absurdist literature,epic literature,body horror literature","Austria,Austria–Hungary","Point(14.0 48.0),Point(16.365 48.2075)","14.0,16.365","48.0,48.2075"
-Q240617,Père Goriot,1835-03-01,historical fiction,France,Point(2.0 47.0),2.0,47.0
-Q798227,The Sandman,1817-01-01,"horror literature,high literature","Germany,Kingdom of Prussia","Point(10.0 51.0),Point(14.0 53.0)","10.0,14.0","51.0,53.0"
-Q27538067,The Terror,,"anthology series,drama television series,horror television series,thriller television series",United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q464928,In Search of Lost Time,2000-01-01,modernist literature,France,Point(2.0 47.0),2.0,47.0
-Q1207595,Confessions,1782-01-01,"autobiography,treatise",France,Point(2.0 47.0),2.0,47.0
-Q1077445,Infinite Jest,1996-02-01,"science fiction,postmodern literature,hysterical realism",United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q181488,Gulliver's Travels,1726-10-28,"satire,fantasy,dystopian fiction",United Kingdom,Point(-2.0 54.6),-2.0,54.6
-Q125622088,Flow,2024-05-22,"fantasy film,adventure film,family film","Belgium,France,Latvia","Point(4.668055555 50.641111111),Point(2.0 47.0),Point(25.0 57.0)","4.668055555,2.0,25.0","50.641111111,47.0,57.0"
-Q480,Don Quixote,,"chivalric romance,parody,adventure fiction,found manuscript",Spain,Point(-3.5 40.2),-3.5,40.2
-Q523076,Little Women,1869-01-01,"autobiography,bildungsroman,family saga,realist novel,developmental novel",United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q2008211,The Left Hand of Darkness,1969-03-01,"science fiction,gay literature,feminist science fiction",United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q1107000,Babbitt,1922-01-01,satire,United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q2609365,The Thirty-nine Steps,1915-01-01,"mystery fiction,spy fiction",United Kingdom,Point(-2.0 54.6),-2.0,54.6
-Q313129,Middlemarch,1871-01-01,realist novel,United Kingdom of Great Britain and Ireland,Point(-0.1275 51.507222222),-0.1275,51.507222222
-Q214132,And Then There Were None,1939-01-01,crime fiction,England,Point(-1.0 53.0),-1.0,53.0
+QID,itemLabel,pubDates,genres,origin,coordinates,lon,lat
 Q2776448,My Ántonia,1918-01-01,historical fiction,United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q8275,Iliad,,epic poem,Ancient Greece,Point(23.0 38.5),23.0,38.5
-Q212340,To Kill a Mockingbird,1960-07-11,"bildungsroman,Southern Gothic,social fiction,legal fiction",United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q3107329,The Hitchhiker's Guide to the Galaxy,1979-10-12,"science fiction,science fiction comedy,comic novel",United Kingdom,Point(-2.0 54.6),-2.0,54.6
-Q1286961,Sister Carrie,1900-01-01,,United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q428680,Fun Home,2006-06-08,"autobiographical comics,graphic novel,gay comics",United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q128518,Gladiator,2000-01-01,"drama film,action film,adventure film,epic film,sword-and-sandal film,melodrama,historical film","United States,United Kingdom","Point(-98.5795 39.828175),Point(-2.0 54.6)","-98.5795,-2.0","39.828175,54.6"
-Q243556,The Godfather,1969-03-10,crime fiction,United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q6945057,My Bondage and My Freedom,,autobiography,United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q1136104,Le Morte d'Arthur,,"Arthurian romance,chivalric romance",England,Point(-1.0 53.0),-1.0,53.0
-Q215410,Adventures of Huckleberry Finn,1884-01-01,"picaresque novel,satire,adventure fiction,humor",United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q756715,Sir Gawain and the Green Knight,,chivalric romance,Kingdom of England,Point(-1.316666666 52.066666666),-1.316666666,52.066666666
-Q1197185,The Right Stuff,1984-05-24,"drama film,adventure film,historical film,film based on book",United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q1444052,Go Tell It on the Mountain,1953-01-01,"African American literature,autobiographical novel",United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q248096,"The History of Tom Jones, a Foundling",1749-01-01,"picaresque novel,bildungsroman",England,Point(-1.0 53.0),-1.0,53.0
-Q41567,Hamlet,,tragedy,England,Point(-1.0 53.0),-1.0,53.0
-Q22263533,My Brilliant Friend,2011-01-01,bildungsroman,Italy,Point(12.5 42.5),12.5,42.5
-Q223880,Emma,1815-12-23,romantic fiction,United Kingdom,Point(-2.0 54.6),-2.0,54.6
-Q174361,Book of the Dead,,,Ancient Egypt,Point(31.3 29.8),31.3,29.8
-Q274744,Sense and Sensibility,1811-01-01,"bildungsroman,romantic fiction",United Kingdom,Point(-2.0 54.6),-2.0,54.6
-Q1233830,New Atlantis,,"science fiction,fantasy,utopian fiction,philosophical fiction",United Kingdom,Point(-2.0 54.6),-2.0,54.6
-Q135515,The Sound and the Fury,1929-01-01,Southern Gothic,United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q483034,Robinson Crusoe,1719-04-25,"autobiography,robinsonade,developmental novel,adventure fiction,pirate fiction",United Kingdom,Point(-2.0 54.6),-2.0,54.6
-Q2281600,The Autobiography of Malcolm X,1965-01-01,autobiography,United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q308918,A Tale of Two Cities,1859-01-01,"historical fiction,social fiction",United Kingdom,Point(-2.0 54.6),-2.0,54.6
-Q235795,A Farewell to Arms,1929-01-01,war novel,United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q1204366,A Room of One's Own,1929-09-01,essay,England,Point(-1.0 53.0),-1.0,53.0
-Q963743,The Maxims of Ptahhotep,,"wisdom literature,didactic literature",Ancient Egypt,Point(31.3 29.8),31.3,29.8
 Q135465,Rashomon,1950-08-25,"drama film,samurai cinema,crime film,medieval film,flashback film",Japan,Point(136.0 35.0),136.0,35.0
-Q45875,A Song of Ice and Fire,1996-01-01,"fantasy,high fantasy",United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q3234313,The Blacks,1958-01-01,theatre of the absurd,France,Point(2.0 47.0),2.0,47.0
-Q1045464,The Age of Innocence,1920-01-01,"novel of manners,romance",United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q1136104,Le Morte d'Arthur,,"Arthurian romance,chivalric romance",England,Point(-1.0 53.0),-1.0,53.0
 Q1215018,The Mill on the Floss,1860-01-01,psychological fiction,United Kingdom,Point(-2.0 54.6),-2.0,54.6
-Q3990982,Thyestes,,Roman tragedy,Ancient Rome,Point(12.48 41.89),12.48,41.89
-Q372941,Confessions,,autobiography,Roman Empire,Point(12.5 41.9),12.5,41.9
-Q92640,Alice's Adventures in Wonderland,1865-01-01,"fairy tale,literary nonsense,children's fiction",United Kingdom,Point(-2.0 54.6),-2.0,54.6
-Q478016,To the Lighthouse,1927-01-01,modernist literature,United Kingdom,Point(-2.0 54.6),-2.0,54.6
-Q438406,Grey's Anatomy,,medical drama,United States,Point(-98.5795 39.828175),-98.5795,39.828175
-Q7767037,The String of Pearls,1846-01-01,fiction,United Kingdom of Great Britain and Ireland,Point(-0.1275 51.507222222),-0.1275,51.507222222
-Q182961,Jane Eyre,1847-01-01,"bildungsroman,romance,education novel,autobiographical novel,Gothic fiction",United Kingdom of Great Britain and Ireland,Point(-0.1275 51.507222222),-0.1275,51.507222222
-Q3766392,Winnie-the-Pooh,1926-10-14,children's fiction,United Kingdom,Point(-2.0 54.6),-2.0,54.6
-Q1170769,The Essence of Christianity,1841-01-01,,Germany,Point(10.0 51.0),10.0,51.0
+Q6467743,Labyrinths,1962-01-01,"essay,magic realist fiction",United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q483034,Robinson Crusoe,1719-04-25,"autobiography,robinsonade,developmental novel,adventure fiction,pirate fiction",United Kingdom,Point(-2.0 54.6),-2.0,54.6
+Q181488,Gulliver's Travels,1726-10-28,"satire,fantasy,dystopian fiction",United Kingdom,Point(-2.0 54.6),-2.0,54.6
+Q428680,Fun Home,2006-06-08,"autobiographical comics,graphic novel,gay comics",United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q189350,30 Rock,,"sitcom,satirical film or television program",United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q963743,The Maxims of Ptahhotep,,"wisdom literature,didactic literature",Ancient Egypt,Point(31.3 29.8),31.3,29.8
+Q1444052,Go Tell It on the Mountain,1953-01-01,"African American literature,autobiographical novel",United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q1247551,Peyton Place,,"soap opera,television series based on a novel",United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q1396889,Animal Farm,1945-08-17,"fable,roman à clef,dystopian fiction,satirical fiction",England,Point(-1.0 53.0),-1.0,53.0
+Q128518,Gladiator,2000-01-01,"drama film,action film,adventure film,epic film,sword-and-sandal film,melodrama,historical film","United States,United Kingdom","Point(-98.5795 39.828175),Point(-2.0 54.6)","-98.5795,-2.0","39.828175,54.6"
+Q214132,And Then There Were None,1939-01-01,crime fiction,England,Point(-1.0 53.0),-1.0,53.0
+Q724008,L'Orfeo,,favola in musica,Duchy of Mantua,Point(10.791111 45.156389),10.791111,45.156389
+Q248096,"The History of Tom Jones, a Foundling",1749-01-01,"picaresque novel,bildungsroman",England,Point(-1.0 53.0),-1.0,53.0
 Q752584,Mrs Dalloway,1925-05-14,modernist literature,United Kingdom,Point(-2.0 54.6),-2.0,54.6
+Q1286961,Sister Carrie,1900-01-01,,United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q214723,The Gold Rush,1925-06-26,"comedy film,silent film,romantic comedy,social comedy film",United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q174361,Book of the Dead,,,Ancient Egypt,Point(31.3 29.8),31.3,29.8
+Q1045464,The Age of Innocence,1920-01-01,"novel of manners,romance",United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q184222,The Metamorphosis,1915-01-01,"absurdist literature,epic literature,body horror literature","Austria,Austria–Hungary","Point(14.0 48.0),Point(16.365 48.2075)","14.0,16.365","48.0,48.2075"
+Q182961,Jane Eyre,1847-01-01,"bildungsroman,romance,education novel,autobiographical novel,Gothic fiction",United Kingdom of Great Britain and Ireland,Point(-0.1275 51.507222222),-0.1275,51.507222222
+Q2609365,The Thirty-nine Steps,1915-01-01,"mystery fiction,spy fiction",United Kingdom,Point(-2.0 54.6),-2.0,54.6
+Q212340,To Kill a Mockingbird,1960-07-11,"bildungsroman,Southern Gothic,social fiction,legal fiction",United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q240617,Père Goriot,1835-03-01,historical fiction,France,Point(2.0 47.0),2.0,47.0
+Q6945057,My Bondage and My Freedom,,autobiography,United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q35160,Odyssey,,epic poem,Ancient Greece,Point(23.0 38.5),23.0,38.5
+Q235795,A Farewell to Arms,1929-01-01,war novel,United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q438406,Grey's Anatomy,,medical drama,United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q44523,Twilight,2005-01-01,"romantic fiction,vampire fiction,young adult fiction",United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q3163506,I Know Why the Caged Bird Sings,1969-01-01,"autobiography,autobiographical novel",United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q151883,The Sorrows of Young Werther,1774-01-01,"epistolary novel,sentimental novel,diary literature",Germany,Point(10.0 51.0),10.0,51.0
+Q459667,The Murders in the Rue Morgue,1841-04-20,"detective fiction,locked room mystery",United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q1207595,Confessions,1782-01-01,"autobiography,treatise",France,Point(2.0 47.0),2.0,47.0
+Q462373,The Yellow Wall Paper,1892-01-01,fiction,United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q92640,Alice's Adventures in Wonderland,1865-01-01,"fairy tale,literary nonsense,children's fiction",United Kingdom,Point(-2.0 54.6),-2.0,54.6
+Q2268391,A Wrinkle in Time,1962-01-01,"science fiction,fantasy,science fantasy",United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q112241985,Disclaimer,,thriller,"United States,United Kingdom","Point(-98.5795 39.828175),Point(-2.0 54.6)","-98.5795,-2.0","39.828175,54.6"
+Q243556,The Godfather,1969-03-10,crime fiction,United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q3990982,Thyestes,,Roman tragedy,Ancient Rome,Point(12.48 41.89),12.48,41.89
 Q2904743,"Narrative of the Life of Frederick Douglass, an American Slave",1845-01-01,autobiography,United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q99179657,Mother Goose’s Melody,1772-01-01,,Kingdom of Great Britain,Point(-0.13333333 51.5),-0.13333333,51.5
+Q191663,The Canterbury Tales,,English literature,England,Point(-1.0 53.0),-1.0,53.0
+Q135515,The Sound and the Fury,1929-01-01,Southern Gothic,United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q2281600,The Autobiography of Malcolm X,1965-01-01,autobiography,United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q1077445,Infinite Jest,1996-02-01,"science fiction,postmodern literature,hysterical realism",United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q223880,Emma,1815-12-23,romantic fiction,United Kingdom,Point(-2.0 54.6),-2.0,54.6
+Q8265,Dream of the Red Chamber,1792-01-01,"xiaoshuo,family saga,zhanghui novel",Qing dynasty,Point(103.0 38.0),103.0,38.0
+Q1107000,Babbitt,1922-01-01,satire,United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q215410,Adventures of Huckleberry Finn,1884-01-01,"picaresque novel,satire,adventure fiction,humor",United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q62595383,Promising Young Woman,2020-01-01,"black comedy,drama film,crime film,rape and revenge film,thriller film,vigilante film","United States,United Kingdom","Point(-98.5795 39.828175),Point(-2.0 54.6)","-98.5795,-2.0","39.828175,54.6"
+Q478016,To the Lighthouse,1927-01-01,modernist literature,United Kingdom,Point(-2.0 54.6),-2.0,54.6
+Q756715,Sir Gawain and the Green Knight,,chivalric romance,Kingdom of England,Point(-1.316666666 52.066666666),-1.316666666,52.066666666
+Q464928,In Search of Lost Time,2000-01-01,modernist literature,France,Point(2.0 47.0),2.0,47.0
+Q1170769,The Essence of Christianity,1841-01-01,,Germany,Point(10.0 51.0),10.0,51.0
+Q971767,Beloved,1987-09-01,"historical fiction,magic realist fiction",United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q181943,I Love Lucy,,"sitcom,comedy television series,American television sitcom",United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q27538067,The Terror,,"anthology series,drama television series,horror television series,thriller television series",United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q798227,The Sandman,1817-01-01,"horror literature,high literature","Germany,Kingdom of Prussia","Point(10.0 51.0),Point(14.0 53.0)","10.0,14.0","51.0,53.0"
+Q1204366,A Room of One's Own,1929-09-01,essay,England,Point(-1.0 53.0),-1.0,53.0
+Q308918,A Tale of Two Cities,1859-01-01,"historical fiction,social fiction",United Kingdom,Point(-2.0 54.6),-2.0,54.6
+Q41567,Hamlet,,tragedy,England,Point(-1.0 53.0),-1.0,53.0
+Q105756377,"Fleabag, season 2",,,United Kingdom,Point(-2.0 54.6),-2.0,54.6
+Q523076,Little Women,1869-01-01,"autobiography,bildungsroman,family saga,realist novel,developmental novel",United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q2527400,The Facetious Nights of Straparola,,group of literary works,Italy,Point(12.5 42.5),12.5,42.5
+Q2008211,The Left Hand of Darkness,1969-03-01,"science fiction,gay literature,feminist science fiction",United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q1142887,In Cold Blood,1966-01-01,"non-fiction,non-fiction novel,true crime,noir fiction",United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q178869,One Hundred Years of Solitude,1967-01-01,magic realism,Argentina,Point(-64.0 -34.0),-64.0,-34.0
+Q45875,A Song of Ice and Fire,1996-01-01,"fantasy,high fantasy",United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q372941,Confessions,,autobiography,Roman Empire,Point(12.5 41.9),12.5,41.9
+Q1987925,Varney the Vampire,1845-01-01,"Gothic fiction,vampire fiction",United Kingdom,Point(-2.0 54.6),-2.0,54.6
+Q3107329,The Hitchhiker's Guide to the Galaxy,1979-10-12,"science fiction,science fiction comedy,comic novel",United Kingdom,Point(-2.0 54.6),-2.0,54.6
+Q1233830,New Atlantis,,"science fiction,fantasy,utopian fiction,philosophical fiction",United Kingdom,Point(-2.0 54.6),-2.0,54.6
+Q548576,The Castle of Otranto,1764-01-01,Gothic novel,England,Point(-1.0 53.0),-1.0,53.0
+Q274744,Sense and Sensibility,1811-01-01,"bildungsroman,romantic fiction",United Kingdom,Point(-2.0 54.6),-2.0,54.6
+Q20124,On the Origin of Species,1859-11-24,"treatise,scientific literature",United Kingdom,Point(-2.0 54.6),-2.0,54.6
+Q1137494,King Solomon's Mines,1885-09-30,"lost world fiction,adventure fiction",United Kingdom,Point(-2.0 54.6),-2.0,54.6
+Q3766392,Winnie-the-Pooh,1926-10-14,children's fiction,United Kingdom,Point(-2.0 54.6),-2.0,54.6
+Q313129,Middlemarch,1871-01-01,realist novel,United Kingdom of Great Britain and Ireland,Point(-0.1275 51.507222222),-0.1275,51.507222222
+Q7767037,The String of Pearls,1846-01-01,fiction,United Kingdom of Great Britain and Ireland,Point(-0.1275 51.507222222),-0.1275,51.507222222
+Q3234313,The Blacks,1958-01-01,theatre of the absurd,France,Point(2.0 47.0),2.0,47.0
+Q189811,David Copperfield,1850-01-01,"bildungsroman,autobiographical novel",United Kingdom,Point(-2.0 54.6),-2.0,54.6
+Q8275,Iliad,,epic poem,Ancient Greece,Point(23.0 38.5),23.0,38.5
+Q480,Don Quixote,,"chivalric romance,parody,adventure fiction,found manuscript",Spain,Point(-3.5 40.2),-3.5,40.2
+Q2743569,An Apology for the Life of Mrs. Shamela Andrews,1741-01-01,"parody,epistolary novel",England,Point(-1.0 53.0),-1.0,53.0
+Q1197185,The Right Stuff,1984-05-24,"drama film,adventure film,historical film,film based on book",United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q22263533,My Brilliant Friend,2011-01-01,bildungsroman,Italy,Point(12.5 42.5),12.5,42.5
+Q172230,Call the Midwife,,"drama television series,medical drama,historical drama,film based on book,LGBT-related television series",United Kingdom,Point(-2.0 54.6),-2.0,54.6
+Q50282028,Becoming,2018-11-13,memoir,United States,Point(-98.5795 39.828175),-98.5795,39.828175
+Q125622088,Flow,2024-05-22,"fantasy film,adventure film,family film","Belgium,France,Latvia","Point(4.668055555 50.641111111),Point(2.0 47.0),Point(25.0 57.0)","4.668055555,2.0,25.0","50.641111111,47.0,57.0"

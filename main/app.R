@@ -1,33 +1,40 @@
 library(tidyverse)
 library(shiny)
-library(httr2)
+# library(httr2)
 library(bslib)
 library(DT)
 library(ggplot2)
 library(plotly)
 library(treemapify)
 library(visNetwork)
-library(WikidataQueryServiceR)
+# library(WikidataQueryServiceR)
 library(leaflet)
+library(shinycssloaders)
 
 source("functions.R")
 
-# WonderCat API Call
+# # WonderCat and WikiData API Calls
 # data <-  call_api_and_build_dataframe("https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience")
-
-# Stored file.
+# wikiResp <- get_wikidata(data)
+# Read-in stored files.
 data <- read_csv('wonderCat.csv', col_names = TRUE)
 colnames(data) <- c(
       'id', 'author', 'date', 'benefit', 'experience', 'technology', 'text', 'QID'
     )
-print(object.size(data))
+wikiResp <- read_csv('wikiData.csv', col_names = TRUE)
+colnames(wikiResp) <- c(
+  'QID', 'title', 'pubDate', 'genreLabel', 'countryOriginLabel', 'coordinates', 'lon', 'lat'
+)
+# Select first item as canon for coordinates, long, and lat.
+wikiResp$coordinates <- gsub('(.*),.*', '\\1', wikiResp$coordinates)
+wikiResp$lon <- gsub('(.*),.*', '\\1', wikiResp$lon) %>% as.numeric()
+wikiResp$lat <- gsub('(.*),.*', '\\1', wikiResp$lat) %>% as.numeric()
 
-wikiResp <- get_wikidata(data)
-
+# Join WonderCat and WikiData
 data <- inner_join(wikiResp %>% select(title, QID), data, by = "QID", multiple = "all") %>%
   unique()
 
-# Define UI for application: using bslib library for layout.
+# Define UI for application (using bslib library for layout).
 ui <- page_navbar(
   
   # App title ----
@@ -57,17 +64,16 @@ ui <- page_navbar(
       "benefit", "Benefit Filter:",
       choices = data[order(data$benefit),]$benefit, multiple = TRUE
     ),
-  ), 
+    # API Updates ----
+    hr(),
+    helpText("Data updated every ten minutes."),
+  open = "desktop"), 
     
   # Build "main panel" ----
   navset_card_underline(
     
-    nav_panel("Network", 
-      p("Network may take a little time to load."), 
-      visNetworkOutput("network")),
-      # Older version allowed for user to choose two columns for a network graph.
-      # selectInput("netSelect1", "Select First Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology', "Titles"="title", "Authors"="author")), 
-      # selectInput("netSelect2", "Select Second Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology', "Titles"="title", "Authors"="author"), "title"), 
+    nav_panel("Network",
+      visNetworkOutput("network") %>% withSpinner(color="tomato")),
     
     nav_panel("Table", textOutput("text"), DT::dataTableOutput("table")),
     
@@ -82,9 +88,6 @@ ui <- page_navbar(
     nav_panel("Tree Map", 
       sliderInput("treeSlider", "Filter Count by Deciles:", min = 1, max = 10, value = c(1, 2), step = 1),
       plotOutput("treemap"),
-      # Data table for testing, but might be useful to see a table with the graph.
-        # , 
-        # DT::dataTableOutput('test')
     ),
 
     nav_panel("WikiData", DT::dataTableOutput("wikiTable")),
@@ -188,8 +191,8 @@ output$network <- renderVisNetwork({
 wikiData <- reactive({
   reactive_df() %>% select(QID) %>% 
   inner_join(wikiResp, by = "QID", multiple = "all") %>% 
-  group_by(QID) %>% nest(data = c(genreLabel, pubDate)) %>% 
-  distinct() %>% subset(select = -data)
+  # group_by(QID) %>% nest(data = c(genreLabel, pubDate)) %>% 
+  distinct()
 })
 
 output$wikiTable <- DT::renderDataTable({wikiData()}, 

@@ -40,8 +40,18 @@ dataframe <- call_api_and_build_dataframe("https://env-1120817.us.reclaim.cloud/
 write.csv(dataframe, paste0(getwd(), "/main/wonderCat.csv"), row.names = FALSE)
 
 dataframe <- read_csv(paste0(getwd(), "/main/wonderCat.csv"), col_names = TRUE)
+colnames(data) <- c(
+      'id', 'author', 'date', 'benefit', 'experience', 'technology', 'text', 'QID'
+    )
 
-wikiResp <- get_wikidata(dataframe)
+# wikiResp <- get_wikidata(dataframe)
+wikiResp <- read_csv(paste0(getwd(), "/main/wikiData.csv"), col_names = TRUE)
+colnames(wikiResp) <- c(
+  'QID', 'title', 'pubDate', 'genreLabel', 'countryOriginLabel', 'coordinates', 'lon', 'lat'
+)
+wikiResp$coordinates <- gsub('(.*),.*', '\\1', wikiResp$coordinates)
+wikiResp$lon <- gsub('(.*),.*', '\\1', wikiResp$lon)
+wikiResp$lat <- gsub('(.*),.*', '\\1', wikiResp$lat)
 
 dataframe <- inner_join(wikiResp %>% select(title, QID), dataframe, by = "QID", multiple = "all") %>%
   unique()
