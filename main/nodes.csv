@@ -1,0 +1,266 @@
+label,category,size,id
+5,user,172,0
+6,user,14,1
+7,user,4,2
+13,user,1,3
+30 Rock,title,2,4
+A Farewell to Arms,title,1,5
+A Portrait of the Artist as a Young Man,title,1,6
+A Room of One's Own,title,4,7
+A Song of Ice and Fire,title,1,8
+A Tale of Two Cities,title,1,9
+A Wild Sheep Chase,title,1,10
+A Wrinkle in Time,title,1,11
+Acceptance of Loss,experience,7,12
+Adventures of Huckleberry Finn,title,1,13
+Alice's Adventures in Wonderland,title,1,14
+Alienation,experience,11,15
+Almighty Heart,technology,12,16
+Almighty Heart + Satiric Narration,technology,1,17
+Amadis de Gaula,title,1,18
+Americanah,title,1,19
+An Apology for the Life of Mrs. Shamela Andrews,title,1,20
+Anarchy Rhymer,technology,6,21
+And Then There Were None,title,1,22
+Animal Farm,title,1,23
+Awe,experience,2,24
+Babbitt,title,1,25
+Becoming,title,1,26
+Being Wrong,experience,5,27
+Bel Canto,title,1,28
+Beloved,title,2,29
+BioShock,title,1,30
+Blazing Saddles,title,1,31
+Bloodchild,title,1,32
+Book of the Dead,title,1,33
+Bottle Rocket,title,1,34
+Broad City,title,1,35
+Brokeback Mountain,title,1,36
+Buffy the Vampire Slayer,title,1,37
+Call Me By Your Name,title,1,38
+Call the Midwife,title,1,39
+Casablanca,title,1,40
+Choose Your Own Accomplice,technology,1,41
+Clarissa,title,1,42
+Cloud Atlas,title,1,43
+Comic Wink,technology,2,44
+Comic Wink + Reality Shifter,technology,5,45
+Confessions,title,2,46
+Confusion,experience,1,47
+Connection,experience,7,48
+Conversion Narrative,technology,1,49
+Courage,experience,9,50
+Crazy Ex-Girlfriend,title,1,51
+Curiosity,experience,9,52
+David Copperfield,title,1,53
+Disclaimer,title,1,54
+Disgrace,title,1,55
+Dissociation,experience,1,56
+Distress,experience,1,57
+Don Quixote,title,2,58
+Double Alien,technology,3,59
+Double Identification,experience,1,60
+Dragnet,title,1,61
+Dream of the Red Chamber,title,2,62
+Dream of the World,technology,5,63
+Emma,title,2,64
+Empathy,experience,8,65
+Empathy Generator,technology,5,66
+Empowerment,experience,1,67
+Epic Simile,technology,2,68
+Equilateral Love Triange,technology,3,69
+Existential Nausea,experience,1,70
+Fanny Hill,title,1,71
+"Fleabag, season 2",title,1,72
+Flow,title,1,73
+Fox in Socks,title,1,74
+Free Indirect Discourse,technology,6,75
+Fun Home,title,1,76
+Generous Love,experience,6,77
+Gladiator,title,1,78
+Go Tell It on the Mountain,title,1,79
+God Voice,technology,2,80
+Gone Girl,title,1,81
+Gratification,experience,9,82
+Gratitude Booster,technology,1,83
+Grey's Anatomy,title,2,84
+Grief Releaser,technology,1,85
+Guilt Lifter,technology,1,86
+Gulliver's Travels,title,2,87
+Hamartia,technology,3,88
+Hamlet,title,4,89
+Horse Feathers,title,1,90
+House M.D.,title,1,91
+Human God Voice,technology,7,92
+I Know Why the Caged Bird Sings,title,1,93
+I Love Lucy,title,1,94
+I Voice,technology,4,95
+Identification,experience,10,96
+Iliad,title,2,97
+Immersion,experience,1,98
+In Cold Blood,title,1,99
+In Search of Lost Time,title,1,100
+Infinite Jest,title,1,101
+Insinuation,technology,1,102
+Invisible Man,title,1,103
+Irony,technology,7,104
+Jane Eyre,title,2,105
+King Solomon's Mines,title,1,106
+L'Orfeo,title,1,107
+La Vie de Marianne,title,1,108
+Labyrinths,title,1,109
+Law & Order,title,1,110
+Le Morte d'Arthur,title,1,111
+Letters from a Peruvian Woman,title,1,112
+Life Evolver,technology,3,113
+Like Water for Chocolate,title,1,114
+Little Women,title,2,115
+Logic,technology,1,116
+Love,experience,9,117
+Lucky Twist,technology,3,118
+Mary Poppins,title,1,119
+Me Before You,title,1,120
+Middlemarch,title,1,121
+Mind Wandering,experience,6,122
+Miranda,title,1,123
+Moral Suasion,technology,1,124
+Mother Courage and Her Children,title,1,125
+Mother Goose’s Melody,title,1,126
+Mr. Nobody,title,1,127
+Mrs Dalloway,title,1,128
+My Bondage and My Freedom,title,1,129
+My Brilliant Friend,title,1,130
+My Ántonia,title,1,131
+Naked Lunch,title,1,132
+"Narrative of the Life of Frederick Douglass, an American Slave",title,1,133
+Narrative without Core Values,technology,1,134
+New Atlantis,title,1,135
+Odyssey,title,1,136
+On the Origin of Species,title,1,137
+One Flew Over the Cuckoo's Nest,title,1,138
+One Hundred Years of Solitude,title,2,139
+Opportunity to Observe,technology,1,140
+Opportunity to Observe + Pivot into Positive Emotion,technology,1,141
+Optimism,experience,3,142
+Orlando Furioso,title,1,143
+Our Sister Killjoy,title,1,144
+"Pamela; or, Virtue Rewarded",title,1,145
+Pan's Labyrinth,title,1,146
+Paranoia,experience,10,147
+Parody,technology,1,148
+Partial Dopamine,technology,3,149
+Partial Dopamine + Perspective of a Child,technology,1,150
+Passing,title,1,151
+Peyton Place,title,1,152
+Pippi Longstocking,title,1,153
+Pivot into Positive Emotion,technology,1,154
+Plot Twist,technology,1,155
+Poetic History,technology,8,156
+Poetic Language,technology,2,157
+Poetic Narrative,technology,1,158
+Portnoy's Complaint,title,1,159
+Promising Young Woman,title,1,160
+Pyramid Texts,title,1,161
+Père Goriot,title,1,162
+Rashomon,title,1,163
+Ready to Grow,experience,3,164
+Reality Shifter,technology,6,165
+Red Herring,technology,5,166
+Relearning,experience,10,167
+Released Emotion Brake,experience,1,168
+Relief,experience,1,169
+Revenge Plot,technology,3,170
+Righteousness,experience,4,171
+Rigoletto,title,1,172
+Robinson Crusoe,title,1,173
+Roma,title,1,174
+Saturday,title,1,175
+Second Look,technology,11,176
+Second Method,technology,3,177
+Secret Discloser,technology,2,178
+Self-Acceptance,experience,9,179
+Self-Affirmation,technology,1,180
+Self-Irony,experience,8,181
+Self-Love,experience,1,182
+Self-Trust,experience,2,183
+Sense and Sensibility,title,1,184
+Shame Reducer,technology,1,185
+Sir Gawain and the Green Knight,title,1,186
+Sister Carrie,title,1,187
+Skepticism,experience,1,188
+Slaughterhouse-Five,title,1,189
+So Long a Letter,title,1,190
+Sober Uplift,experience,2,191
+Soliloquy,technology,6,192
+Soliloquy in a Soliloquy,technology,5,193
+Sorrow Resolver,technology,5,194
+Story in the Story,technology,2,195
+Stream of Consciousness,technology,9,196
+Superiority,experience,2,197
+Superman,title,1,198
+Suspended Judgment,experience,4,199
+Suspense,technology,9,200
+The Age of Innocence,title,1,201
+The Autobiography of Malcolm X,title,1,202
+The Black Cat,title,1,203
+The Blacks,title,1,204
+The Bridges of Madison County,title,1,205
+The Calcutta Chromosome,title,1,206
+The Canterbury Tales,title,1,207
+The Castle of Otranto,title,1,208
+The Children Act,title,1,209
+The Crying of Lot 49,title,1,210
+The Essence of Christianity,title,1,211
+The Facetious Nights of Straparola,title,1,212
+The Godfather,title,1,213
+The Gold Rush,title,1,214
+The Great Railway Bazaar,title,1,215
+The History of Love,title,1,216
+"The History of Tom Jones, a Foundling",title,1,217
+The Hitchhiker's Guide to the Galaxy,title,1,218
+The Intuitionist,title,1,219
+The Left Hand of Darkness,title,1,220
+The Marriage Plot,title,1,221
+The Maxims of Ptahhotep,title,1,222
+The Metamorphosis,title,1,223
+The Mill on the Floss,title,1,224
+The Murders in the Rue Morgue,title,1,225
+The Redundancy of Courage,title,1,226
+The Right Stuff,title,1,227
+The Sandman,title,1,228
+The Scarlet Letter,title,1,229
+"The Secret Diary of Adrian Mole, Aged 13¾",title,1,230
+The Sorrows of Young Werther,title,2,231
+The Sound and the Fury,title,1,232
+The String of Pearls,title,1,233
+The Sun Also Rises,title,1,234
+The Terror,title,1,235
+The Thirty-nine Steps,title,1,236
+The Time Traveler's Wife,title,1,237
+The Trial,title,1,238
+The Turn of the Screw,title,1,239
+The Women's Room,title,1,240
+The Year of Magical Thinking,title,1,241
+The Yellow Wall Paper,title,1,242
+Things Fall Apart,title,1,243
+"Thinking ""What If?""",experience,13,244
+Thyestes,title,1,245
+To Kill a Mockingbird,title,1,246
+To the Lighthouse,title,2,247
+Togetherness,experience,1,248
+Total Recall,title,1,249
+Toy Story,title,1,250
+Tranquility,experience,7,251
+Twilight,title,1,252
+Ubik,title,1,253
+Untrustworthy Narrator,technology,1,254
+Varney the Vampire,title,2,255
+Veronica Mars,title,1,256
+Vigilance Trigger,technology,11,257
+"Voice of ""You and Me""",technology,1,258
+Waiting for Godot,title,1,259
+Westcar Papyrus,title,1,260
+Winnie-the-Pooh,title,5,261
+Wish Fulfillment,technology,2,262
+Wonder,experience,2,263
+xxx-I need to enter something new,experience,2,264

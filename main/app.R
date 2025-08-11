@@ -66,7 +66,7 @@ ui <- page_navbar(
     ),
     # API Updates ----
     hr(),
-    helpText("Data updated every ten minutes."),
+    HTML("<p>Updated with data from <a href='https://env-1120817.us.reclaim.cloud/user-experience/'>WonderCat</a> and <a href='https://www.wikidata.org/wiki/Special:RecentChanges?hidebots=1&hidecategorization=1&limit=50&days=7&urlversion=2'>Wikidata</a> every ten minutes.</p>"),
   open = "desktop"), 
     
   # Build "main panel" ----
@@ -76,19 +76,6 @@ ui <- page_navbar(
       visNetworkOutput("network") %>% withSpinner(color="tomato")),
     
     nav_panel("Table", textOutput("text"), DT::dataTableOutput("table")),
-    
-    nav_panel("Bar Plot", 
-      layout_columns(
-        selectInput("barSelect", "Select Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology')), 
-        sliderInput("barSlider", "Filter Count by Deciles:", min = 1, max = 10, value = c(8, 10), step = 1)
-      ), 
-        plotlyOutput("barplot")
-    ),
-
-    nav_panel("Tree Map", 
-      sliderInput("treeSlider", "Filter Count by Deciles:", min = 1, max = 10, value = c(1, 2), step = 1),
-      plotOutput("treemap"),
-    ),
 
     nav_panel("WikiData", DT::dataTableOutput("wikiTable")),
 
@@ -138,43 +125,6 @@ observeEvent(input$table_rows_selected, {
   ))
 })
 
-
-# Bar Plot Output ----
-barData <- reactive({
-    req(input$barSelect)
-    reactive_df() %>% dplyr::count(!!sym(input$barSelect), name = 'count') %>%
-      mutate(decile = ntile(count, 10)) %>%
-      filter(between(decile, input$barSlider[1], input$barSlider[2]))
-})
-
-output$barplot <- renderPlotly(
-    barData() |>
-    ggplot(aes(x = count, y = reorder(!!sym(input$barSelect), count), fill = !!sym(input$barSelect))) +
-    geom_bar(stat = "identity") +
-    xlab('count') + 
-    ylab(input$barSelect) +
-    theme(legend.position = 'none')
-)
-
-# Tree Map Output ---
-treeData <- reactive({
-    reactive_df() %>% group_by(title, experience) %>% summarize(count = n()) %>%
-      mutate(decile = ntile(count, 10)) %>%
-      filter(between(decile, input$treeSlider[1], input$treeSlider[2]))
-})
-
-output$treemap <- renderPlot(
-    ggplot(treeData(), aes(area = count, label = title, fill = experience, subgroup = experience)) + 
-        geom_treemap() +
-        geom_treemap_subgroup_border() +
-        geom_treemap_text(fontface = "italic", colour = "black", place = "topleft", grow = FALSE) + 
-        geom_treemap_subgroup_border() +
-        geom_treemap_subgroup_text(place = "centre", grow = T, alpha = 0.3, colour = "black", fontface = "italic", min.size = 0) +
-        scale_colour_brewer(palette = "Set1")
-)
-
-# output$test <- DT::renderDataTable({barData()})
-
 # Network Output ---
 network <- reactive({
     # net <- create_subset_network_data(reactive_df(), input$netSelect1, input$netSelect2)
@@ -191,7 +141,6 @@ output$network <- renderVisNetwork({
 wikiData <- reactive({
   reactive_df() %>% select(QID) %>% 
   inner_join(wikiResp, by = "QID", multiple = "all") %>% 
-  # group_by(QID) %>% nest(data = c(genreLabel, pubDate)) %>% 
   distinct()
 })
 
@@ -210,6 +159,21 @@ output$worldMap <- renderLeaflet({
 # Run the application 
 shinyApp(ui = ui, server = server)
 
+# Old Functions.
+# Bar Plot Nav Panel.
+    # nav_panel("Bar Plot", 
+    #   layout_columns(
+    #     selectInput("barSelect", "Select Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology')), 
+    #     sliderInput("barSlider", "Filter Count by Deciles:", min = 1, max = 10, value = c(8, 10), step = 1)
+    #   ), 
+    #     plotlyOutput("barplot")
+    # ),
+# Tree Map Nav Panel
+    # nav_panel("Tree Map", 
+    #   sliderInput("treeSlider", "Filter Count by Deciles:", min = 1, max = 10, value = c(1, 2), step = 1),
+    #   plotOutput("treemap"),
+    # ),
+
 #   # Output Timeline ----
 #   output$timeline <- renderPlotly( 
 #     plot_ly(reactive_df(), type = "scatter") %>% # , mode = ""
@@ -217,3 +181,37 @@ shinyApp(ui = ui, server = server)
 #       layout(showLegend = F, title = "Timeline with Rangeslider",
 #              xaxis = list(rangeslider = list(visible = T)))
 #     )
+
+# # Bar Plot Output ----
+# barData <- reactive({
+#     req(input$barSelect)
+#     reactive_df() %>% dplyr::count(!!sym(input$barSelect), name = 'count') %>%
+#       mutate(decile = ntile(count, 10)) %>%
+#       filter(between(decile, input$barSlider[1], input$barSlider[2]))
+# })
+
+# output$barplot <- renderPlotly(
+#     barData() |>
+#     ggplot(aes(x = count, y = reorder(!!sym(input$barSelect), count), fill = !!sym(input$barSelect))) +
+#     geom_bar(stat = "identity") +
+#     xlab('count') + 
+#     ylab(input$barSelect) +
+#     theme(legend.position = 'none')
+# )
+
+# # Tree Map Output ---
+# treeData <- reactive({
+#     reactive_df() %>% group_by(title, experience) %>% summarize(count = n()) %>%
+#       mutate(decile = ntile(count, 10)) %>%
+#       filter(between(decile, input$treeSlider[1], input$treeSlider[2]))
+# })
+
+# output$treemap <- renderPlot(
+#     ggplot(treeData(), aes(area = count, label = title, fill = experience, subgroup = experience)) + 
+#         geom_treemap() +
+#         geom_treemap_subgroup_border() +
+#         geom_treemap_text(fontface = "italic", colour = "black", place = "topleft", grow = FALSE) + 
+#         geom_treemap_subgroup_border() +
+#         geom_treemap_subgroup_text(place = "centre", grow = T, alpha = 0.3, colour = "black", fontface = "italic", min.size = 0) +
+#         scale_colour_brewer(palette = "Set1")
+# )
