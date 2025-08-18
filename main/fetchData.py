@@ -58,7 +58,7 @@ def transform_to_dataframe(api_call):
     return api_data
 
 wp_call = read_wordpress_post_with_pagination()
-data = transform_to_dataframe(wp_call)
+wonderCat = transform_to_dataframe(wp_call)
 
 """
 WikiData Functions.
@@ -149,90 +149,90 @@ def api_to_dataframe(res):
 
     return wiki_df
 
-# Remove rows that have any null values and drop duplicates. This might be something to talk through.
-wonderCat = data.dropna(how='any',axis=0).drop_duplicates()
-
 # Call WikiData API and create dataframe.
-qids = get_QIDS(wonderCat)
+qids = get_QIDS(wonderCat.drop_duplicates()) # Remove rows that have any null values and drop duplicates. This might be something to talk through.
 api_results = build_query_call_api(qids)
-wikidata = api_to_dataframe(api_results)
+wikiData = api_to_dataframe(api_results)
+
+# Rename wikiData itemLabel to title.
+wikiData.rename(columns={'itemLabel':'title'}, inplace=True)
 
 # Use WikiData title in place of WonderCat title.
-data = pd.merge(data, wikidata[['itemLabel', 'QID']], on = "QID")
-data.rename(columns={'itemLabel':'title'}, inplace=True)
+wonderCat = pd.merge(wonderCat, wikiData[['title', 'QID']], on = "QID")
+
 
 """
 Save dataframes as .csv
 """
-data.to_csv(root + "wonderCat.csv", index = False)
+wonderCat.to_csv(root + "wonderCat.csv", index = False)
 print ('WonderCat fetched.')
-wikidata.to_csv(root + "wikiData.csv", sep = ",", index = False)
+wikiData.to_csv(root + "wikiData.csv", sep = ",", index = False)
 print('WikiData fetched.')
 
 """
 Network functions.
 """
-def create_nodes_and_links(dataframe):
-    # Create link/edge pairs.
-    title_tech = dataframe[['title', 'technology']]
-    title_tech.rename(columns = {'title': 'from', 'technology': 'to'}, inplace = True)
+# def create_nodes_and_links(dataframe):
+#     # Create link/edge pairs.
+#     title_tech = dataframe[['title', 'technology']]
+#     title_tech.rename(columns = {'title': 'from', 'technology': 'to'}, inplace = True)
 
-    tech_exp = dataframe[['technology', 'experience']]
-    tech_exp.rename(columns = {'technology': 'from', 'experience': 'to'}, inplace = True)
+#     tech_exp = dataframe[['technology', 'experience']]
+#     tech_exp.rename(columns = {'technology': 'from', 'experience': 'to'}, inplace = True)
 
-    exp_user = dataframe[['experience', 'author']]
-    exp_user.rename(columns = {'experience': 'from', 'author': 'to'}, inplace = True)
+#     exp_user = dataframe[['experience', 'author']]
+#     exp_user.rename(columns = {'experience': 'from', 'author': 'to'}, inplace = True)
 
-    # Join pairs.
-    links = pd.concat([title_tech, tech_exp, exp_user]) 
+#     # Join pairs.
+#     links = pd.concat([title_tech, tech_exp, exp_user]) 
 
-    # Clean pairs of whitespace.
-    links['from'] = links['from'].str.replace(r'\\w', '')
-    links['to'] = links['to'].str.replace(r'\\w', '')
+#     # Clean pairs of whitespace.
+#     links['from'] = links['from'].str.replace(r'\\w', '')
+#     links['to'] = links['to'].str.replace(r'\\w', '')
 
-    # Create link/edge weights.
-    links = links.groupby(['from', 'to']).size().to_frame(name = 'weight').reset_index()
+#     # Create link/edge weights.
+#     links = links.groupby(['from', 'to']).size().to_frame(name = 'weight').reset_index()
 
-    # Create nodes from links and rename column name.
-    titles = dataframe[['title']]
-    titles.rename(columns = {'title': 'label'}, inplace = True)
-    titles['category'] = 'title'
+#     # Create nodes from links and rename column name.
+#     titles = dataframe[['title']]
+#     titles.rename(columns = {'title': 'label'}, inplace = True)
+#     titles['category'] = 'title'
 
-    technologies = dataframe[['technology']]
-    technologies.rename(columns = {'technology': 'label'}, inplace = True)
-    technologies['category'] = 'technology'
+#     technologies = dataframe[['technology']]
+#     technologies.rename(columns = {'technology': 'label'}, inplace = True)
+#     technologies['category'] = 'technology'
 
-    experiences = dataframe[['experience']]
-    experiences.rename(columns = {'experience': 'label'}, inplace = True)
-    experiences['category'] = 'experience'
+#     experiences = dataframe[['experience']]
+#     experiences.rename(columns = {'experience': 'label'}, inplace = True)
+#     experiences['category'] = 'experience'
 
-    users = dataframe[["author"]]
-    users.rename(columns = {'author': 'label'}, inplace = True)
-    users['category'] = 'user'
+#     users = dataframe[["author"]]
+#     users.rename(columns = {'author': 'label'}, inplace = True)
+#     users['category'] = 'user'
 
-    # Concatenate nodes.
-    nodes = pd.concat([titles, technologies, experiences, users]) # users
+#     # Concatenate nodes.
+#     nodes = pd.concat([titles, technologies, experiences, users]) # users
 
-    # Create node "size" from frequency.
-    nodes = nodes.groupby(['label', 'category']).size().to_frame(name = 'size').reset_index()
+#     # Create node "size" from frequency.
+#     nodes = nodes.groupby(['label', 'category']).size().to_frame(name = 'size').reset_index()
 
-    # Remove duplicates from nodes.
-    nodes.drop_duplicates(inplace = True)
+#     # Remove duplicates from nodes.
+#     nodes.drop_duplicates(inplace = True)
 
-    # Create node "id's."
-    nodes['id'] = nodes.index
+#     # Create node "id's."
+#     nodes['id'] = nodes.index
 
-    # Replace link's 'labels' with node id's.
-    label_id_map = pd.Series(nodes['id'].values, index = nodes['label']).to_dict()
-    links = links.replace({'from': label_id_map})
-    links = links.replace({'to': label_id_map})
+#     # Replace link's 'labels' with node id's.
+#     label_id_map = pd.Series(nodes['id'].values, index = nodes['label']).to_dict()
+#     links = links.replace({'from': label_id_map})
+#     links = links.replace({'to': label_id_map})
 
-    return (links, nodes)
+#     return (links, nodes)
 
-# Create links and nodes.
-links, nodes = create_nodes_and_links(data)
+# # Create links and nodes.
+# links, nodes = create_nodes_and_links(wonderCat)
 
-# Save data.
-links.to_csv(root + "links.csv", index = False)
-nodes.to_csv(root + "nodes.csv", index = False)
-print ('Network components built.')
+# # Save data.
+# links.to_csv(root + "links.csv", index = False)
+# nodes.to_csv(root + "nodes.csv", index = False)
+# print ('Network components built.')

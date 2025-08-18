@@ -16,23 +16,15 @@ source("functions.R")
 # # WonderCat and WikiData API Calls
 # data <-  call_api_and_build_dataframe("https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience")
 # wikiResp <- get_wikidata(data)
+
 # Read-in stored files.
 data <- read_csv('wonderCat.csv', col_names = TRUE)
-colnames(data) <- c(
-      'id', 'author', 'date', 'benefit', 'experience', 'technology', 'text', 'QID'
-    )
 wikiResp <- read_csv('wikiData.csv', col_names = TRUE)
-colnames(wikiResp) <- c(
-  'QID', 'title', 'pubDate', 'genreLabel', 'countryOriginLabel', 'coordinates', 'lon', 'lat'
-)
+
 # Select first item as canon for coordinates, long, and lat.
 wikiResp$coordinates <- gsub('(.*),.*', '\\1', wikiResp$coordinates)
 wikiResp$lon <- gsub('(.*),.*', '\\1', wikiResp$lon) %>% as.numeric()
 wikiResp$lat <- gsub('(.*),.*', '\\1', wikiResp$lat) %>% as.numeric()
-
-# Join WonderCat and WikiData
-data <- inner_join(wikiResp %>% select(title, QID), data, by = "QID", multiple = "all") %>%
-  unique()
 
 # Define UI for application (using bslib library for layout).
 ui <- page_navbar(
@@ -72,8 +64,7 @@ ui <- page_navbar(
   # Build "main panel" ----
   navset_card_underline(
     
-    nav_panel("Network",
-      visNetworkOutput("network") %>% withSpinner(color="tomato")),
+    nav_panel("Network", visNetworkOutput("network")),
     
     nav_panel("Table", textOutput("text"), DT::dataTableOutput("table")),
 
@@ -86,6 +77,7 @@ fluid = TRUE) # navbarPage() closure
 
 # Define server logic.
 server <- function(input, output) {
+
 # Render User Inputs: ----
 reactive_df <- reactive({
     react_data <- data
@@ -102,7 +94,18 @@ reactive_df <- reactive({
     react_data <- react_data %>% filter(benefit %in% input$benefit)
     }
     return(react_data)
-})
+}) 
+
+# Network Output ---
+network_graph <- reactive({
+  net <- create_full_network_data(reactive_df())
+  return(net)
+}) 
+
+output$network <- renderVisNetwork({
+  visNetwork(network_graph()$nodes, network_graph()$links) %>%
+  visOptions(highlightNearest = TRUE, selectedBy = "label")
+}) %>% bindCache(network_graph())
   
 # Table Output ----
 output$table <- DT::renderDataTable(
@@ -123,18 +126,6 @@ observeEvent(input$table_rows_selected, {
       HTML('<br><br>'), sel_text,
     easyClose = TRUE
   ))
-})
-
-# Network Output ---
-network <- reactive({
-    # net <- create_subset_network_data(reactive_df(), input$netSelect1, input$netSelect2)
-    net <- create_full_network_data(reactive_df())
-    return(net)
-})
-
-output$network <- renderVisNetwork({
-    visNetwork(network()$nodes, network()$links) %>%
-    visOptions(highlightNearest = TRUE, selectedBy = "label")
 })
 
 # Wiki-Table Output ----

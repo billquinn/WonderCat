@@ -39,26 +39,23 @@ source(paste0(getwd(), '/main/functions.R'))
 dataframe <- call_api_and_build_dataframe("https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience")
 write.csv(dataframe, paste0(getwd(), "/main/wonderCat.csv"), row.names = FALSE)
 
-dataframe <- read_csv(paste0(getwd(), "/main/wonderCat.csv"), col_names = TRUE)
-colnames(data) <- c(
-      'id', 'author', 'date', 'benefit', 'experience', 'technology', 'text', 'QID'
-    )
+dataframe <- read_csv(paste0(getwd(), "/wonderCat.csv"), col_names = TRUE)
+# colnames(data) <- c(
+#       'id', 'author', 'date', 'benefit', 'experience', 'technology', 'text', 'QID', 'title'
+#     )
 
 # wikiResp <- get_wikidata(dataframe)
-wikiResp <- read_csv(paste0(getwd(), "/main/wikiData.csv"), col_names = TRUE)
-colnames(wikiResp) <- c(
-  'QID', 'title', 'pubDate', 'genreLabel', 'countryOriginLabel', 'coordinates', 'lon', 'lat'
-)
+wikiResp <- read_csv(paste0(getwd(), "/wikiData.csv"), col_names = TRUE)
+# colnames(wikiResp) <- c(
+#   'QID', 'title', 'pubDate', 'genreLabel', 'countryOriginLabel', 'coordinates', 'lon', 'lat'
+# )
 wikiResp$coordinates <- gsub('(.*),.*', '\\1', wikiResp$coordinates)
 wikiResp$lon <- gsub('(.*),.*', '\\1', wikiResp$lon)
 wikiResp$lat <- gsub('(.*),.*', '\\1', wikiResp$lat)
 
-dataframe <- inner_join(wikiResp %>% select(title, QID), dataframe, by = "QID", multiple = "all") %>%
-  unique()
-
-wikiData <- dataframe %>% select(QID) %>% 
-  inner_join(wikiResp, by = "QID", multiple = "all") %>% 
-  group_by(QID) %>% nest(data = c(genreLabel, pubDate)) %>% distinct()
+# wikiData <- dataframe %>% select(QID) %>% 
+#   inner_join(wikiResp, by = "QID", multiple = "all") %>% 
+#   group_by(QID) %>% nest(data = c(genreLabel, pubDate)) %>% distinct()
 
 net <- create_full_network_data(dataframe)
 ```
