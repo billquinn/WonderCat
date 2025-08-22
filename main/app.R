@@ -63,15 +63,10 @@ ui <- page_navbar(
     
   # Build "main panel" ----
   navset_card_underline(
-    
-    nav_panel("Network", visNetworkOutput("network")),
-    
     nav_panel("Table", textOutput("text"), DT::dataTableOutput("table")),
-
+    nav_panel("Network", visNetworkOutput("network")),
     nav_panel("WikiData", DT::dataTableOutput("wikiTable")),
-
     nav_panel("World Map", leafletOutput("worldMap"))
-
   ), 
 fluid = TRUE) # navbarPage() closure
 
