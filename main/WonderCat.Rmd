@@ -34,10 +34,10 @@ library(leaflet)
 
 print (getwd())
 # Import functions.
-source(paste0(getwd(), '/main/functions.R'))
+source(paste0(getwd(), '/functions.R'))
 
-dataframe <- call_api_and_build_dataframe("https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience")
-write.csv(dataframe, paste0(getwd(), "/main/wonderCat.csv"), row.names = FALSE)
+# dataframe <- call_api_and_build_dataframe("https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience")
+# write.csv(dataframe, paste0(getwd(), "/main/wonderCat.csv"), row.names = FALSE)
 
 dataframe <- read_csv(paste0(getwd(), "/wonderCat.csv"), col_names = TRUE)
 # colnames(data) <- c(
@@ -52,10 +52,6 @@ wikiResp <- read_csv(paste0(getwd(), "/wikiData.csv"), col_names = TRUE)
 wikiResp$coordinates <- gsub('(.*),.*', '\\1', wikiResp$coordinates)
 wikiResp$lon <- gsub('(.*),.*', '\\1', wikiResp$lon)
 wikiResp$lat <- gsub('(.*),.*', '\\1', wikiResp$lat)
-
-# wikiData <- dataframe %>% select(QID) %>% 
-#   inner_join(wikiResp, by = "QID", multiple = "all") %>% 
-#   group_by(QID) %>% nest(data = c(genreLabel, pubDate)) %>% distinct()
 
 net <- create_full_network_data(dataframe)
 ```
@@ -113,6 +109,7 @@ print (dim(dataframe))
 dataframe <- head(dataframe, -1)
 print (dim(dataframe))
 ```
+
 
 ### Wikidata
 ```{r}
@@ -305,6 +302,7 @@ create_network_data(data, columnOne, columnTwo)
 
 
 ### Network
+#### Build
 ```{r}
 
 # Create links from columns: source -> technology -> experience.
@@ -360,6 +358,10 @@ links$to = nodes$id[ match( unlist(links$to), nodes$label)]
 
 # Remove variables.
 rm(title_tech, tech_exp, sources, experiences, technologies, users)
+```
+#### Visualize
+```{r}
+
 
 # Set Styling.
 # We'll start by adding new node and edge attributes to our dataframes. 

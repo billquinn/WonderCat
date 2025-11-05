@@ -43,7 +43,7 @@ ui <- page_navbar(
     ),
     # Technology Filter ----
     selectInput(
-      "technology", "Technology Filter:",
+      "technology", "Narrative Technology Filter:",
       choices = data[order(data$technology),]$technology, multiple = TRUE
     ),
     # Experience Filter ----
@@ -88,6 +88,7 @@ reactive_df <- reactive({
     if (length(input$benefit) > 0) {
     react_data <- react_data %>% filter(benefit %in% input$benefit)
     }
+    # print (colnames(react_data))
     return(react_data)
 }) 
 
@@ -100,7 +101,7 @@ network_graph <- reactive({
 output$network <- renderVisNetwork({
   visNetwork(network_graph()$nodes, network_graph()$links) %>%
   visOptions(highlightNearest = TRUE, selectedBy = "label")
-}) %>% bindCache(network_graph())
+})
   
 # Table Output ----
 output$table <- DT::renderDataTable(
@@ -111,13 +112,14 @@ output$table <- DT::renderDataTable(
 # Text "Alert" when clicking on data table row ----
 observeEvent(input$table_rows_selected, {
   selected_row <- reactive_df()[input$table_rows_selected,]
-  sel_title <- selected_row[[1]]
-  sel_author <- selected_row[[4]]
-  sel_tech <- selected_row[[8]]
-  sel_text <- selected_row[[9]]
+  sel_title <- selected_row[[9]]
+  sel_author <- selected_row[[2]]
+  sel_tech <- selected_row[[5]]
+  sel_exp <- selected_row[[6]]
+  sel_text <- selected_row[[7]]
   showModal(modalDialog(
     title = sel_title, 
-      'Feature illustrating ', sel_tech, 'in ', sel_title, 'according to ', sel_author,
+      'Feature prompting', sel_exp, 'in ', sel_title, 'according to ', sel_author,
       HTML('<br><br>'), sel_text,
     easyClose = TRUE
   ))
