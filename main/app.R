@@ -51,14 +51,9 @@ ui <- page_navbar(
       "experience", "Experience Filter:",
       choices = data[order(data$experience),]$experience, multiple = TRUE
     ),
-    # Benefit Filter ----
-    selectInput(
-      "benefit", "Benefit Filter:",
-      choices = data[order(data$benefit),]$benefit, multiple = TRUE
-    ),
     # API Updates ----
     hr(),
-    HTML("<p>Updated with data from <a href='https://env-1120817.us.reclaim.cloud/user-experience/'>WonderCat</a> and <a href='https://www.wikidata.org/wiki/Special:RecentChanges?hidebots=1&hidecategorization=1&limit=50&days=7&urlversion=2'>Wikidata</a> every ten minutes.</p>"),
+    HTML("<p>Updated with data from <a href='https://wonder-cat.org/'>WonderCat</a> and <a href='https://www.wikidata.org/wiki/Special:RecentChanges?hidebots=1&hidecategorization=1&limit=50&days=7&urlversion=2'>Wikidata</a> every ten minutes.</p>"),
   open = "desktop"), 
     
   # Build "main panel" ----
@@ -85,10 +80,6 @@ reactive_df <- reactive({
     if (length(input$experience) > 0) {
     react_data <- react_data %>% filter(experience %in% input$experience)
     }
-    if (length(input$benefit) > 0) {
-    react_data <- react_data %>% filter(benefit %in% input$benefit)
-    }
-    # print (colnames(react_data))
     return(react_data)
 }) 
 
@@ -105,18 +96,17 @@ output$network <- renderVisNetwork({
   
 # Table Output ----
 output$table <- DT::renderDataTable(
-  {reactive_df() %>% select(id, author, date, title, technology, experience, benefit, QID)}, 
+  {reactive_df() %>% select(id, author, date, title, technology, experience, QID)}, 
   selection = 'single', rownames = FALSE, options = list(pageLength = -1, info = FALSE, lengthMenu = list(c(15, -1), c("15", "All")))
 )
 
 # Text "Alert" when clicking on data table row ----
 observeEvent(input$table_rows_selected, {
-  selected_row <- reactive_df()[input$table_rows_selected,]
-  sel_title <- selected_row[[9]]
-  sel_author <- selected_row[[2]]
-  sel_tech <- selected_row[[5]]
-  sel_exp <- selected_row[[6]]
-  sel_text <- selected_row[[7]]
+  selected_row <- reactive_df()[input$table_rows_selected,] # id
+  sel_title <- selected_row[[9]] # author/user
+  sel_author <- selected_row[[2]] # date
+  sel_tech <- selected_row[[5]] # title
+  sel_text <- selected_row[[7]] # experience
   showModal(modalDialog(
     title = sel_title, 
       'Feature prompting', sel_exp, 'in ', sel_title, 'according to ', sel_author,
@@ -146,60 +136,3 @@ output$worldMap <- renderLeaflet({
 
 # Run the application 
 shinyApp(ui = ui, server = server)
-
-# Old Functions.
-# Bar Plot Nav Panel.
-    # nav_panel("Bar Plot", 
-    #   layout_columns(
-    #     selectInput("barSelect", "Select Input:", list('Experiences'='experience', 'Benefits'='benefit', 'Technologies'='technology')), 
-    #     sliderInput("barSlider", "Filter Count by Deciles:", min = 1, max = 10, value = c(8, 10), step = 1)
-    #   ), 
-    #     plotlyOutput("barplot")
-    # ),
-# Tree Map Nav Panel
-    # nav_panel("Tree Map", 
-    #   sliderInput("treeSlider", "Filter Count by Deciles:", min = 1, max = 10, value = c(1, 2), step = 1),
-    #   plotOutput("treemap"),
-    # ),
-
-#   # Output Timeline ----
-#   output$timeline <- renderPlotly( 
-#     plot_ly(reactive_df(), type = "scatter") %>% # , mode = ""
-#       add_trace(x = ~pubDate, y = ~benefit) %>%
-#       layout(showLegend = F, title = "Timeline with Rangeslider",
-#              xaxis = list(rangeslider = list(visible = T)))
-#     )
-
-# # Bar Plot Output ----
-# barData <- reactive({
-#     req(input$barSelect)
-#     reactive_df() %>% dplyr::count(!!sym(input$barSelect), name = 'count') %>%
-#       mutate(decile = ntile(count, 10)) %>%
-#       filter(between(decile, input$barSlider[1], input$barSlider[2]))
-# })
-
-# output$barplot <- renderPlotly(
-#     barData() |>
-#     ggplot(aes(x = count, y = reorder(!!sym(input$barSelect), count), fill = !!sym(input$barSelect))) +
-#     geom_bar(stat = "identity") +
-#     xlab('count') + 
-#     ylab(input$barSelect) +
-#     theme(legend.position = 'none')
-# )
-
-# # Tree Map Output ---
-# treeData <- reactive({
-#     reactive_df() %>% group_by(title, experience) %>% summarize(count = n()) %>%
-#       mutate(decile = ntile(count, 10)) %>%
-#       filter(between(decile, input$treeSlider[1], input$treeSlider[2]))
-# })
-
-# output$treemap <- renderPlot(
-#     ggplot(treeData(), aes(area = count, label = title, fill = experience, subgroup = experience)) + 
-#         geom_treemap() +
-#         geom_treemap_subgroup_border() +
-#         geom_treemap_text(fontface = "italic", colour = "black", place = "topleft", grow = FALSE) + 
-#         geom_treemap_subgroup_border() +
-#         geom_treemap_subgroup_text(place = "centre", grow = T, alpha = 0.3, colour = "black", fontface = "italic", min.size = 0) +
-#         scale_colour_brewer(palette = "Set1")
-# )
