@@ -34,17 +34,26 @@ library(leaflet)
 
 print (getwd())
 # Import functions.
-source(paste0(getwd(), '/main/functions.R'))
+source(paste0(getwd(), '/functions.R'))
 
-dataframe <- call_api_and_build_dataframe("https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience")
-wikiResp <- get_wikidata(dataframe)
+# dataframe <- call_api_and_build_dataframe("https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience")
+# write.csv(dataframe, paste0(getwd(), "/main/wonderCat.csv"), row.names = FALSE)
 
-dataframe <- inner_join(wikiResp %>% select(title, QID), dataframe, by = "QID", multiple = "all") %>%
-  unique()
+dataframe <- read_csv(paste0(getwd(), "/wonderCat.csv"), col_names = TRUE)
+# colnames(data) <- c(
+#       'id', 'author', 'date', 'benefit', 'experience', 'technology', 'text', 'QID', 'title'
+#     )
 
-wikiData <- dataframe %>% select(QID) %>% 
-  inner_join(wikiResp, by = "QID", multiple = "all") %>% 
-  group_by(QID) %>% nest(data = c(genreLabel, pubDate)) %>% distinct()
+# wikiResp <- get_wikidata(dataframe)
+wikiResp <- read_csv(paste0(getwd(), "/wikiData.csv"), col_names = TRUE)
+# colnames(wikiResp) <- c(
+#   'QID', 'title', 'pubDate', 'genreLabel', 'countryOriginLabel', 'coordinates', 'lon', 'lat'
+# )
+wikiResp$coordinates <- gsub('(.*),.*', '\\1', wikiResp$coordinates)
+wikiResp$lon <- gsub('(.*),.*', '\\1', wikiResp$lon)
+wikiResp$lat <- gsub('(.*),.*', '\\1', wikiResp$lat)
+
+net <- create_full_network_data(dataframe)
 ```
 
 ## API Call
@@ -100,6 +109,7 @@ print (dim(dataframe))
 dataframe <- head(dataframe, -1)
 print (dim(dataframe))
 ```
+
 
 ### Wikidata
 ```{r}
@@ -292,6 +302,7 @@ create_network_data(data, columnOne, columnTwo)
 
 
 ### Network
+#### Build
 ```{r}
 
 # Create links from columns: source -> technology -> experience.
@@ -347,6 +358,10 @@ links$to = nodes$id[ match( unlist(links$to), nodes$label)]
 
 # Remove variables.
 rm(title_tech, tech_exp, sources, experiences, technologies, users)
+```
+#### Visualize
+```{r}
+
 
 # Set Styling.
 # We'll start by adding new node and edge attributes to our dataframes. 
