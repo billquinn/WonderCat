@@ -8,10 +8,9 @@ print('Starting API calls and builing network at', datetime.today().strftime('%Y
 
 # Declare root and easily switch from server to local directories.
 root = '/root/shiny-server/apps/sample-apps/00_wondercat/'
-# root = ""
 
 # Fetch WonderCat Data through API
-api_prefix = 'https://env-1120817.us.reclaim.cloud/wp-json/wp/v2/user-experience'
+api_prefix = 'https://wonder-cat.org/wp-json/wp/v2/user-experience'
 
 """
 WonderCat Functions.
@@ -39,17 +38,15 @@ def read_wordpress_post_with_pagination():
 # Transforms API response to dataframe.
 def transform_to_dataframe(api_call):
     api_data = pd.DataFrame(api_call)
-    api_data = api_data[['id', 'author', 'date', 'benefit', 'experience', 'technology', 'acf']]
+    api_data = api_data[['id', 'author', 'date', 'experience', 'technology', 'acf']]
     # This should be cleaner...
-    api_data['bene_del'] = pd.json_normalize(api_data['benefit'])
-    api_data['benefit'] = pd.json_normalize(api_data['bene_del'])['name']
     api_data['exp_del'] = pd.json_normalize(api_data['experience'])
     api_data['experience'] = pd.json_normalize(api_data['exp_del'])['name']
     api_data['tech_del'] = pd.json_normalize(api_data['technology'])
     api_data['technology'] = pd.json_normalize(api_data['tech_del'])['name']
     api_data['text'] = pd.json_normalize(api_data['acf'])['feature']
     api_data['QID'] = pd.json_normalize(api_data['acf'])['wikidata-qid']
-    del api_data['acf'], api_data['bene_del'], api_data['exp_del'], api_data['tech_del']
+    del api_data['acf'], api_data['exp_del'], api_data['tech_del']
 
     # Convert date of experience to Y-m-d
     api_data['date'] = api_data['date'].str.replace(r'(\d{4}-\d{2}-\d{2}).*', '\\1', regex = True)
@@ -59,6 +56,7 @@ def transform_to_dataframe(api_call):
 
 wp_call = read_wordpress_post_with_pagination()
 wonderCat = transform_to_dataframe(wp_call)
+print('Built wonderCat')
 
 """
 WikiData Functions.
@@ -153,6 +151,7 @@ def api_to_dataframe(res):
 qids = get_QIDS(wonderCat.drop_duplicates()) # Remove rows that have any null values and drop duplicates. This might be something to talk through.
 api_results = build_query_call_api(qids)
 wikiData = api_to_dataframe(api_results)
+print ('Wikidata built.')
 
 # Rename wikiData itemLabel to title.
 wikiData.rename(columns={'itemLabel':'title'}, inplace=True)
@@ -160,13 +159,12 @@ wikiData.rename(columns={'itemLabel':'title'}, inplace=True)
 # Use WikiData title in place of WonderCat title.
 wonderCat = pd.merge(wonderCat, wikiData[['title', 'QID']], on = "QID")
 
-
 """
 Save dataframes as .csv
 """
-wonderCat.to_csv(root + "wonderCat.csv", index = False)
+wonderCat.to_csv("/root/shiny-server/apps/sample-apps/00_wondercat/wonderCat.csv", sep = ",", index = False)
 print ('WonderCat fetched.')
-wikiData.to_csv(root + "wikiData.csv", sep = ",", index = False)
+wikiData.to_csv("/root/shiny-server/apps/sample-apps/00_wondercat/wikiData.csv", sep = ",", index = False)
 print('WikiData fetched.')
 
 """

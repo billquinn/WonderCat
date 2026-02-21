@@ -1,13 +1,11 @@
 library(tidyverse)
 library(shiny)
-# library(httr2)
 library(bslib)
 library(DT)
 library(ggplot2)
 library(plotly)
 library(treemapify)
 library(visNetwork)
-# library(WikidataQueryServiceR)
 library(leaflet)
 library(shinycssloaders)
 
