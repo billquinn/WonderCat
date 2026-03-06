@@ -4,7 +4,7 @@ import pandas as pd
 
 warnings.filterwarnings('ignore')
 
-print('Starting API calls and builing network at', datetime.today().strftime('%Y-%m-%d %H:%M:%S'))
+print('Starting API calls at ', datetime.today().strftime('%Y-%m-%d %H:%M:%S'))
 
 # Declare root and easily switch from server to local directories.
 root = '/root/shiny-server/apps/sample-apps/00_wondercat/'
@@ -56,7 +56,6 @@ def transform_to_dataframe(api_call):
 
 wp_call = read_wordpress_post_with_pagination()
 wonderCat = transform_to_dataframe(wp_call)
-print('Built wonderCat')
 
 """
 WikiData Functions.
@@ -151,7 +150,6 @@ def api_to_dataframe(res):
 qids = get_QIDS(wonderCat.drop_duplicates()) # Remove rows that have any null values and drop duplicates. This might be something to talk through.
 api_results = build_query_call_api(qids)
 wikiData = api_to_dataframe(api_results)
-print ('Wikidata built.')
 
 # Rename wikiData itemLabel to title.
 wikiData.rename(columns={'itemLabel':'title'}, inplace=True)
@@ -162,10 +160,10 @@ wonderCat = pd.merge(wonderCat, wikiData[['title', 'QID']], on = "QID")
 """
 Save dataframes as .csv
 """
-wonderCat.to_csv("/root/shiny-server/apps/sample-apps/00_wondercat/wonderCat.csv", sep = ",", index = False)
-print ('WonderCat fetched.')
-wikiData.to_csv("/root/shiny-server/apps/sample-apps/00_wondercat/wikiData.csv", sep = ",", index = False)
-print('WikiData fetched.')
+wonderCat.to_csv(root + "wonderCat.csv", sep = ",", index = False)
+print ('\tWonderCat fetched.')
+wikiData.to_csv(root + "wikiData.csv", sep = ",", index = False)
+print('\tWikiData fetched.')
 
 """
 Network functions.
