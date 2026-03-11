@@ -15,16 +15,13 @@ api_prefix = 'https://wonder-cat.org/wp-json/wp/v2/user-experience'
 """
 WonderCat Functions.
 """
-# Get all pages from API.
-def get_total_pagecount():
+# Fetch WonderCat Data through API
+def get_api_results(api_prefix):
+    # Get total page count.
     api_url = f'{api_prefix}?page=1&per_page=100'
     response = requests.get(api_url)
-    pages_count = response.headers['X-WP-TotalPages']
-    return int(pages_count)
-
-# Get API response.
-def read_wordpress_post_with_pagination():
-    total_pages = get_total_pagecount()
+    total_pages = int(response.headers['X-WP-TotalPages'])
+    # Get Wordpress Posts with pagination.
     current_page = 1
     all_page_items_json = []
     while current_page <= total_pages:
@@ -35,18 +32,15 @@ def read_wordpress_post_with_pagination():
         current_page = current_page + 1
     return all_page_items_json
 
-# Transforms API response to dataframe.
+# Transform API JSON to Dataframe
 def transform_to_dataframe(api_call):
     api_data = pd.DataFrame(api_call)
     api_data = api_data[['id', 'author', 'date', 'experience', 'technology', 'acf']]
-    # This should be cleaner...
-    api_data['exp_del'] = pd.json_normalize(api_data['experience'])
-    api_data['experience'] = pd.json_normalize(api_data['exp_del'])['name']
-    api_data['tech_del'] = pd.json_normalize(api_data['technology'])
-    api_data['technology'] = pd.json_normalize(api_data['tech_del'])['name']
-    api_data['text'] = pd.json_normalize(api_data['acf'])['feature']
+    # Accessing the first item [0] wasn't working. Explode() will repeat rows if multiple values appear...
+    api_data['experience'] = api_data['experience'].explode()
+    api_data['technology'] = api_data['technology'].explode()
     api_data['QID'] = pd.json_normalize(api_data['acf'])['wikidata-qid']
-    del api_data['acf'], api_data['exp_del'], api_data['tech_del']
+    del api_data['acf']
 
     # Convert date of experience to Y-m-d
     api_data['date'] = api_data['date'].str.replace(r'(\d{4}-\d{2}-\d{2}).*', '\\1', regex = True)
@@ -54,8 +48,34 @@ def transform_to_dataframe(api_call):
 
     return api_data
 
-wp_call = read_wordpress_post_with_pagination()
+# Get Indices of Glossaries for Technologies and Experiences
+def get_glossary_index(api_prefix):
+    glossary_index = get_api_results(api_prefix)
+    glossary_index = pd.DataFrame(glossary_index)[['id', 'name']].sort_values(by=['id'])
+    return glossary_index
+
+# For users, I should get a list of unique IDs and append them to users_url.
+# I'll need to add a permissions key to do this part.
+
+wp_call = get_api_results('https://wonder-cat.org/wp-json/wp/v2/user-experience')
 wonderCat = transform_to_dataframe(wp_call)
+
+# Reshape wp_call (json) as dataframe.
+wonderCat = transform_to_dataframe(wp_call)
+
+# Get experience index and merge with data.
+experiences = get_glossary_index('https://wonder-cat.org/wp-json/wp/v2/experience')
+experiences.rename(columns={'id':'experience'}, inplace=True)
+wonderCat = wonderCat.merge(experiences, on = 'experience', how = 'inner') # Merge dataframes.
+del wonderCat['experience']
+wonderCat.rename(columns={'name':'experience'}, inplace=True)
+
+# Get technology index and merge with data
+technologies = get_glossary_index('https://wonder-cat.org/wp-json/wp/v2/technology/')
+technologies.rename(columns={'id':'technology'}, inplace=True)
+wonderCat = wonderCat.merge(technologies, on = 'technology', how = 'inner') # Merge dataframes.
+del wonderCat['technology']
+wonderCat.rename(columns={'name':'technology'}, inplace=True)
 print('Built wonderCat')
 
 """
